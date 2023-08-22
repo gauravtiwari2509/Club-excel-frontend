@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background: #302C42;
 }
 
 body {
@@ -92,6 +93,13 @@ body {
 
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: white;
+    color-scheme: #302C42;
   }
+}
+
+.pointer{
+  cursor: pointer;
+}
+.hover:hover{
+  transform: scale(1.1);
 }

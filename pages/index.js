@@ -2,8 +2,22 @@ import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "next/font/google"
 import styles from "@/styles/Home.module.css"
+import { styled } from "styled-components"
+import LeftHero from "@/components/leftHero"
+import Intro from "@/components/intro"
+import About from "@/components/aboutComp"
 
 const inter = Inter({ subsets: ["latin"] })
+
+const MainCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .intro-comp {
+    margin-top: 94px;
+    margin-bottom: 100px;
+  }
+`
 
 export default function Home() {
   return (
@@ -22,20 +36,18 @@ export default function Home() {
           rel="icon"
           href="/clubexcellogo.png"
         />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
+      <MainCont>
+        <div>
+          <LeftHero />
+        </div>
+        <div className="intro-comp">
+          <Intro />
+        </div>
+        <div>
+          <About />
+        </div>
+      </MainCont>
     </>
   )
 }

@@ -198,6 +198,9 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            onClick={() =>
+              window.open("https://www.linkedin.com/company/club-excel-nist/")
+            }
           />
 
           <Image

@@ -92,6 +92,7 @@ function Navbar() {
             src={"/clubexcellogo.png"}
             height={70}
             width={70}
+            alt="logo"
           />
           <div className="club-txt">Club Excel</div>
         </div>

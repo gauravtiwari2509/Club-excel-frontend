@@ -78,12 +78,16 @@
   padding: 0;
   margin: 0;
 }
-
+.navbar{
+position: relative;
+z-index: 10;
+}
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #302C42;
+  background: #160E2A;
+
 }
 
 body {
@@ -93,7 +97,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: #302C42;
+    color-scheme: #160E2A;
   }
 }
 
@@ -102,4 +106,71 @@ body {
 }
 .hover:hover{
   transform: scale(1.1);
+}
+
+.Hero-div{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:400px;
+  position: relative;
+  z-index: 10;
+}
+.show-above{
+  position: relative;
+  z-index: 10;
+}
+
+.bg1{
+  position: relative;
+  margin-left: -1400px;
+  opacity: 0.6;
+  z-index: 2;
+  margin-top: -920px;
+  width: 433.788px;
+height: 636.579px;
+transform: rotate(76.66deg);
+flex-shrink: 0;
+border-radius: 636.579px;
+background: linear-gradient(180deg, #FB03F5 0%, #AA9CFF 100%);
+filter: blur(94.70753479003906px);
+}
+.bg2{
+  position: relative;
+  margin-top: -750px;
+  margin-left: -500px;
+  z-index: 2;
+  width: 697.406px;
+height: 818.518px;
+opacity: 0.2;
+transform: rotate(54.351deg);
+flex-shrink: 0;
+border-radius: 818.518px;
+background: linear-gradient(264deg, #7000FF 0%, #06FFF0 100%);
+filter: blur(133.97015380859375px);
+}
+.bg3{
+  position: relative;
+  margin-top: -200px;
+  margin-left: -100px;
+  z-index: 2;
+opacity: 0.5;
+  width: 346.55px;
+height: 346.55px;
+transform: rotate(-22.538deg);
+flex-shrink: 0;
+border-radius: 346.55px;
+background: linear-gradient(180deg, #2603FB 0%, #DC06FF 100%);
+filter: blur(176.73252868652344px);
+}
+
+.hero-4 {
+  margin-left: -1300px;
+  margin-top: -300px;
+  flex-shrink: 0;
+  width: 238.075px;
+  height: 561px;
+  background: url("/hero 4.svg");
+  background-size: 238.075px 561px;
 }

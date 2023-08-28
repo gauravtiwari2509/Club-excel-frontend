@@ -185,11 +185,11 @@ function Form() {
     <MainCont>
     <div className='form'>
       <div className='status'>
-      <Image src={'/filled.svg'} height={17} width={17} alt='' className=''/>
+      <Image src={'/filled.svg'} height={17} width={17} alt='select' className=''/>
       <div className={state>=1?'line active':'line inactive'}></div>
-      <Image src={state>=1?'/filled.svg':'/holo.svg'} height={17} width={17} alt='' className=''/>
+      <Image src={state>=1?'/filled.svg':'/holo.svg'} height={17} width={17} alt='select' className=''/>
       <div className={state>=2?'line active':'line inactive'}></div>
-      <Image src={state>=2?'/filled.svg':'/holo.svg'} height={17} width={17} alt='' className=''/>
+      <Image src={state>=2?'/filled.svg':'/holo.svg'} height={17} width={17} alt='select' className=''/>
       </div>
       <div className='regd-txt'>Registration</div>
       <div className='regd-msg'>

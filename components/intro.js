@@ -4,9 +4,12 @@ import styled from "styled-components"
 const MainCont = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   .intro-text {
     color: #fff;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-size: 36px;
     font-style: normal;
     font-weight: bolder;
@@ -24,12 +27,13 @@ const MainCont = styled.div`
   .text {
     margin-top: -23px;
     margin-left: 111px;
+
     color: #fff;
     font-family: Montserrat;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0.6cm;
     width: 652px;
   }
   .intro {

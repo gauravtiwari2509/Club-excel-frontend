@@ -5,6 +5,7 @@ import Image from "next/image"
 const MainCont = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   .intro1 {
     display: flex;
   }
@@ -32,6 +33,7 @@ const MainCont = styled.div`
     background: url("/arrow-right.svg");
   }
   .text {
+    line-height: 0.9cm;
     margin-bottom: 28px;
     margin-top: 42px;
     color: #fff;
@@ -39,7 +41,6 @@ const MainCont = styled.div`
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     width: 652px;
   }
   .button {
@@ -61,12 +62,33 @@ const MainCont = styled.div`
     transition: 0.5s;
   }
   .abt-img {
+    position: relative;
     border-radius: 100px 240px;
     background: #a3a3a3;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 3;
   }
   .rightabtdiv {
     margin-left: 108px;
+  }
+  .vector-7 {
+    background: url("/Vector 7.svg");
+    width: 1449px;
+    height: 256.676px;
+    flex-shrink: 0;
+    background-size: 1449px 256px;
+
+    margin-left: -1390px;
+    margin-top: -245px;
+  }
+  .vector-8 {
+    background: url("/Vector 8.svg");
+    width: 1445px;
+    height: 266.75px;
+    flex-shrink: 0;
+    background-size: 1449px 256px;
+    margin-left: -1449px;
+    margin-top: 299px;
   }
 `
 
@@ -95,10 +117,12 @@ function About() {
           platform for students to cultivate their technical skills, collaborate
           on innovative projects, and prepare for a tech-driven future.
         </div>
-        <div className="button">
+        <div className="button pointer hover">
           <span className="send">LET’S GET IN TOUCH</span>
         </div>
       </div>
+      <div className="vector-7"></div>
+      <div className="vector-8"></div>
     </MainCont>
   )
 }

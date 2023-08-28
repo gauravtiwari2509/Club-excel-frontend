@@ -6,6 +6,8 @@ import { styled } from "styled-components"
 import LeftHero from "@/components/leftHero"
 import Intro from "@/components/intro"
 import About from "@/components/aboutComp"
+import QuickContact from "@/components/quickContact"
+import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -40,6 +42,9 @@ export default function Home() {
       <MainCont>
         <div>
           <LeftHero />
+        </div>
+        <div>
+          <QuickContact />
         </div>
         <div className="intro-comp">
           <Intro />

@@ -213,6 +213,7 @@ function RightContact() {
                 onClick={() => setSelect(1)}
                 height={14}
                 width={13}
+                alt="select"
               />
               <p className="option">General Inquiry</p>
             </div>
@@ -223,6 +224,7 @@ function RightContact() {
                 onClick={() => setSelect(2)}
                 height={14}
                 width={13}
+                alt="select"
               />
               <p className="option">General Inquiry</p>
             </div>
@@ -233,6 +235,7 @@ function RightContact() {
                 onClick={() => setSelect(3)}
                 height={14}
                 width={13}
+                alt="select"
               />
               <p className="option">General Inquiry</p>
             </div>
@@ -243,6 +246,7 @@ function RightContact() {
                 onClick={() => setSelect(4)}
                 height={14}
                 width={13}
+                alt="select"
               />
               <p className="option">General Inquiry</p>
             </div>

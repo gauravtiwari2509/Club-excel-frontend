@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const MainCont = styled.div`
+margin-left: -100px;
   .head {
     font-family: Montserrat;
     font-size: 46px;
@@ -17,7 +18,6 @@ const MainCont = styled.div`
   }
   .head-text {
     margin-left: 54px;
-    margin-top: 199px;
   }
   .head2 {
   }
@@ -27,19 +27,15 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: #fff;
+    background: linear-gradient( #fff,grey);
+    background: linear-gradient( #fff,grey);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  .hero-4 {
-    margin-left: -80px;
-    margin-top: -200px;
-    flex-shrink: 0;
-    width: 238.075px;
-    height: 561px;
-    background: url("/hero 4.svg");
-    background-size: 238.075px 561px;
-  }
+
   .hero-p {
-    margin-top: -300px;
+    margin-top: 36px;
     color: #fff;
     font-family: Montserrat;
     font-size: 16px;
@@ -50,7 +46,10 @@ const MainCont = styled.div`
     height: 72px;
   }
   .button {
+    margin-top: 40px;
     display: flex;
+    font-family: Montserrat;
+    font-weight: 600;
     justify-content: center;
     align-self: flex-end;
     align-items: center;
@@ -77,10 +76,10 @@ function LeftHero() {
           <span className="head">CLUB</span>{" "}
           <span className="white">EXCEL</span>
         </div>
-        <div className="head head2">
-          One of the <span className="white">Top Coding Club</span> in NIST
+        <div className="">
+        <span className="head">One of the </span> <span className="white">Top<br/>  Coding Club </span>
+        <span className="head">in NIST</span>
         </div>
-        <div className="hero-4"></div>
         <div className="hero-p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.

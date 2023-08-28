@@ -153,6 +153,7 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
           +91 700XXXXXXX
         </div>
@@ -162,6 +163,7 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
           demo@gmail.com
         </div>
@@ -171,6 +173,7 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
           <div className="wm221">
             {" "}
@@ -185,6 +188,7 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
 
           <Image
@@ -192,12 +196,14 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
           <Image
             src={"/linkdin.png"}
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
             onClick={() =>
               window.open("https://www.linkedin.com/company/club-excel-nist/")
             }
@@ -208,6 +214,7 @@ function LeftContact() {
             height={24}
             width={24}
             className="clogo"
+            alt="contact"
           />
         </div>
       </div>

@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import RoundBall from "./roundball"
 
 const MainCont = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: -100px;
+  margin-bottom: 80px;
   .intro-text {
     color: #fff;
     font-family: "Montserrat";

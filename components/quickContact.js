@@ -7,7 +7,6 @@ const MainCont = styled.div`
   margin-bottom: 100px;
   margin-top: 88px;
   .bg {
-    margin-top: 100px;
     width: 1272px;
     height: 167px;
     flex-shrink: 0;

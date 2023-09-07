@@ -12,6 +12,16 @@ import { useInView } from "react-intersection-observer"
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import QuickContact from "@/components/quickContact"
+import WhyChoose from "@/components/whyChoose"
+import Gallary from "@/components/Gallary"
+import { v4 as uuidv4 } from "uuid"
+
+const Carroussel = dynamic(() => import("@/components/carousel"), {
+  ssr: false,
+})
+const Card = dynamic(() => import("@/components/Card"), {
+  ssr: false,
+})
 
 const NoSSR = dynamic(() => import("../components/leftHero"), { ssr: false })
 
@@ -35,7 +45,36 @@ const MainCont = styled.div`
 export default function Home() {
   const [animate, setAnimate] = useState(false)
   const [ref, inView] = useInView()
-
+  let cards = [
+    {
+      key: uuidv4(),
+      content: <Card imagen="/club excel image.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />
+      ),
+    },
+  ]
   useEffect(() => {
     if (inView) {
       setAnimate(true)
@@ -101,6 +140,19 @@ export default function Home() {
         </div>
         <div>
           <About />
+        </div>
+        <div>
+          <WhyChoose />
+        </div>
+        <div>
+          <Carroussel
+            cards={cards}
+            height="500px"
+            width="50%"
+            margin="0 auto"
+            offset={2}
+            showArrows={false}
+          />
         </div>
       </MainCont>
     </>

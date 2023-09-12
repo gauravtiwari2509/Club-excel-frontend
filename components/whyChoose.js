@@ -13,7 +13,7 @@ const MainCont = styled.div`
     background-size: 1381px 639px;
     display: flex;
     align-items: center;
-    margin-left: 45px;
+    margin-left: 100px;
   }
   .head {
     margin-top: -50px;
@@ -180,34 +180,35 @@ function WhyChoose() {
             <div className="left">
               <div className="head">Why Choose Us?</div>
               <div className="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                orci lacus, tempor nec accumsan ac, luctus ut sem. Mauris
-                pretium lacus eget vulputate rhoncus. Vivamus egestas, orci eu
-                lobortis pulvinar. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Aliquam orci lacus, tempor nec accumsan ac,
-                luctus ut sem.
+                Joining Club Excel can be a rewarding and enriching experience
+                that helps you grow both professionally and personally. It can
+                open doors to exciting opportunities in the tech world and help
+                you build a strong foundation for your future career.
               </div>
             </div>
             <div className="right">
               <div className="stch-left rectangle1">
                 <div className="icon1"></div>
                 <div className="yellow"></div>
-                <div className="text1">Marketplace</div>
+                <div className="text1">Innovation</div>
               </div>
               <div className="stch-left rectangle1">
                 <div className="icon2"></div>
                 <div className="orange"></div>
-                <div className="text1">Marketplace</div>
+                <div className="text1">Exploration</div>
               </div>
               <div className="rectangle1">
                 <div className="icon3"></div>
                 <div className="blue"></div>
-                <div className="text1">Marketplace</div>
+                <div className="text1">Collaboration</div>
               </div>
               <div className="rectangle1">
                 <div className="icon4"></div>
                 <div className="green"></div>
-                <div className="text1">Marketplace</div>
+                <div className="text1">
+                  Industry connections & <br />
+                  skill enhancement
+                </div>
               </div>
             </div>
           </div>

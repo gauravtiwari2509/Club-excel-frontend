@@ -123,13 +123,15 @@ const MainCont = styled.div`
     }
   }
   .social-logo {
-    padding-top: 159px;
+    padding-top: 125px;
     margin: 39px;
     display: flex;
     align-items: center;
     width: 30px;
     height: 30px;
     flex-shrink: 0;
+    margin-left: 2px;
+    cursor: pointer;
   }
   .wm221 {
     @media (max-width: 800px) {

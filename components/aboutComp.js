@@ -94,6 +94,9 @@ const MainCont = styled.div`
     position: relative;
     z-index: 10;
   }
+  .video {
+    margin-top: 100px;
+  }
 `
 
 function About() {
@@ -105,6 +108,7 @@ function About() {
             autoPlay
             loop
             style={{ width: "600px", height: "300px" }}
+            className="video"
           >
             <source src="/clubexcel intro.mp4" />
           </video>

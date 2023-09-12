@@ -48,19 +48,15 @@ export default function Home() {
   let cards = [
     {
       key: uuidv4(),
-      content: <Card imagen="/club excel image.jpg" />,
+      content: <Card imagen="/p1.jpg" />,
     },
     {
       key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
-      ),
+      content: <Card imagen="/p2.jpg" />,
     },
     {
       key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
-      ),
+      content: <Card imagen="/p3.jpg" />,
     },
     {
       key: uuidv4(),

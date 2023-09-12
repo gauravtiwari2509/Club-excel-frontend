@@ -158,6 +158,11 @@ function Footer() {
                   src={"/linkedin.svg"}
                   height={32}
                   width={32}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/company/club-excel-nist/"
+                    )
+                  }
                 />
               </div>
             </div>

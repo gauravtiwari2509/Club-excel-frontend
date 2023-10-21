@@ -9,6 +9,10 @@ const MainCont = styled.div`
   justify-content: center;
   margin-top: -100px;
   margin-bottom: 80px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    padding: 10px;
+  }
   .intro-text {
     color: #fff;
     font-family: "Montserrat";
@@ -25,6 +29,9 @@ const MainCont = styled.div`
     flex-shrink: 0;
     background: url("/big arrow.svg");
     background-size: 228px 100px;
+    @media (max-width: 800px) {
+      margin: 10px;
+    }
   }
   .text {
     margin-top: -23px;

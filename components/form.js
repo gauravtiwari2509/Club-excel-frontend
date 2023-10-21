@@ -2,9 +2,16 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Image from "next/image"
 import Input from "./input"
+import axios from "axios"
+import "react-responsive-modal/styles.css"
+import { Modal } from "react-responsive-modal"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { validate } from "email-validator"
 
 const MainCont = styled.div`
   @media (max-width: 800px) {
+    margin-top: -50px;
     transform: scale(0.8);
   }
   .regd-txt {
@@ -75,14 +82,19 @@ const MainCont = styled.div`
   }
 
   .main-form {
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: 32px;
     border: 1px solid rgba(87, 95, 110, 0.7);
     padding-top: 12px;
-    padding-bottom: 32px;
+    padding-bottom: 62px;
     display: flex;
     align-items: center;
     flex-direction: column;
     transition: width 2s;
+    box-shadow: 2px 2px 6px #888888;
+  }
+  .main-form::shadow {
   }
   .labelc {
     color: #242426;
@@ -141,19 +153,41 @@ const MainCont = styled.div`
       width: 350px;
     }
   }
+  .Main-modal {
+    color: black;
+    background-color: #242426;
+  }
+  .back-button {
+    transform: rotate(180deg);
+  }
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+  .close {
+    color: red;
+    font-size: large;
+    font-weight: 900;
+  }
 `
 
 function Form() {
   const [state, setState] = useState(0)
   const [check, setCheck] = useState(false)
+  const notify = () =>
+    toast.error("Oops! It appears that you may have overlooked a few fields.")
+
   const emptyObj = {
     name: "",
     email: "",
     contact: "",
     roll: "",
-    branch: "",
+    why: "",
     batch: "",
+    hackerrankid: "",
     area: "",
+    gender: "",
+    skill: "",
+    branch: "",
   }
   const [details, setDetails] = useState(emptyObj)
 
@@ -162,20 +196,81 @@ function Form() {
     setDetails({ ...details, [name]: value })
   }
   async function save() {
-    console.log(details)
-    setDetails(emptyObj)
-    setState(0)
+    if (validateForm()) {
+      const url = "https://club-excell-backend.onrender.com"
+      console.log(details)
+      const resp = await axios.post(`${url}/api/register`, details)
+      console.log(resp.data)
+      onOpenModal()
+      setDetails(emptyObj)
+      setState(0)
+    } else {
+      notify()
+    }
   }
+  const [open, setOpen] = useState(false)
+  const onOpenModal = () => setOpen(true)
+  const onCloseModal = () => setOpen(false)
+
+  // Function to go to the next step if validation passes
+  function goToNextStep() {
+    // Check if all required fields are filled before proceeding
+    if (validateForm()) {
+      setState(state + 1)
+    } else {
+      notify()
+    }
+  }
+
+  // Function to validate the form based on the current state
+  function validateForm() {
+    // console.log(validate(""))
+    if (state === 0) {
+      let verify = validate(details.email)
+      if (details.email !== "" && !verify)
+        toast.error("Please provide a valid email address.")
+
+      return (
+        details.name !== "" &&
+        details.email !== "" &&
+        details.contact !== "" &&
+        details.roll !== "" &&
+        verify
+      )
+    } else if (state === 1) {
+      return (
+        details.gender !== "" &&
+        details.batch !== "" &&
+        details.branch !== "" &&
+        details.skill !== ""
+      )
+    } else {
+      return (
+        details.hackerrankid !== "" &&
+        details.why !== "" &&
+        (!check || details.area !== "")
+      )
+    }
+  }
+
+  // Function to go to the previous step
+  function goBack() {
+    if (state > 0) {
+      setState(state - 1)
+    }
+  }
+  const isRegistrationOpen = false
 
   return (
     <MainCont>
+      <div className="close">Registration is currently closed...</div>
       <div className="form">
         <div className="status">
           <Image
             src={"/filled.svg"}
             height={17}
             width={17}
-            alt="select"
+            alt=""
             className=""
           />
           <div className={state >= 1 ? "line active" : "line inactive"}></div>
@@ -183,7 +278,7 @@ function Form() {
             src={state >= 1 ? "/filled.svg" : "/holo.svg"}
             height={17}
             width={17}
-            alt="select"
+            alt=""
             className=""
           />
           <div className={state >= 2 ? "line active" : "line inactive"}></div>
@@ -191,7 +286,7 @@ function Form() {
             src={state >= 2 ? "/filled.svg" : "/holo.svg"}
             height={17}
             width={17}
-            alt="select"
+            alt=""
             className=""
           />
         </div>
@@ -208,43 +303,78 @@ function Form() {
                 change={change}
                 name={"name"}
                 details={details}
+                required
               />
               <Input
-                label={"Email"}
+                label={"Email (nist.edu)"}
                 change={change}
                 name={"email"}
                 details={details}
+                required
               />
               <Input
                 label={"Contact No."}
                 change={change}
                 name={"contact"}
                 details={details}
+                required
               />
-            </div>
-          ) : state == 1 ? (
-            <div className="state2">
               <Input
                 label={"Roll No."}
                 change={change}
                 name={"roll"}
                 details={details}
+                required
               />
+            </div>
+          ) : state == 1 ? (
+            <div className="state2">
               <Input
-                label={"Branch"}
+                label={"Gender"}
                 change={change}
-                name={"branch"}
+                name={"gender"}
                 details={details}
+                required
               />
               <Input
                 label={"Batch"}
                 change={change}
                 name={"batch"}
                 details={details}
+                required
+              />
+              <Input
+                label={"branch"}
+                change={change}
+                name={"branch"}
+                details={details}
+                required
+              />
+              <Input
+                label={"Skills"}
+                change={change}
+                name={"skill"}
+                details={details}
+                required
               />
             </div>
           ) : (
             <div className="state3">
+              <Input
+                label={"hacker rank id "}
+                change={change}
+                name={"hackerrankid"}
+                details={details}
+                required
+              />
+              <Input
+                label={"Why do you want to join Club Excel ?"}
+                change={change}
+                name={"why"}
+                details={details}
+                required
+              />
+
               <div className="checkbox-div">
                 <div className="labelc">Are you localite?</div>
                 <div
@@ -267,10 +397,29 @@ function Form() {
             </div>
           )}
         </div>
+        {/* Add Back button */}
+        {state > 0 && (
+          <div
+            className="nxt-btn hover pointer mb-10"
+            onClick={goBack}
+          >
+            Back
+            <Image
+              src={"/Icon.svg"}
+              height={24}
+              width={24}
+              alt=""
+              className="back-button"
+            />
+          </div>
+        )}
         {state < 2 ? (
           <div
             className="nxt-btn hover pointer"
-            onClick={() => setState(state + 1)}
+            // onClick={() => setState(state + 1)}
+            onClick={() => {
+              goToNextStep()
+            }}
           >
             Go next{" "}
             <Image
@@ -284,7 +433,9 @@ function Form() {
         ) : (
           <div
             className="save-btn hover pointer"
-            onClick={() => save()}
+            onClick={() => {
+              save()
+            }}
           >
             {" "}
             <Image
@@ -298,6 +449,78 @@ function Form() {
           </div>
         )}
       </div>
+      <Modal
+        open={open}
+        onClose={onCloseModal}
+        center
+      >
+        <div
+          className="Main-modal"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            maxWidth: 370,
+            marginTop: 30,
+            marginBottom: 30,
+          }}
+        >
+          <div
+            className="Thank-msg"
+            style={{
+              color: "skyblue",
+              marginTop: 5,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+            }}
+          >
+            Thank you for completing your registration for Club Excel!
+          </div>
+          <div
+            className="req-msg"
+            style={{
+              color: "purple",
+              marginTop: 15,
+              lineHeight: 1.5,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              cursor: "pointer",
+            }}
+          >
+            We invite you to join our WhatsApp group to receive additional
+            information and stay updated on upcoming events and activities.
+          </div>
+          <div
+            className="Link-msg"
+            onClick={() =>
+              window.open("https://chat.whatsapp.com/ERDhyzeRE1B2FEUrDdhfQg")
+            }
+            style={{
+              color: "violet",
+              marginTop: 25,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+            }}
+          >
+            https://chat.whatsapp.com/
+            <br />
+            ERDhyzeRE1B2FEUrDdhfQg
+          </div>
+        </div>
+      </Modal>
+      <ToastContainer
+        className="toast-position"
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </MainCont>
   )
 }

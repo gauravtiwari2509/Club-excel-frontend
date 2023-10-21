@@ -6,12 +6,23 @@ const MainCont = styled.div`
   .box {
     height: 667px;
     flex-shrink: 0;
+    @media (max-width: 800px) {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .content {
     padding-left: 65px;
 
     display: flex;
     flex-direction: column;
+    @media (max-width: 800px) {
+      padding: 20px;
+      align-items: center;
+    }
   }
   .llabel {
     top: 115px;
@@ -21,6 +32,9 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 166.667% */
+    @media (max-width: 800px) {
+      text-align: center; /* Center text on all screens */
+    }
   }
   .rlabel {
     color: #8d8d8d;
@@ -51,6 +65,10 @@ const MainCont = styled.div`
     background: #011c2a;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.12);
     cursor: pointer;
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      margin-top: 20px; /* Add some space at the top on small screens */
+    }
   }
   .button:hover {
     transform: scale(1.1);
@@ -73,11 +91,20 @@ const MainCont = styled.div`
     fill: #8d8d8d;
     stroke-width: 1px;
     stroke: #8d8d8d;
+    @media (max-width: 800px) {
+      margin-bottom: 20px; /* Reduce margin on small screens */
+      width: 100%; /* Full width on small screens */
+    }
   }
   .grid {
     display: grid;
     grid-template-columns: 278px 278px;
     grid-column-gap: 40px;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column; /* Stack columns on small screens */
+      align-items: center;
+    }
   }
   input {
     color: #8d8d8d;
@@ -86,10 +113,19 @@ const MainCont = styled.div`
     margin-top: 2px;
     border-style: none;
     padding: 5px;
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      margin-top: 10px; /* Adjust margin on small screens */
+      border-style: none; /* Add border for input fields */
+      padding: 10px; /* Increase padding for better touch usability */
+    }
   }
   .place {
     margin-right: 243px;
     margin-top: 60px;
+    @media (max-width: 800px) {
+      margin: 0; /* Remove margin on small screens */
+    }
   }
   .Select-head {
     width: 109px;
@@ -100,7 +136,13 @@ const MainCont = styled.div`
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
+    margin-bottom: 20px;
     line-height: 20px; /* 142.857% */
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      font-family: "Poppins";
+      text-align: center; /* Center text on all screens */
+    }
   }
   .tick-box {
     width: 13px;
@@ -117,6 +159,10 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 166.667% */
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      text-align: center; /* Center text on all screens */
+    }
   }
 
   .msg {
@@ -127,6 +173,10 @@ const MainCont = styled.div`
     font-weight: 500;
     line-height: 20px; /* 166.667% */
     margin-top: 45px;
+    @media (max-width: 800px) {
+      text-align: center; /* Center text on all screens */
+      margin-top: 20px; /* Adjust margin on small screens */
+    }
   }
   .message {
     width: 595px;
@@ -138,6 +188,12 @@ const MainCont = styled.div`
     padding: 5px;
     outline: none;
     margin-top: 6px;
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      border: 1px solid #8d8d8d; /* Add border for the message input */
+      padding: 10px; /* Increase padding for better touch usability */
+      margin-top: 10px; /* Adjust margin on small screens */
+    }
   }
   .choice {
     margin-top: 15px;
@@ -148,6 +204,12 @@ const MainCont = styled.div`
   .choice-box {
     display: flex;
     align-items: center;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column; /* Stack columns on small screens */
+      align-items: flex-start; /* Align items to the start on small screens */
+      margin-left: 0; /* Remove left margin on small screens */
+    }
   }
   .line1 {
     margin-top: 2px;
@@ -159,6 +221,11 @@ const MainCont = styled.div`
     stroke-width: 1px;
     stroke: #8d8d8d;
     border: 1px solid #8d8d8d;
+    @media (max-width: 800px) {
+      margin-top: 10px; /* Adjust margin on small screens */
+      margin-bottom: 20px; /* Reduce margin on small screens */
+      width: 100%; /* Full width on small screens */
+    }
   }
   .letter_send {
     width: 240.788px;
@@ -169,6 +236,14 @@ const MainCont = styled.div`
     background-size: 240.788px 112.305px;
     margin-top: 20px;
     margin-left: 300px;
+    @media (max-width: 800px) {
+      width: 100%; /* Full width on small screens */
+      max-width: 240.788px;
+      height: auto;
+      background-size: contain; /* Ensure image fits within the container */
+      margin-top: 10px; /* Adjust margin on small screens */
+      margin-left: 0; /* Remove left margin on small screens */
+    }
   }
 `
 
@@ -256,8 +331,7 @@ function RightContact() {
             className="message"
             type="message"
           />
-          <div className="line1"></div>
-
+          <div className="line"></div>
           <div className="button dis">
             <span className="send">Send Message</span>
           </div>

@@ -13,7 +13,7 @@ import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import QuickContact from "@/components/quickContact"
 import WhyChoose from "@/components/whyChoose"
-import Gallary from "@/components/Gallary"
+
 import { v4 as uuidv4 } from "uuid"
 
 const Carroussel = dynamic(() => import("@/components/carousel"), {
@@ -34,11 +34,25 @@ const MainCont = styled.div`
   .intro-comp {
     margin-top: 94px;
     margin-bottom: 100px;
+    @media (max-width: 800px) {
+      margin-bottom: 0;
+    }
+  }
+  .Hero-div {
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .center-ref {
     margin-top: -120px;
-    height: 300px;
+    height: 600px;
+    @media (max-width: 800px) {
+      margin-top: -1000px;
+      height: 200px;
+    }
   }
 `
 
@@ -60,15 +74,15 @@ export default function Home() {
     },
     {
       key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
-      ),
+      content: <Card imagen="/p4.jpg" />,
     },
     {
       key: uuidv4(),
-      content: (
-        <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />
-      ),
+      content: <Card imagen="/p5.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p6.jpg" />,
     },
   ]
   useEffect(() => {
@@ -131,7 +145,10 @@ export default function Home() {
         <div className="bg3"></div>
         <div className="hero-4"></div>
 
-        <div className="intro-comp">
+        <div
+          className="intro-comp"
+          id="about"
+        >
           <Intro />
         </div>
         <div>
@@ -140,7 +157,7 @@ export default function Home() {
         <div>
           <WhyChoose />
         </div>
-        <div>
+        <div id="Gallary">
           <Carroussel
             cards={cards}
             height="500px"

@@ -4,7 +4,8 @@ import LeftContact from "../components/LeftContact"
 import RightContact from "../components/RightContact"
 
 const MainCont = styled.div`
-  background: #fbfbfb;
+  /* background: #fbfbfb; */
+  background: transparent;
   display: flex;
   justify-content: center;
   padding-top: 30px;

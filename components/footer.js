@@ -99,6 +99,28 @@ const MainCont = styled.div`
     display: flex;
     gap: 20px;
   }
+  @media (max-width: 768px) {
+    .footer {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .flex {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .link {
+      text-align: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .vector-20 {
+      display: none; /* Hide the vertical dividers on smaller screens */
+    }
+  }
 `
 
 function Footer() {

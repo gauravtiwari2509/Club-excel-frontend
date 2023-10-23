@@ -22,7 +22,7 @@ const MainCont = styled.div`
   flex-direction: column;
   align-items: center;
   .intro-comp {
-    margin-top: 94px;
+    margin-top: 1094px;
     margin-bottom: 100px;
   }
 

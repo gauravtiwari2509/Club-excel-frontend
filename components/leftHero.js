@@ -2,7 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const MainCont = styled.div`
-margin-left: -100px;
+  @media (max-width: 800px) {
+    margin-left: 0px;
+  }
+  margin-left: -100px;
   .head {
     font-family: Montserrat;
     font-size: 46px;
@@ -18,6 +21,20 @@ margin-left: -100px;
   }
   .head-text {
     margin-left: 54px;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      align-items: center;
+    }
+  }
+  .below-div {
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
   .head2 {
   }
@@ -27,8 +44,8 @@ margin-left: -100px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background: linear-gradient( #fff,grey);
-    background: linear-gradient( #fff,grey);
+    background: linear-gradient(#fff, grey);
+    background: linear-gradient(#fff, grey);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -38,12 +55,15 @@ margin-left: -100px;
     margin-top: 36px;
     color: #fff;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     width: 450px;
     height: 72px;
+    @media (max-width: 800px) {
+      text-align: center;
+    }
   }
   .button {
     margin-top: 40px;
@@ -55,10 +75,12 @@ margin-left: -100px;
     align-items: center;
     width: 214px;
     height: 48px;
-    flex-shrink: 0;
     border-radius: 40px;
     background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
     cursor: pointer;
+    @media (max-width: 800px) {
+      align-self: center;
+    }
   }
 
   .button:hover {
@@ -76,14 +98,17 @@ function LeftHero() {
           <span className="head">CLUB</span>{" "}
           <span className="white">EXCEL</span>
         </div>
-        <div className="">
-        <span className="head">One of the </span> <span className="white">Top<br/>  Coding Club </span>
-        <span className="head">in NIST</span>
+        <div className="below-div">
+          <span className="head">One of the </span>{" "}
+          <span className="white">
+            Top
+            <br /> Coding Club{" "}
+          </span>
+          <span className="head">in NIST</span>
         </div>
         <div className="hero-p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
-          Lectus mauris eros in vitae .
+          Unlocking the Future: Join Our Coding Club and Shape Tomorrow's
+          Technology.
         </div>
         <div className="button">
           <span className="send">Send Message</span>

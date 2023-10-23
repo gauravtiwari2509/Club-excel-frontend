@@ -12,6 +12,16 @@ import { useInView } from "react-intersection-observer"
 import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import QuickContact from "@/components/quickContact"
+import WhyChoose from "@/components/whyChoose"
+
+import { v4 as uuidv4 } from "uuid"
+
+const Carroussel = dynamic(() => import("@/components/carousel"), {
+  ssr: false,
+})
+const Card = dynamic(() => import("@/components/Card"), {
+  ssr: false,
+})
 
 const NoSSR = dynamic(() => import("../components/leftHero"), { ssr: false })
 
@@ -24,18 +34,57 @@ const MainCont = styled.div`
   .intro-comp {
     margin-top: 1094px;
     margin-bottom: 100px;
+    @media (max-width: 800px) {
+      margin-bottom: 0;
+    }
+  }
+  .Hero-div {
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .center-ref {
     margin-top: -120px;
-    height: 300px;
+    height: 600px;
+    @media (max-width: 800px) {
+      margin-top: -1000px;
+      height: 200px;
+    }
   }
 `
 
 export default function Home() {
   const [animate, setAnimate] = useState(false)
   const [ref, inView] = useInView()
-
+  let cards = [
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p1.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p2.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p3.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p4.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p5.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p6.jpg" />,
+    },
+  ]
   useEffect(() => {
     if (inView) {
       setAnimate(true)
@@ -96,11 +145,27 @@ export default function Home() {
         <div className="bg3"></div>
         <div className="hero-4"></div>
 
-        <div className="intro-comp">
+        <div
+          className="intro-comp"
+          id="about"
+        >
           <Intro />
         </div>
         <div>
           <About />
+        </div>
+        <div>
+          <WhyChoose />
+        </div>
+        <div id="Gallary">
+          <Carroussel
+            cards={cards}
+            height="500px"
+            width="50%"
+            margin="0 auto"
+            offset={2}
+            showArrows={false}
+          />
         </div>
       </MainCont>
     </>

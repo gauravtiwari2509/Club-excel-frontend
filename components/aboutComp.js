@@ -90,19 +90,36 @@ const MainCont = styled.div`
     margin-left: -1449px;
     margin-top: 299px;
   }
+  .upar {
+    position: relative;
+    z-index: 10;
+  }
+  .video {
+    margin-top: 100px;
+  }
 `
 
 function About() {
   return (
     <MainCont>
       <div>
-        <Image
-          src={"/club excel image.jpg"}
+        <div className="upar">
+          <video
+            autoPlay
+            loop
+            style={{ width: "600px", height: "300px" }}
+            className="video"
+          >
+            <source src="/clubexcel intro.mp4" />
+          </video>
+        </div>
+        {/* <Image
+          src={"/clubexcel intro.mp4"}
           height={557}
           width={624}
           alt="Image"
           className="abt-img"
-        />
+        /> */}
       </div>
       <div className="rightabtdiv">
         <div className="intro-text">ABOUT</div>
@@ -121,7 +138,7 @@ function About() {
           <span className="send">LET’S GET IN TOUCH</span>
         </div>
       </div>
-      <div className="vector-7"></div>
+      <div className="vector-7 nicha"></div>
       <div className="vector-8"></div>
     </MainCont>
   )

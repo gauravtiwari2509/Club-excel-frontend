@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -9,14 +9,19 @@ const MainCont = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 30px 84px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 20px;
+    }
   }
+
   .club-txt {
     margin-left: 20px;
     background: -webkit-linear-gradient(#c0b7e8, #8176af);
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -25,7 +30,14 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @media (max-width: 800px) {
+      margin-left: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
+
   .nav-link {
     display: flex;
     gap: 42px;
@@ -35,6 +47,18 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @media (max-width: 800px) {
+      display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
+      flex-direction: column;
+      align-items: center;
+      background-color: #343045;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+    }
   }
 
   .button1 {
@@ -49,6 +73,11 @@ const MainCont = styled.div`
     flex-shrink: 0;
     border-radius: 40px;
     border: 2px solid #fff;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      margin-top: 10px;
+    }
   }
 
   .button1,
@@ -56,7 +85,6 @@ const MainCont = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
 
   .button1:hover {
@@ -66,26 +94,57 @@ const MainCont = styled.div`
     transform: scale(1.08);
   }
 
-  .button2 {
-    width: 155px;
-    height: 48px;
-    flex-shrink: 0;
-    border-radius: 40px;
-  }
   .logo-img {
     display: flex;
     align-items: center;
+
+    @media (max-width: 800px) {
+      margin-left: 0;
+    }
   }
+
   .nav-line {
     width: 100vw;
     border: 1px solid #fff;
+  }
+
+  .menu-button {
+    display: none;
+
+    @media (max-width: 800px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: block;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+      background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+      transition: 0.5s;
+      border: none;
+      transform: scale(1.08);
+    }
   }
 `
 
 function Navbar() {
   const router = useRouter()
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  const closeMenu = () => {
+    setMenuOpen(false)
+  }
+
   return (
-    <MainCont>
+    <MainCont menuOpen={menuOpen}>
       <div className="navbar">
         <div className="logo-img">
           <Image
@@ -98,16 +157,42 @@ function Navbar() {
         </div>
 
         <div className="nav-link">
-          <div className="pointer hover">ABOUT</div>
-          <div className="pointer hover">SERVICES</div>
-          <div className="pointer hover">TECHNOLOGIES</div>
-          <div className="pointer hover">HOW TO</div>
+          <div
+            className="pointer hover"
+            onClick={closeMenu}
+          >
+            ABOUT
+          </div>
+          <div
+            className="pointer hover"
+            onClick={closeMenu}
+          >
+            SERVICES
+          </div>
+          <div
+            className="pointer hover"
+            onClick={closeMenu}
+          >
+            TECHNOLOGIES
+          </div>
+          <div
+            className="pointer hover"
+            onClick={() => router.push("/register")}
+          >
+            Register
+          </div>
         </div>
         <div
           className="button1"
           onClick={() => router.push("/contact")}
         >
           CONTACT US
+        </div>
+        <div
+          className="menu-button"
+          onClick={toggleMenu}
+        >
+          MENU
         </div>
       </div>
       <div className="nav-line"></div>

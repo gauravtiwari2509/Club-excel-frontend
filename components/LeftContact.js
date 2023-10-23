@@ -12,6 +12,12 @@ const MainCont = styled.div`
     flex-shrink: 0;
     background: #011c2b;
     border-radius: 12px;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0px;
+    }
   }
 
   .contact-head {
@@ -24,6 +30,10 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    @media (max-width: 800px) {
+      padding-top: 0px;
+      margin-bottom: 0px;
+    }
   }
   .cmsg {
     padding-top: 6px;
@@ -33,6 +43,9 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width: 800px) {
+      padding-top: 0px;
+    }
   }
   .clogo {
     margin-right: 25px;
@@ -123,13 +136,21 @@ const MainCont = styled.div`
     }
   }
   .social-logo {
-    padding-top: 159px;
+    padding-top: 125px;
     margin: 39px;
     display: flex;
     align-items: center;
     width: 30px;
     height: 30px;
     flex-shrink: 0;
+    margin-left: 2px;
+    cursor: pointer;
+    @media (max-width: 800px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -5px;
+    }
   }
   .wm221 {
     @media (max-width: 800px) {

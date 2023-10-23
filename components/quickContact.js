@@ -6,13 +6,27 @@ const MainCont = styled.div`
   justify-content: center;
   margin-bottom: 100px;
   margin-top: 88px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-top: 500px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+  }
   .bg {
-    margin-top: 100px;
     width: 1272px;
     height: 167px;
     flex-shrink: 0;
     background: url("/Rectangle 6.svg");
     border-radius: 90px;
+    @media (max-width: 800px) {
+      width: 375px;
+      height: 100px;
+      padding-left: 100px;
+      overflow-x: scroll;
+      scrollbar-width: thin;
+      scroll-size: thin;
+    }
     background: radial-gradient(
       2900.76% 50.13% at 50% 53.89%,
       rgba(58, 52, 86, 0.95) 0%,
@@ -29,7 +43,15 @@ const MainCont = styled.div`
     height: 70px;
     flex-shrink: 0;
     background-repeat: no-repeat;
+    @media (max-width: 800px) {
+      background-size: 30px 30px;
+      height: 30px;
+      width: 30px;
+      flex-shrink: 0;
+      padding-left: 40px;
+    }
   }
+
   .bold-text {
     color: #fff;
     font-family: "Montserrat";
@@ -37,6 +59,11 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    @media (max-width: 800px) {
+      font-weight: 500;
+      font-size: 13px;
+      width: 100px;
+    }
   }
   .text {
     color: #fff;
@@ -45,11 +72,19 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width: 800px) {
+      font-size: 8px;
+      font-weight: 500;
+    }
   }
   .flex {
     display: flex;
 
     align-items: center;
+    @media (max-width: 800px) {
+      gap: 30px;
+      margin-right: 30px;
+    }
   }
   .phone {
     background: url("/phone-call.svg");
@@ -57,6 +92,13 @@ const MainCont = styled.div`
     height: 59px;
     flex-shrink: 0;
     color: #c0b7e8;
+    @media (max-width: 800px) {
+      background-size: 30px 30px;
+      height: 30px;
+      width: 30px;
+      flex-shrink: 0;
+      gap: 50px;
+    }
   }
   .mail {
     background: url("/mail.svg");
@@ -64,9 +106,23 @@ const MainCont = styled.div`
     height: 59px;
     flex-shrink: 0;
     color: #c0b7e8;
+    @media (max-width: 800px) {
+      background-size: 30px 30px;
+      height: 30px;
+      width: 30px;
+      flex-shrink: 0;
+    }
   }
   .gap {
     gap: 20px;
+    @media (max-width: 800px) {
+      gap: 60px;
+    }
+  }
+  .inl {
+    @media (max-width: 800px) {
+      margin-left: 240px;
+    }
   }
 `
 
@@ -74,7 +130,10 @@ function QuickContact() {
   return (
     <MainCont>
       <div className="bg">
-        <div className="flex">
+        <div
+          className="flex inl"
+          // style={{ marginLeft: "220px" }}
+        >
           <div className="loc"></div>
           <div className="bold-text">
             Pay Us a Visit
@@ -94,7 +153,7 @@ function QuickContact() {
           <div className="mail"></div>
           <div className="bold-text">
             Send Us a Message
-            <div className="text">Contact@HydraVTech.com</div>
+            <div className="text">Contact@clubexcel.com</div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { styled } from "styled-components"
 
 const MainCont = styled.div`

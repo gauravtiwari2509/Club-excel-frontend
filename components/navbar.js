@@ -163,11 +163,12 @@ function Navbar() {
         </div>
 
         <div className="nav-link">
-        <Link href={"#about"}>
+        <Link href={"#about"} >
 
           <div
             className="pointer hover ntxt"
             onClick={closeMenu}
+            
           >
             ABOUT
           </div>

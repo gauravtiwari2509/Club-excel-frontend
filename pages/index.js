@@ -1,18 +1,16 @@
 import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "next/font/google"
-import styles from "@/styles/Home.module.css"
 import { styled } from "styled-components"
-import LeftHero from "@/components/leftHero"
 import Intro from "@/components/intro"
 import About from "@/components/aboutComp"
-import RightHero from "@/components/rightHero"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import QuickContact from "@/components/quickContact"
 import WhyChoose from "@/components/whyChoose"
+
+
+
+
 
 import { v4 as uuidv4 } from "uuid"
 import Hero from "@/components/Hero"
@@ -24,7 +22,6 @@ const Card = dynamic(() => import("@/components/Card"), {
   ssr: false,
 })
 
-const NoSSR = dynamic(() => import("../components/leftHero"), { ssr: false })
 
 const inter = Inter({ subsets: ["latin"] })
 

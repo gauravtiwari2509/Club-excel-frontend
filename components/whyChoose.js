@@ -6,6 +6,11 @@ import { useInView } from "react-intersection-observer"
 
 const MainCont = styled.div`
   margin-bottom: 200px;
+  margin-top: -200px;
+  @media (max-width: 800px) {
+    margin-top: 100px;
+
+  }
   .rectangle {
     width: 1381px;
     height: 639px;
@@ -13,8 +18,17 @@ const MainCont = styled.div`
     background-size: 1381px 639px;
     display: flex;
     align-items: center;
-    margin-left: 100px;
+    @media (max-width: 800px) {
+   flex-direction: column;
+   justify-content: center;
+   margin-right: -140px;
   }
+  }
+  @media (min-width: 801px) and (max-width: 1200px) {
+    transform: scale(0.6);
+    margin-top: -700px;
+  }
+ 
   .head {
     margin-top: -50px;
     color: #fff;
@@ -24,6 +38,10 @@ const MainCont = styled.div`
     font-weight: 400;
     line-height: normal;
     margin-left: 149px;
+    @media (max-width: 800px) {
+      margin-top: 20px;
+      margin-left:90px;
+  }
   }
   .text {
     width: 493.072px;
@@ -34,7 +52,14 @@ const MainCont = styled.div`
     font-weight: 400;
     margin-top: 69px;
     margin-left: 60px;
-    line-height: 32px; /* 160% */
+    line-height: 32px;
+    @media (max-width: 800px) {
+   text-align: center;
+   margin-top: 10px;
+  font-size: 15px;
+  width: 360px;
+  margin-left: 85px;
+  }
   }
   .rectangle1 {
     width: 241.429px;
@@ -66,6 +91,12 @@ const MainCont = styled.div`
     grid-column-gap: 25.57px;
     grid-row-gap: 28.12px;
     margin-left: 300px;
+    @media (max-width: 800px) {
+      transform: scale(0.7);
+      margin-left: 0;
+      justify-content: center;
+      margin-right: -140px;
+  }
   }
   .stch-left {
     margin-left: -70px;

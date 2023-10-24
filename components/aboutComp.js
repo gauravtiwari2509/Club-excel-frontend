@@ -5,7 +5,16 @@ import Image from "next/image"
 const MainCont = styled.div`
   display: flex;
   align-items: center;
+  margin-top: -1000px;
   justify-content: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-top: -800px;
+  }
+  @media (min-width: 801px) and (max-width: 1200px) {
+    transform: scale(0.6);
+    margin-top: -1200px;
+  }
   .intro1 {
     display: flex;
   }
@@ -42,6 +51,10 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 400;
     width: 652px;
+    @media (max-width: 800px) {
+    width: 360px;
+    text-align: center;
+  }
   }
   .button {
     display: flex;
@@ -54,6 +67,9 @@ const MainCont = styled.div`
     border-radius: 40px;
     background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
     cursor: pointer;
+    @media (max-width: 800px) {
+        align-self: center;
+  }
   }
 
   .button:hover {
@@ -70,6 +86,12 @@ const MainCont = styled.div`
   }
   .rightabtdiv {
     margin-left: 108px;
+    @media (max-width: 800px) {
+     margin-left: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
   }
   .vector-7 {
     background: url("/Vector 7.svg");
@@ -80,6 +102,9 @@ const MainCont = styled.div`
 
     margin-left: -1390px;
     margin-top: -245px;
+    @media (max-width: 800px) {
+    display: none;
+  }
   }
   .vector-8 {
     background: url("/Vector 8.svg");
@@ -89,20 +114,38 @@ const MainCont = styled.div`
     background-size: 1449px 256px;
     margin-left: -1449px;
     margin-top: 299px;
+    @media (max-width: 800px) {
+    display: none;
+  }
   }
   .upar {
     position: relative;
     z-index: 10;
+    @media (max-width: 800px) {
+     display: flex;
+     justify-content: center;
+    }
   }
-  .video {
+  video {
     margin-top: 100px;
+    @media (max-width: 800px) {
+      transform: scale(0.6);
+    }
+  }
+  .for-mob{
+       @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+  }
   }
 `
 
 function About() {
   return (
     <MainCont>
-      <div>
+   
         <div className="upar">
           <video
             autoPlay
@@ -120,10 +163,11 @@ function About() {
           alt="Image"
           className="abt-img"
         /> */}
-      </div>
       <div className="rightabtdiv">
+        <div className="for-mob">
         <div className="intro-text">ABOUT</div>
         <div className="intro">CLUB EXCEL</div>
+        </div>
         <div className="text">
           Club Excel stands as a premier coding club within the National
           Institute of Science and Technology (NIST), recognized for its

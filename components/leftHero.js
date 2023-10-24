@@ -4,6 +4,7 @@ import styled from "styled-components"
 const MainCont = styled.div`
   @media (max-width: 800px) {
     margin-left: 0px;
+    margin-right: 0px;
   }
   margin-left: -100px;
   .head {
@@ -107,7 +108,7 @@ function LeftHero() {
           <span className="head">in NIST</span>
         </div>
         <div className="hero-p">
-          Unlocking the Future: Join Our Coding Club and Shape Tomorrow's
+          Unlocking the Future: Join Our Coding Club and Shape Tomorrow&apos;s
           Technology.
         </div>
         <div className="button">

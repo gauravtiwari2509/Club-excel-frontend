@@ -1,6 +1,19 @@
 import Carousel from "react-spring-3d-carousel"
 import { useState, useEffect } from "react"
 import { config } from "react-spring"
+import styled from "styled-components"
+
+
+const MainCont = styled.div`
+   @media (max-width: 800px) {
+      transform: scale(0.65);
+  }
+  height: 500px;
+  width: 800px;
+
+
+`
+
 
 export default function Carroussel(props) {
   const table = props.cards.map((element, index) => {
@@ -18,8 +31,7 @@ export default function Carroussel(props) {
   }, [props.offset, props.showArrows])
 
   return (
-    <div
-      style={{ width: props.width, height: props.height, margin: props.margin }}
+    <MainCont
     >
       <Carousel
         slides={cards}
@@ -28,6 +40,6 @@ export default function Carroussel(props) {
         showNavigation={showArrows}
         animationConfig={config.gentle}
       />
-    </div>
+    </MainCont>
   )
 }

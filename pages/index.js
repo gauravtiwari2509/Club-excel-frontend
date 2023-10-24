@@ -15,6 +15,7 @@ import QuickContact from "@/components/quickContact"
 import WhyChoose from "@/components/whyChoose"
 
 import { v4 as uuidv4 } from "uuid"
+import Hero from "@/components/Hero"
 
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
@@ -31,6 +32,7 @@ const MainCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .intro-comp {
     margin-top: 1094px;
     margin-bottom: 100px;
@@ -45,20 +47,32 @@ const MainCont = styled.div`
       align-items: center;
     }
   }
-
-  .center-ref {
-    margin-top: -120px;
-    height: 600px;
+.Gal-head{
+  color: #fff;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 200px;
     @media (max-width: 800px) {
-      margin-top: -1000px;
-      height: 200px;
+      margin-bottom: -50px;
+
     }
+    @media (min-width: 801px) and (max-width: 1200px) {
+    margin-top: -100px;
   }
+}
+ 
+#Gallary{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 `
 
 export default function Home() {
-  const [animate, setAnimate] = useState(false)
-  const [ref, inView] = useInView()
+ 
   let cards = [
     {
       key: uuidv4(),
@@ -85,13 +99,7 @@ export default function Home() {
       content: <Card imagen="/p6.jpg" />,
     },
   ]
-  useEffect(() => {
-    if (inView) {
-      setAnimate(true)
-    } else {
-      setAnimate(false)
-    }
-  }, [inView])
+
   return (
     <>
       <Head>
@@ -110,54 +118,31 @@ export default function Home() {
         />
       </Head>
       <MainCont>
-        <div className="Hero-div">
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(-300px)",
-            }}
-          >
-            <NoSSR />
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(300px)",
-            }}
-          >
-            <RightHero />
-          </motion.div>
-
-          <div
-            ref={ref}
-            className="center-ref"
-          ></div>
-        </div>
-        <div>
+          <Hero/>
+        <div
+                 id="about"
+                 >
           <QuickContact />
         </div>
 
         <div className="bg1"></div>
-        <div className="bg2"></div>
+        <div className="bg2" ></div>
         <div className="bg3"></div>
         <div className="hero-4"></div>
 
         <div
           className="intro-comp"
-          id="about"
         >
           <Intro />
         </div>
-        <div>
+        <div   >
           <About />
         </div>
         <div>
           <WhyChoose />
         </div>
         <div id="Gallary">
+          <div className="Gal-head">Gallary</div>
           <Carroussel
             cards={cards}
             height="500px"

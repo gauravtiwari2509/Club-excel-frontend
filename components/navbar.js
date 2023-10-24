@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 const MainCont = styled.div`
   .navbar {
@@ -15,6 +16,10 @@ const MainCont = styled.div`
       align-items: flex-start;
       padding: 20px 20px;
     }
+  }
+  .ntxt{
+    color: white;
+    text-decoration: none;
   }
 
   .club-txt {
@@ -97,7 +102,7 @@ const MainCont = styled.div`
   .logo-img {
     display: flex;
     align-items: center;
-
+    cursor: pointer;
     @media (max-width: 800px) {
       margin-left: 0;
     }
@@ -143,10 +148,11 @@ function Navbar() {
     setMenuOpen(false)
   }
 
+
   return (
     <MainCont menuOpen={menuOpen}>
       <div className="navbar">
-        <div className="logo-img">
+        <div className="logo-img" onClick={()=>router.push('/')}>
           <Image
             src={"/clubexcellogo.png"}
             height={70}
@@ -157,30 +163,30 @@ function Navbar() {
         </div>
 
         <div className="nav-link">
+        <Link href={"#about"}>
+
           <div
-            className="pointer hover"
+            className="pointer hover ntxt"
             onClick={closeMenu}
           >
             ABOUT
           </div>
-          <div
-            className="pointer hover"
-            onClick={closeMenu}
-          >
-            SERVICES
-          </div>
-          <div
-            className="pointer hover"
-            onClick={closeMenu}
-          >
-            TECHNOLOGIES
-          </div>
+          </Link>
+
           <div
             className="pointer hover"
             onClick={() => router.push("/register")}
           >
-            Register
+            REGISTER
           </div>
+          <Link href={"#Gallary"}>
+          <div
+            className="pointer hover ntxt"
+            onClick={closeMenu}
+          >
+            GALLARY
+          </div>
+          </Link>
         </div>
         <div
           className="button1"

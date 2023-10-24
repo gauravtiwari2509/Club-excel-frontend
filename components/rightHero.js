@@ -5,7 +5,13 @@ import Image from "next/image"
 const MainCont = styled.div`
   width: fit-content;
   margin-right: -800px;
+  @media (max-width: 800px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -350px;
+  }
   .rightHero {
+    
   }
 `
 

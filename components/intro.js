@@ -7,11 +7,15 @@ const MainCont = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
-  margin-top: -100px;
+  margin-top: -1200px;
   margin-bottom: 80px;
   @media (max-width: 800px) {
     flex-direction: column;
     padding: 10px;
+    margin-top: -1200px;
+  }
+  @media (min-width: 801px) and (max-width: 1200px) {
+    transform: scale(0.7);
   }
   .intro-text {
     color: #fff;
@@ -20,6 +24,9 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: bolder;
     line-height: normal;
+    @media (max-width: 800px) {
+   text-align: center;
+  }
   }
 
   .arrow {
@@ -31,6 +38,7 @@ const MainCont = styled.div`
     background-size: 228px 100px;
     @media (max-width: 800px) {
       margin: 10px;
+      display: none;
     }
   }
   .text {
@@ -44,6 +52,13 @@ const MainCont = styled.div`
     font-weight: 400;
     line-height: 0.6cm;
     width: 652px;
+    @media (max-width: 800px) {
+      margin-top: 20px;
+      text-align: center;
+      margin-left: 0;
+      width: 360px;
+
+    }
   }
   .intro {
     margin-top: -20px;
@@ -55,6 +70,20 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 100;
     line-height: normal;
+    @media (max-width: 800px) {
+      text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    }
+  }
+  .flex{
+    @media (max-width: 800px) {
+      text-align: center;
+    
+
+    }
   }
 `
 

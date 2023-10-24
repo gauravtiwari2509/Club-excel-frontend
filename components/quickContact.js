@@ -12,6 +12,10 @@ const MainCont = styled.div`
     margin-bottom: 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 801px) and (max-width: 1300px) {
+    transform: scale(0.6);
   }
   .bg {
     width: 1272px;

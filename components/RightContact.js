@@ -8,6 +8,7 @@ const MainCont = styled.div`
     flex-shrink: 0;
     @media (max-width: 800px) {
       min-height: 100vh;
+      margin-top: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -33,7 +34,7 @@ const MainCont = styled.div`
     font-weight: 500;
     line-height: 20px; /* 166.667% */
     @media (max-width: 800px) {
-      text-align: center; /* Center text on all screens */
+      text-align: start; /* Center text on all screens */
     }
   }
   .rlabel {
@@ -66,8 +67,9 @@ const MainCont = styled.div`
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
-      margin-top: 20px; /* Add some space at the top on small screens */
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px; 
     }
   }
   .button:hover {
@@ -114,7 +116,7 @@ const MainCont = styled.div`
     border-style: none;
     padding: 5px;
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
+      width: 300px; /* Full width on small screens */
       margin-top: 10px; /* Adjust margin on small screens */
       border-style: none; /* Add border for input fields */
       padding: 10px; /* Increase padding for better touch usability */
@@ -128,7 +130,7 @@ const MainCont = styled.div`
     }
   }
   .Select-head {
-    width: 109px;
+    width: 209px;
     height: 20.37px;
     flex-shrink: 0;
     color: #011c2a;
@@ -137,11 +139,11 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 600;
     margin-bottom: 20px;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px; 
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
+      width: 100%; 
       font-family: "Poppins";
-      text-align: center; /* Center text on all screens */
+      text-align: start;
     }
   }
   .tick-box {
@@ -174,7 +176,8 @@ const MainCont = styled.div`
     line-height: 20px; /* 166.667% */
     margin-top: 45px;
     @media (max-width: 800px) {
-      text-align: center; /* Center text on all screens */
+      width: 100%;
+      text-align: start; /* Center text on all screens */
       margin-top: 20px; /* Adjust margin on small screens */
     }
   }
@@ -206,9 +209,9 @@ const MainCont = styled.div`
     align-items: center;
     @media (max-width: 800px) {
       display: flex;
-      flex-direction: column; /* Stack columns on small screens */
-      align-items: flex-start; /* Align items to the start on small screens */
-      margin-left: 0; /* Remove left margin on small screens */
+      flex-direction: column; 
+      align-items: flex-start; 
+      margin-left: -130px; 
     }
   }
   .line1 {
@@ -222,9 +225,9 @@ const MainCont = styled.div`
     stroke: #8d8d8d;
     border: 1px solid #8d8d8d;
     @media (max-width: 800px) {
-      margin-top: 10px; /* Adjust margin on small screens */
-      margin-bottom: 20px; /* Reduce margin on small screens */
-      width: 100%; /* Full width on small screens */
+      margin-top: 10px; 
+      margin-bottom: 20px; 
+      width: 100%;
     }
   }
   .letter_send {

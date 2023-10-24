@@ -4,6 +4,12 @@ import Image from "next/image"
 
 const MainCont = styled.div`
   margin-left: 10px;
+  @media (max-width: 800px) {
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
   .leftcontact-comp {
     position: relative;
     padding-left: 40px;
@@ -16,7 +22,10 @@ const MainCont = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 10px;
       padding-left: 0px;
+      width: 391px;
+      height: 500px;
     }
   }
 
@@ -64,6 +73,7 @@ const MainCont = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 50px;
     }
   }
 
@@ -150,6 +160,8 @@ const MainCont = styled.div`
       align-items: center;
       justify-content: center;
       margin-top: -5px;
+      margin-right: -30px;
+      padding-top: 50px;
     }
   }
   .wm221 {

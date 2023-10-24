@@ -19,6 +19,7 @@ const MainCont = styled.div`
       display: flex;
       align-items: center;
       flex-direction: column;
+      padding-bottom: 50px;
     }
   }
 

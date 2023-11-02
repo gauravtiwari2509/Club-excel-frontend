@@ -60,7 +60,7 @@ export const StyleCard1 = styled.div`
 function Card1({ img, txt }) {
   return (
     <StyleCard1>
-      <div className='card1'>
+      <div className='card1 pointer hover'>
         <div className='partners-pic'>
           <Image
             className='card1-graphics'

@@ -185,3 +185,12 @@ filter: blur(176.73252868652344px);
     display: none;
   }
 }
+.hover:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.hover{
+  transition: 0.3s;
+
+}

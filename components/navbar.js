@@ -165,16 +165,13 @@ function Navbar() {
         </div>
 
         <div className="nav-link">
-        <Link href={"#about"} >
 
           <div
             className="pointer hover ntxt"
-            onClick={closeMenu}
-            
+            onClick={()=>{router.push('/');closeMenu();}}            
           >
-            ABOUT
+            HOME
           </div>
-          </Link>
 
           <div
             className="pointer hover"
@@ -182,14 +179,13 @@ function Navbar() {
           >
             REGISTER
           </div>
-          <Link href={"#Gallary"}>
+        
             <div
               className="pointer hover ntxt"
-              onClick={closeMenu}
+              onClick={()=>{router.push('/team');closeMenu();}}
             >
-              GALLARY
+              OUR TEAM
             </div>
-          </Link>
         </div>
         <div
           className="button1"

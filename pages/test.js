@@ -1,60 +1,309 @@
 import React from "react"
 import styled from "styled-components"
-import Card from "@/components/Card"
-import { v4 as uuidv4 } from "uuid"
-import dynamic from "next/dynamic"
-import Hero from "@/components/Hero"
-import WhyChoose from "@/components/whyChoose"
-const Carroussel = dynamic(() => import("@/components/carousel"), {
-  ssr: false,
-})
-
+import Image from "next/image"
 const MainCont = styled.div`
-margin-top: 400px;
-display: flex;
-justify-content: center;
+  margin: 100px;
+
+  .card {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for cards */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card.open {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .details {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .name {
+    color: #ccc;
+  }
 `
 
-function test() {
-  let cards = [
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p1.jpg" />,
-    },
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p2.jpg" />,
-    },
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p3.jpg" />,
-    },
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p4.jpg" />,
-    },
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p5.jpg" />,
-    },
-    {
-      key: uuidv4(),
-      content: <Card imagen="/p6.jpg" />,
-    },
-  ]
+function Navbar() {
   return (
-    <MainCont >
-   {/* <Carroussel
-            cards={cards}
-            height="500px"
-            width="50%"
-            margin="0 auto"
-            offset={2}
-            showArrows={false}
-          />    */}
-          <WhyChoose/>
-           </MainCont>
+    <MainCont>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+      <div className="card">
+        <Image
+          src={"/Excel_Logo_Anim.gif"}
+          alt="Logo"
+          height={426}
+          width={490}
+        />
+
+        <h3 className="name">name</h3>
+        <p className="name">description</p>
+        {/* <button onClick={toggleDetails}>Show Details</button>
+        {isDetailsOpen && <div className="details">{details}</div>} */}
+      </div>
+    </MainCont>
   )
 }
 
-export default test
+export default Navbar

@@ -17,7 +17,7 @@ const MainCont = styled.div`
       padding: 20px 20px;
     }
   }
-  .ntxt{
+  .ntxt {
     color: white;
     text-decoration: none;
   }
@@ -148,11 +148,13 @@ function Navbar() {
     setMenuOpen(false)
   }
 
-
   return (
     <MainCont menuOpen={menuOpen}>
       <div className="navbar">
-        <div className="logo-img" onClick={()=>router.push('/')}>
+        <div
+          className="logo-img"
+          onClick={() => router.push("/")}
+        >
           <Image
             src={"/clubexcellogo.png"}
             height={70}
@@ -163,14 +165,13 @@ function Navbar() {
         </div>
 
         <div className="nav-link">
-        <Link href={"#about"}>
-
-          <div
-            className="pointer hover ntxt"
-            onClick={closeMenu}
-          >
-            ABOUT
-          </div>
+          <Link href={"#about"}>
+            <div
+              className="pointer hover ntxt"
+              onClick={closeMenu}
+            >
+              ABOUT
+            </div>
           </Link>
 
           <div
@@ -180,12 +181,12 @@ function Navbar() {
             REGISTER
           </div>
           <Link href={"#Gallary"}>
-          <div
-            className="pointer hover ntxt"
-            onClick={closeMenu}
-          >
-            GALLARY
-          </div>
+            <div
+              className="pointer hover ntxt"
+              onClick={closeMenu}
+            >
+              GALLARY
+            </div>
           </Link>
         </div>
         <div
@@ -194,6 +195,7 @@ function Navbar() {
         >
           CONTACT US
         </div>
+
         <div
           className="menu-button"
           onClick={toggleMenu}

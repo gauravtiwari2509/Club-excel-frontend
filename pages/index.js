@@ -47,8 +47,8 @@ const MainCont = styled.div`
       align-items: center;
     }
   }
-.Gal-head{
-  color: #fff;
+  .Gal-head {
+    color: #fff;
     font-family: Montserrat;
     font-size: 36px;
     font-style: normal;
@@ -57,22 +57,20 @@ const MainCont = styled.div`
     margin-top: 200px;
     @media (max-width: 800px) {
       margin-bottom: -50px;
-
     }
     @media (min-width: 801px) and (max-width: 1200px) {
-    margin-top: -100px;
+      margin-top: -100px;
+    }
   }
-}
- 
-#Gallary{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
+  #Gallary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export default function Home() {
- 
   let cards = [
     {
       key: uuidv4(),
@@ -118,24 +116,20 @@ export default function Home() {
         />
       </Head>
       <MainCont>
-          <Hero/>
-        <div
-                 id="about"
-                 >
+        <Hero />
+        <div id="about">
           <QuickContact />
         </div>
 
         <div className="bg1"></div>
-        <div className="bg2" ></div>
+        <div className="bg2"></div>
         <div className="bg3"></div>
         <div className="hero-4"></div>
 
-        <div
-          className="intro-comp"
-        >
+        <div className="intro-comp">
           <Intro />
         </div>
-        <div   >
+        <div>
           <About />
         </div>
         <div>

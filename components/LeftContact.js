@@ -9,7 +9,7 @@ const MainCont = styled.div`
     margin-top: 8px;
     margin-left: 5px;
     margin-right: 5px;
-    }
+  }
   .leftcontact-comp {
     position: relative;
     padding-left: 40px;
@@ -217,22 +217,30 @@ function LeftContact() {
         <div className="lcircle"></div>
         <div className="social-logo">
           <Image
-            src={"/twitter.svg"}
+            src={"/facebook.svg"}
             height={24}
             width={24}
             className="clogo"
             alt="contact"
+            onClick={() =>
+              window.open("https://www.facebook.com/excelnist?mibextid=ZbWKwL")
+            }
           />
 
           <Image
-            src={"/insta.svg"}
+            src={"/instagram.svg"}
             height={24}
             width={24}
             className="clogo"
             alt="contact"
+            onClick={() =>
+              window.open(
+                "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
+              )
+            }
           />
           <Image
-            src={"/linkdin.png"}
+            src={"/linkedin.svg"}
             height={24}
             width={24}
             className="clogo"
@@ -242,13 +250,13 @@ function LeftContact() {
             }
           />
 
-          <Image
+          {/* <Image
             src={"/discord.svg"}
             height={24}
             width={24}
             className="clogo"
             alt="contact"
-          />
+          /> */}
         </div>
       </div>
     </MainCont>

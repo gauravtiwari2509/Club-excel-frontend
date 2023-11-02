@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useRouter } from "next/router"
 
 const MainCont = styled.div`
   @media (max-width: 800px) {
@@ -92,6 +93,7 @@ const MainCont = styled.div`
 `
 
 function LeftHero() {
+  const router = useRouter()
   return (
     <MainCont>
       <div className="head-text">
@@ -111,7 +113,10 @@ function LeftHero() {
           Unlocking the Future: Join Our Coding Club and Shape Tomorrow&apos;s
           Technology.
         </div>
-        <div className="button">
+        <div
+          className="button"
+          onClick={() => router.push("/contact")}
+        >
           <span className="send">Send Message</span>
           <div className="arrow"></div>
         </div>

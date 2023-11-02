@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Card1 from './Card1';
 import { useInView } from 'react-intersection-observer';
 
-export const StylePartnerAndVenture = styled.div`
+export const MainCont = styled.div`
   margin-top: 150px;
   margin-bottom: 500px;
   position: relative;
@@ -82,7 +82,7 @@ export const StylePartnerAndVenture = styled.div`
 `;
 
 
-function Team() {
+function Member() {
     const [animate, setAnimate] = useState(false);
     const [ref, inView] = useInView();
   
@@ -94,7 +94,7 @@ function Team() {
       }
     }, [inView]);
   return (
-    <StylePartnerAndVenture>
+    <MainCont>
          <div className='pnvm'>
           <motion.div
             transition={{ duration: 1 }}
@@ -314,8 +314,8 @@ function Team() {
         </div>
         <div ref={ref} className='  center-ref'></div>
 
-    </StylePartnerAndVenture>
+    </MainCont>
   )
 }
 
-export default Team
+export default Member

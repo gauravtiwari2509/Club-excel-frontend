@@ -17,6 +17,9 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         ></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet"/> 
       </Head>
       <body>
         <Main />

@@ -18,9 +18,9 @@ export const StyleCard1 = styled.div`
     flex-direction: column;
     align-items: center;
     width: 230px;
-    height: 320px;
+    height: 300px;
     background: url("/card1.png");
-    background-size: 230px 320px;
+    background-size: 230px 300px;
     background-repeat: no-repeat ;
   }
 
@@ -36,8 +36,8 @@ export const StyleCard1 = styled.div`
   }
 
   .partner-card-txt {
-    margin-top: 10px;
-    font-family: "Righteous";
+    margin-top: 20px;
+    font-family: 'Playpen Sans', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -65,8 +65,8 @@ function Card1({ img, txt }) {
           <Image
             className='card1-graphics'
             src={img}
-            height={200}
-            width={200}
+            height={170}  
+            width={170}
             alt='Image'
           />
         </div>

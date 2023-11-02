@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Image from "next/legacy/image"
+import Image from "next/image"
+import { useRouter } from "next/router"
+import Link from "next/link"
 
 const MainCont = styled.div`
   display: flex;
@@ -124,11 +126,15 @@ const MainCont = styled.div`
 `
 
 function Footer() {
+  const router = useRouter()
   return (
     <MainCont>
       <div className="footer">
         <div className="flex">
-          <div className="logo-img">
+          <div
+            className="logo-img"
+            onClick={() => router.push("/")}
+          >
             <Image
               src={"/clubexcellogo.png"}
               height={185}
@@ -137,18 +143,24 @@ function Footer() {
           </div>
           <div className="vector-20"></div>
           <div className="link">
-            <div className="pointer hover">ABOUT</div>
-            <div className="pointer hover">SERVICES</div>
-            <div className="pointer hover">TECHNOLOGIES</div>
-            <div className="pointer hover">HOW TO</div>
+            <div className="pointer hover">
+              <Link href={"#about"}>ABOUT</Link>
+            </div>
+          </div>
+          <div className="link">
+            <div
+              className="pointer hover"
+              onClick={() => router.push("/contact")}
+            >
+              CONTACT US
+            </div>
           </div>
           <div className="vector-20"></div>
 
           <div className="link">
-            <div className="pointer hover">ABOUT</div>
-            <div className="pointer hover">SERVICES</div>
-            <div className="pointer hover">TECHNOLOGIES</div>
-            <div className="pointer hover">HOW TO</div>
+            <div className="pointer hover">
+              <Link href={"#Gallary"}>GALLARY</Link>
+            </div>
           </div>
           <div className="vector-20"></div>
           <div className="link">
@@ -159,6 +171,11 @@ function Footer() {
                   src={"/instagram.svg"}
                   height={32}
                   width={32}
+                  onClick={() =>
+                    window.open(
+                      "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
+                    )
+                  }
                 />
               </div>
               <div className="pointer hover">
@@ -173,6 +190,11 @@ function Footer() {
                   src={"/facebook.svg"}
                   height={32}
                   width={32}
+                  onClick={() =>
+                    window.open(
+                      "https://www.facebook.com/excelnist?mibextid=ZbWKwL"
+                    )
+                  }
                 />
               </div>
               <div className="pointer hover">

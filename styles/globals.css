@@ -172,3 +172,16 @@ filter: blur(176.73252868652344px);
   background: url("/hero 4.svg");
   background-size: 238.075px 561px;
 }
+
+.show-mobile {
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+.hide-mobile {
+  display: block;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}

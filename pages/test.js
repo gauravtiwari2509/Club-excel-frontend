@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid"
 import dynamic from "next/dynamic"
 import Hero from "@/components/Hero"
 import WhyChoose from "@/components/whyChoose"
+import Team from "@/components/team"
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
 })
@@ -44,15 +45,8 @@ function test() {
   ]
   return (
     <MainCont >
-   {/* <Carroussel
-            cards={cards}
-            height="500px"
-            width="50%"
-            margin="0 auto"
-            offset={2}
-            showArrows={false}
-          />    */}
-          <WhyChoose/>
+ 
+          <Team/>
            </MainCont>
   )
 }

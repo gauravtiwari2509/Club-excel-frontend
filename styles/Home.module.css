@@ -4,3 +4,16 @@
 .hover:hover{
     transform: scale(1.1);
 }
+
+.show-mobile {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+  .hide-mobile {
+    display: block;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }

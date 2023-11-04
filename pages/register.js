@@ -8,7 +8,7 @@ const MainCont = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: #fff;
+  background: transparent;
 `
 export default function Home() {
   return (

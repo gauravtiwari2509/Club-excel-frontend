@@ -31,7 +31,6 @@ const MainCont = styled.div`
 
   .contact-head {
     padding-top: 40px;
-
     margin-bottom: 6px;
     color: #fff;
     font-family: "Poppins", sans-serif;
@@ -148,22 +147,21 @@ const MainCont = styled.div`
     }
   }
   .social-logo {
-    padding-top: 125px;
+    margin-top: 100px;
     margin: 39px;
     display: flex;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     margin-left: 2px;
+    gap: 10px;
     cursor: pointer;
     @media (max-width: 800px) {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -5px;
-      margin-right: -30px;
-      padding-top: 50px;
+      margin-top: -30px;
     }
   }
   .wm221 {
@@ -190,7 +188,7 @@ function LeftContact() {
             className="clogo"
             alt="contact"
           />
-          +91 700XXXXXXX
+          +91 7008680932
         </div>
         <div className="emal">
           <Image
@@ -200,7 +198,7 @@ function LeftContact() {
             className="clogo"
             alt="contact"
           />
-          demo@gmail.com
+          clubexcel@nist.edu
         </div>
         <div className="loc">
           <Image
@@ -210,18 +208,15 @@ function LeftContact() {
             className="clogo"
             alt="contact"
           />
-          <div className="wm221">
-            {" "}
-            132 Dartmouth Street Boston, Massachusetts 02156 United States
-          </div>
+          <div className="wm221"> NIST, Berhampur</div>
         </div>
         <div className="scircle"></div>
         <div className="lcircle"></div>
         <div className="social-logo">
           <Image
             src={"/facebook.svg"}
-            height={24}
-            width={24}
+            height={34}
+            width={34}
             className="clogo"
             alt="contact"
             onClick={() =>
@@ -231,8 +226,8 @@ function LeftContact() {
 
           <Image
             src={"/instagram.svg"}
-            height={24}
-            width={24}
+            height={34}
+            width={34}
             className="clogo"
             alt="contact"
             onClick={() =>
@@ -243,8 +238,8 @@ function LeftContact() {
           />
           <Image
             src={"/linkedin.svg"}
-            height={24}
-            width={24}
+            height={34}
+            width={34}
             className="clogo"
             alt="contact"
             onClick={() =>
@@ -252,13 +247,18 @@ function LeftContact() {
             }
           />
 
-          {/* <Image
-            src={"/discord.svg"}
-            height={24}
-            width={24}
+          <Image
+            src={"/twitter1.svg"}
+            height={34}
+            width={34}
             className="clogo"
-            alt="contact"
-          /> */}
+            alt="twitter"
+            onClick={() =>
+              window.open(
+                "https://twitter.com/_club_excel_?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
+              )
+            }
+          />
         </div>
       </div>
     </MainCont>

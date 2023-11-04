@@ -142,6 +142,7 @@ function Footer() {
             />
           </div>
           <div className="vector-20"></div>
+          <div className="sec"></div>
           <div className="link">
             <div className="pointer hover">
               <Link href={"#about"}>ABOUT</Link>
@@ -155,7 +156,7 @@ function Footer() {
               CONTACT US
             </div>
           </div>
-          <div className="vector-20"></div>
+          {/* <div className="vector-20"></div> */}
 
           <div className="link">
             <div className="pointer hover">
@@ -183,6 +184,11 @@ function Footer() {
                   src={"/twitter1.svg"}
                   height={32}
                   width={32}
+                  onClick={() =>
+                    window.open(
+                      "https://twitter.com/_club_excel_?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
+                    )
+                  }
                 />
               </div>
               <div className="pointer hover">
@@ -211,8 +217,11 @@ function Footer() {
               </div>
             </div>
 
-            <div className="button">
-              <span className="send">BUILD YOUR WORLD</span>
+            <div
+              className="button"
+              onClick={() => router.push("/contact")}
+            >
+              <span className="send">CONTACT US</span>
             </div>
           </div>
         </div>

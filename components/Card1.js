@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import styled from "styled-components";
+import React from "react"
+import Image from "next/image"
+import styled from "styled-components"
 
 export const StyleCard1 = styled.div`
   display: flex;
@@ -9,7 +9,8 @@ export const StyleCard1 = styled.div`
   width: 259px;
 
   @media (max-width: 799px) {
-    transform: scale(0.75);
+    transform: scale(0.7);
+    margin-top: -60px;
   }
   .card1 {
     padding-top: 40px;
@@ -21,7 +22,7 @@ export const StyleCard1 = styled.div`
     height: 300px;
     background: url("/card1.png");
     background-size: 230px 300px;
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
   }
 
   .c-shadow {
@@ -37,7 +38,7 @@ export const StyleCard1 = styled.div`
 
   .partner-card-txt {
     margin-top: 20px;
-    font-family: 'Playpen Sans', cursive;
+    font-family: "Playpen Sans", cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -51,30 +52,31 @@ export const StyleCard1 = styled.div`
     text-align: center;
     color: #ffffff;
   }
-  .card1-graphics{
+  .card1-graphics {
     border-radius: 50%;
   }
-`;
+`
 
-
-function Card1({ img, txt }) {
+function Card1({ data }) {
   return (
     <StyleCard1>
-      <div className='card1 pointer hover'>
-        <div className='partners-pic'>
+      <div className="card1 pointer hover">
+        <div className="partners-pic">
           <Image
-            className='card1-graphics'
-            src={img}
-            height={170}  
+            className="card1-graphics"
+            src={data ? data.img : "/clubexcellogo.png"}
+            height={170}
             width={170}
-            alt='Image'
+            alt="Image"
           />
         </div>
-        <div className='partner-card-txt'>{txt}</div>
+        <div className="partner-card-txt">
+          {data ? data.name : "club excel"}
+        </div>
       </div>
-      <div className='c-shadow'></div>
+      <div className="c-shadow"></div>
     </StyleCard1>
-  );
+  )
 }
 
-export default Card1;
+export default Card1

@@ -58,6 +58,8 @@ const MainCont = styled.div`
   }
   .clogo {
     margin-right: 25px;
+    width: 25px;
+    height: 25px;
   }
   .ctxt {
     padding-top: 111px;

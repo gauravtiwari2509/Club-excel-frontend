@@ -8,10 +8,6 @@ import dynamic from "next/dynamic"
 import QuickContact from "@/components/quickContact"
 import WhyChoose from "@/components/whyChoose"
 
-
-
-
-
 import { v4 as uuidv4 } from "uuid"
 import Hero from "@/components/Hero"
 
@@ -21,7 +17,6 @@ const Carroussel = dynamic(() => import("@/components/carousel"), {
 const Card = dynamic(() => import("@/components/Card"), {
   ssr: false,
 })
-
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -92,6 +87,38 @@ export default function Home() {
     {
       key: uuidv4(),
       content: <Card imagen="/p6.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p7.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p8.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p9.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p10.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p11.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p12.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p13.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p14.jpg" />,
     },
   ]
 

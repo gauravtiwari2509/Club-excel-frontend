@@ -4,22 +4,15 @@ import Card from "@/components/Card"
 import { v4 as uuidv4 } from "uuid"
 import dynamic from "next/dynamic"
 import Member from "@/components/member"
+import Button from "@/components/button"
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
 })
 
-const MainCont = styled.div`
-
-  
-`
+const MainCont = styled.div``
 
 function Navbar() {
-  return (
-    <MainCont >
- 
-          <Member/>
-           </MainCont>
-  )
+  return <MainCont>{/* <Member /> */}</MainCont>
 }
 
 export default Navbar

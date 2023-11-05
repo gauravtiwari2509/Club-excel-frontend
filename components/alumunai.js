@@ -12,8 +12,8 @@ const MainCont = styled.div`
   @media (min-width: 800px) and (max-width: 1440px) {
     transform: scale(0.5);
     margin-left: 0px;
-    margin-top: -450px;
-    margin-bottom: -600px;
+    margin-top: -70px;
+    margin-bottom: -200px;
   }
   @media (min-width: 2560px) {
     transform: scale(1.4);
@@ -68,17 +68,19 @@ const MainCont = styled.div`
   }
 
   .center-ref {
-    height: 3000px;
-    margin-top: -3200px;
+    height: 1400px;
+    margin-top: -1800px;
+
     @media (max-width: 799px) {
       width: 100px;
       position: relative;
-      margin-top: -500px;
-      height: 5350px;
-      margin-bottom: -20px;
+      margin-top: -00px;
+      height: 3550px;
+      margin-bottom: -520px;
       margin-left: -800px;
       z-index: 300;
     }
+ 
   }
 `
 

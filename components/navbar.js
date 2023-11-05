@@ -47,7 +47,8 @@ const MainCont = styled.div`
     font-size: 30px;
   }
     @media (max-width: 800px) {
-      margin-left: 20px;
+      margin-left: 15px;
+      font-size: 35px;
       margin-bottom: 10px;
       text-align: center;
     }
@@ -266,7 +267,7 @@ function Navbar() {
 
           <div
             className="pointer hover"
-            onClick={() => router.push("/register")}
+            onClick={() =>{ router.push("/register");closeMenu();}}
           >
             REGISTER
           </div>
@@ -280,7 +281,7 @@ function Navbar() {
         </div>
         <div
           className="button1"
-          onClick={() => router.push("/contact")}
+          onClick={() => {router.push("/contact");closeMenu();}}
         >
           CONTACT US
         </div>

@@ -228,7 +228,7 @@ const MainCont = styled.div`
 
 function Navbar() {
   const router = useRouter()
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)

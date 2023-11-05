@@ -6,6 +6,7 @@ const MainCont = styled.div`
 display: flex;
 align-items: center;
 gap: 100px;
+
 @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.6);
   }

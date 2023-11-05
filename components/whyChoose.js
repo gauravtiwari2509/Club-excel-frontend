@@ -7,11 +7,14 @@ import { useInView } from "react-intersection-observer"
 const MainCont = styled.div`
   margin-bottom: 200px;
   margin-top: 200px;
+  .why-box{
+
+  }
   @media (max-width: 800px) {
     margin-top: 100px;
 
   }
-  .rectangle {
+  .why-rectangle {
     width: 1381px;
     height: 639px;
     background: url("/Rectangle 28.svg");
@@ -199,7 +202,7 @@ function WhyChoose() {
   }, [inView])
   return (
     <MainCont>
-      <div className="box">
+      <div className="why-box">
         <motion.div
           transition={{ duration: 1 }}
           animate={{
@@ -207,7 +210,7 @@ function WhyChoose() {
             transform: animate ? "translateX(-100px)" : "translateX(-400px)",
           }}
         >
-          <div className="rectangle">
+          <div className="why-rectangle">
             <div className="left">
               <div className="head">Why Choose Us?</div>
               <div className="text">

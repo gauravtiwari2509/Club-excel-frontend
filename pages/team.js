@@ -52,7 +52,7 @@ function Team() {
 
         <Button handleState={handleState} />
       </div>
-      {state ? <Alumunai /> : <Member />}
+      {!state ? <Alumunai /> : <Member />}
     </MainCont>
   )
 }

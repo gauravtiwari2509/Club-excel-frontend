@@ -194,3 +194,85 @@ filter: blur(176.73252868652344px);
   transition: 0.3s;
 
 }
+
+.Gal-head {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 200px;
+  @media (max-width: 800px) {
+    margin-bottom: -50px;
+  }
+  @media (min-width: 801px) and (max-width: 1200px) {
+    margin-top: -100px;
+  }
+}
+
+#Gallary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.why-rectangle {
+  width: 1381px;
+  height: 639px;
+  background: url("/Rectangle 28.svg");
+  background-size: 1381px 639px;
+  display: flex;
+  align-items: center;
+  margin-right: -30px;
+  @media (max-width: 800px) {
+ flex-direction: column;
+ justify-content: center;
+ margin-right: -140px;
+}
+}
+
+.mt30{
+  margin-top: 30px;
+}
+
+
+
+.scrolly-arrow {
+  width: 228px;
+  height: 100px;
+  flex-shrink: 0;
+  background: url("/big arrow.svg");
+  background-size: 228px 100px;
+  @media (max-width: 800px) {
+    margin: 10px;
+    display: none;
+  }
+}
+.intro-text {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: normal;
+  @media (max-width: 800px) {
+ text-align: center;
+}
+}
+.scrolly{
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flex-scrolly{
+  margin-bottom:-200px;
+  margin-left: -1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

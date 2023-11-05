@@ -59,10 +59,6 @@ export default function Home() {
     },
     {
       key: uuidv4(),
-      content: <Card imagen="/p5.jpg" />,
-    },
-    {
-      key: uuidv4(),
       content: <Card imagen="/p6.jpg" />,
     },
     {

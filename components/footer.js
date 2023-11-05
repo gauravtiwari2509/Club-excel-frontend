@@ -123,6 +123,12 @@ const MainCont = styled.div`
       display: none; /* Hide the vertical dividers on smaller screens */
     }
   }
+  .sec {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 5px;
+  }
 `
 
 function Footer() {
@@ -140,29 +146,25 @@ function Footer() {
               height={185}
               width={185}
               alt="club-excel"
-
             />
           </div>
           <div className="vector-20"></div>
-          <div className="sec"></div>
-          <div className="link">
-            <div className="pointer hover">
-              REGISTER
+          <div className="sec">
+            <div className="link">
+              <div className="pointer hover">REGISTER</div>
             </div>
-          </div>
-          <div className="link">
-            <div
-              className="pointer hover"
-              onClick={() => router.push("/contact")}
-            >
-              CONTACT
+            <div className="link">
+              <div
+                className="pointer hover"
+                onClick={() => router.push("/contact")}
+              >
+                CONTACT
+              </div>
             </div>
-          </div>
-          {/* <div className="vector-20"></div> */}
+            {/* <div className="vector-20"></div> */}
 
-          <div className="link">
-            <div className="pointer hover">
-              OUR TEAM
+            <div className="link">
+              <div className="pointer hover">OUR TEAM</div>
             </div>
           </div>
           <div className="vector-20"></div>
@@ -201,7 +203,6 @@ function Footer() {
                   height={32}
                   width={32}
                   alt="facebook"
-
                   onClick={() =>
                     window.open(
                       "https://www.facebook.com/excelnist?mibextid=ZbWKwL"
@@ -215,7 +216,6 @@ function Footer() {
                   height={32}
                   width={32}
                   alt="linkedin"
-
                   onClick={() =>
                     window.open(
                       "https://www.linkedin.com/company/club-excel-nist/"

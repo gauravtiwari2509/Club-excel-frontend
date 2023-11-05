@@ -79,7 +79,7 @@ export const clubMembers = [
   },
   {
     name: "Rupa",
-    img: "/team/Rupa.jpeg",
+    img: "/team/rupa.jpg",
     batch: "2020",
     linkedIn: "https://www.linkedin.com/in/rupa-mohanty/",
     domain: "Machine Learning",
@@ -126,6 +126,13 @@ export const clubMembers = [
     batch: "2021",
     linkedIn: "https://www.linkedin.com/in/mayank-raj-a82446258/",
     domain: "Data Analyst",
+  },
+  {
+    name: "SOUMIK BERA",
+    img: "/team/soumik.jpg",
+    batch: "2021",
+    linkedIn: "https://www.linkedin.com/in/soumik-bera-a42723238",
+    domain: "Full Stack Web Developer",
   },
   {
     name: "Bishal",
@@ -266,6 +273,13 @@ export const clubMembers = [
   {
     name: "Sai Kalyan",
     img: "/team/K sai kalyan jr.jpg",
+    batch: "2022",
+    linkedIn: "https://www.linkedin.com/in/k-sai-kalyan-1a7249262",
+    domain: " Data Science ",
+  },
+  {
+    name: "Deepti Manjari Nayak",
+    img: "/team/deepti jr.png",
     batch: "2022",
     linkedIn: "https://www.linkedin.com/in/k-sai-kalyan-1a7249262",
     domain: " Data Science ",

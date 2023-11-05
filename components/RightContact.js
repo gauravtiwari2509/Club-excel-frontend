@@ -69,7 +69,7 @@ const MainCont = styled.div`
     @media (max-width: 800px) {
       width: 100%;
       margin-right: 0;
-      margin-top: 20px; 
+      margin-top: 20px;
     }
   }
   .button:hover {
@@ -139,9 +139,9 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 600;
     margin-bottom: 20px;
-    line-height: 20px; 
+    line-height: 20px;
     @media (max-width: 800px) {
-      width: 100%; 
+      width: 100%;
       font-family: "Poppins";
       text-align: start;
     }
@@ -207,11 +207,12 @@ const MainCont = styled.div`
   .choice-box {
     display: flex;
     align-items: center;
+    gap: 20px;
     @media (max-width: 800px) {
       display: flex;
-      flex-direction: column; 
-      align-items: flex-start; 
-      margin-left: -130px; 
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: -130px;
     }
   }
   .line1 {
@@ -225,8 +226,8 @@ const MainCont = styled.div`
     stroke: #8d8d8d;
     border: 1px solid #8d8d8d;
     @media (max-width: 800px) {
-      margin-top: 10px; 
-      margin-bottom: 20px; 
+      margin-top: 10px;
+      margin-bottom: 20px;
       width: 100%;
     }
   }
@@ -304,29 +305,7 @@ function RightContact() {
                 width={13}
                 alt="select"
               />
-              <p className="option">General Inquiry</p>
-            </div>
-            <div className="choice">
-              <Image
-                className="tick-box"
-                src={select === 3 ? "/solid-tick.svg" : "/tick-circle.svg"}
-                onClick={() => setSelect(3)}
-                height={14}
-                width={13}
-                alt="select"
-              />
-              <p className="option">General Inquiry</p>
-            </div>
-            <div className="choice">
-              <Image
-                className="tick-box"
-                src={select === 4 ? "/solid-tick.svg" : "/tick-circle.svg"}
-                onClick={() => setSelect(4)}
-                height={14}
-                width={13}
-                alt="select"
-              />
-              <p className="option">General Inquiry</p>
+              <p className="option">Special Inquiry</p>
             </div>
           </div>
           <div className="msg">Message</div>

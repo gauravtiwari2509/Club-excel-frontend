@@ -94,8 +94,8 @@ const MainCont = styled.div`
     stroke-width: 1px;
     stroke: #8d8d8d;
     @media (max-width: 800px) {
-      margin-bottom: 20px; /* Reduce margin on small screens */
-      width: 100%; /* Full width on small screens */
+      margin-bottom: 20px; 
+      width: 100%;
     }
   }
   .grid {
@@ -104,7 +104,7 @@ const MainCont = styled.div`
     grid-column-gap: 40px;
     @media (max-width: 800px) {
       display: flex;
-      flex-direction: column; /* Stack columns on small screens */
+      flex-direction: column; 
       align-items: center;
     }
   }
@@ -116,10 +116,10 @@ const MainCont = styled.div`
     border-style: none;
     padding: 5px;
     @media (max-width: 800px) {
-      width: 300px; /* Full width on small screens */
-      margin-top: 10px; /* Adjust margin on small screens */
-      border-style: none; /* Add border for input fields */
-      padding: 10px; /* Increase padding for better touch usability */
+      width: 300px;
+      margin-top: 10px;
+      border-style: none; 
+      padding: 10px; 
     }
   }
   .place {
@@ -146,11 +146,7 @@ const MainCont = styled.div`
       text-align: start;
     }
   }
-  .tick-box {
-    width: 13px;
-    height: 13.241px;
-    flex-shrink: 0;
-  }
+  
   .option {
     width: 92px;
     height: 20.37px;
@@ -160,10 +156,10 @@ const MainCont = styled.div`
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 166.667% */
+    line-height: 20px;
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
-      text-align: center; /* Center text on all screens */
+      width: 100%;
+      text-align: center; 
     }
   }
 
@@ -177,8 +173,8 @@ const MainCont = styled.div`
     margin-top: 45px;
     @media (max-width: 800px) {
       width: 100%;
-      text-align: start; /* Center text on all screens */
-      margin-top: 20px; /* Adjust margin on small screens */
+      text-align: start; 
+      margin-top: 20px;
     }
   }
   .message {
@@ -192,10 +188,10 @@ const MainCont = styled.div`
     outline: none;
     margin-top: 6px;
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
-      border: 1px solid #8d8d8d; /* Add border for the message input */
-      padding: 10px; /* Increase padding for better touch usability */
-      margin-top: 10px; /* Adjust margin on small screens */
+      width: 100%;
+      border: 1px solid #8d8d8d;
+      padding: 10px; 
+      margin-top: 10px;
     }
   }
   .choice {
@@ -241,12 +237,20 @@ const MainCont = styled.div`
     margin-top: 20px;
     margin-left: 300px;
     @media (max-width: 800px) {
-      width: 100%; /* Full width on small screens */
+      width: 100%;
       max-width: 240.788px;
       height: auto;
-      background-size: contain; /* Ensure image fits within the container */
-      margin-top: 10px; /* Adjust margin on small screens */
-      margin-left: 0; /* Remove left margin on small screens */
+      background-size: contain; 
+      margin-top: 10px; 
+      margin-left: 0;
+    }
+  }
+
+  .tick-box {
+    width: 13px;
+    height: 13.241px;
+    @media (max-width: 800px) {
+  margin-left: 100px;
     }
   }
 `

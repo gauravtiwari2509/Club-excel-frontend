@@ -127,7 +127,7 @@ const MainCont = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 `
 
@@ -157,19 +157,18 @@ function Footer() {
               >
                 REGISTER
               </div>
-              <div className="link">
-                <div
-                  className="pointer hover"
-                  onClick={() => router.push("/contact")}
-                >
-                  CONTACT
-                </div>
+            </div>
+            <div className="link">
+              <div
+                className="pointer hover"
+                onClick={() => router.push("/contact")}
+              >
+                CONTACT
               </div>
-              {/* <div className="vector-20"></div> */}
+            </div>
 
-              <div className="link">
-                <div className="pointer hover">OUR TEAM</div>
-              </div>
+            <div className="link">
+              <div className="pointer hover">OUR TEAM</div>
             </div>
           </div>
           <div className="vector-20"></div>
@@ -184,7 +183,7 @@ function Footer() {
                   alt="instagram"
                   onClick={() =>
                     window.open(
-                      "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
+                      "https://instagram.com/club_excel?igshid=MzRlODBiNWFlZA=="
                     )
                   }
                 />
@@ -196,7 +195,7 @@ function Footer() {
                   width={32}
                   onClick={() =>
                     window.open(
-                      "https://twitter.com/_club_excel_?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
+                      "https://twitter.com/club_excel?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
                     )
                   }
                   alt="twitter"
@@ -237,9 +236,9 @@ function Footer() {
               <span className="send">CONTACT US</span>
             </div>
           </div>
-          <div className="vector-17"></div>
-          2023 © Club Excel - ALL RIGHTS RESERVED
         </div>
+        <div className="vector-17"></div>
+        2023 © Club Excel - ALL RIGHTS RESERVED{" "}
       </div>
     </MainCont>
   )

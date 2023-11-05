@@ -22,6 +22,9 @@ const MainCont = styled.div`
   .hero-gif{
     height: 336px;
     width: 360px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   }
 `

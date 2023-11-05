@@ -151,20 +151,25 @@ function Footer() {
           <div className="vector-20"></div>
           <div className="sec">
             <div className="link">
-              <div className="pointer hover">REGISTER</div>
-            </div>
-            <div className="link">
               <div
                 className="pointer hover"
-                onClick={() => router.push("/contact")}
+                onClick={() => router.push("/register")}
               >
-                CONTACT
+                REGISTER
               </div>
-            </div>
-            {/* <div className="vector-20"></div> */}
+              <div className="link">
+                <div
+                  className="pointer hover"
+                  onClick={() => router.push("/contact")}
+                >
+                  CONTACT
+                </div>
+              </div>
+              {/* <div className="vector-20"></div> */}
 
-            <div className="link">
-              <div className="pointer hover">OUR TEAM</div>
+              <div className="link">
+                <div className="pointer hover">OUR TEAM</div>
+              </div>
             </div>
           </div>
           <div className="vector-20"></div>
@@ -232,9 +237,9 @@ function Footer() {
               <span className="send">CONTACT US</span>
             </div>
           </div>
+          <div className="vector-17"></div>
+          2023 © Club Excel - ALL RIGHTS RESERVED
         </div>
-        <div className="vector-17"></div>
-        2023 © Club Excel - ALL RIGHTS RESERVED{" "}
       </div>
     </MainCont>
   )

@@ -273,7 +273,7 @@ export const clubMembers = [
 ]
 
 
-export const alumunai =[
+export const AlumunaiMembers =[
 
   {
     name:"Sushovan Paul",
@@ -353,18 +353,4 @@ export const alumunai =[
     linkedIn:"https://www.linkedin.com/in/sarbajitmohanty/",
     domain:"Programmer Analyst"
   }
- 
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 ]
-=======
-]
->>>>>>> Stashed changes
-=======
-]
->>>>>>> Stashed changes
-=======
-]
->>>>>>> Stashed changes

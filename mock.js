@@ -3,7 +3,7 @@ export const clubMembers = [
     name: "Sanjeev",
     img: "/team/sanjeev.jpg",
     batch: "2020",
-    linkedIn: "https://www.linkedin.com/in/sanjeev-sde-rnd",
+    linkedIn: "https://www.linkedin.com/in/sanjeev-sde",
     domain: "Web3 Full Stack Developer",
   },
   {
@@ -128,6 +128,29 @@ export const clubMembers = [
     domain: "Data Analyst",
   },
   {
+    name: "Bishal",
+    img: "/team/bishal.jpg",
+    batch: "2021",
+    linkedIn:
+      "https://www.linkedin.com/in/bishal-kumar-saw-35b918257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    domain: "Full Stack Developer",
+  },
+  {
+    name: "Akshat",
+    img: "/team/akshat.jpg",
+    batch: "2021",
+    linkedIn:
+      "https://www.linkedin.com/in/akshat-anand-7ba987249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    domain: "Full Stack Developer",
+  },
+  {
+    name: "Naveen",
+    img: "/team/naveen.jpg",
+    batch: "2021",
+    linkedIn: "",
+    domain: "Full Stack Developer",
+  },
+  {
     name: "Payal",
     img: "/team/payal jr.jpg",
     batch: "2022",
@@ -246,5 +269,99 @@ export const clubMembers = [
     batch: "2022",
     linkedIn: "https://www.linkedin.com/in/k-sai-kalyan-1a7249262",
     domain: " Data Science ",
+  },
+]
+
+export const AlumunaiMembers = [
+  {
+    name: "Sushovan Paul",
+    img: "/team/sushovan.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/sushovan07",
+    domain: "Full Stack Developer",
+  },
+  {
+    name: "Sunny Kumar",
+    img: "/team/sunny.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/sunny52525",
+    domain: "Android, Backend",
+  },
+  {
+    name: "Ashu Sharma",
+    img: "/team/ashu.png",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/a-shu",
+    domain: "Backend",
+  },
+  {
+    name: "Akarsh Agarwal",
+    img: "/team/akarsh.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/akarshagrawal09/",
+    domain: "Backend",
+  },
+  {
+    name: "Dipti Mishra",
+    img: "/team/deepti.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/dipti-mishra-724928202/",
+    domain: "Backend",
+  },
+  {
+    name: "Hritvik Ranjan",
+    img: "/team/hritvik.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/hritvik-ranjan-b290a71a9/",
+    domain: "Android development",
+  },
+  {
+    name: "Laxmi Narayan",
+    img: "/team/narayan.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/naryann/",
+    domain: "Software Developer",
+  },
+  {
+    name: "Rupesh Raj Tripathy",
+    img: "/team/rupesh.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/rupesh-raj-tripathy-86497b1ab/",
+    domain: "Software Developer",
+  },
+  {
+    name: "Shradha Kyal",
+    img: "/team/sradha.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/shradha-kyal-a268331b1/",
+    domain: "Web development, Data Analyst",
+  },
+  {
+    name: "Sonali Sahu",
+    img: "/team/sonali.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/sonali-sahu-/",
+    domain: "Web development",
+  },
+  {
+    name: "Niharika Kumari",
+    img: "/team/sonali.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/niharika-kumari-23b3a6213/",
+    domain: "Web development",
+  },
+  {
+    name: "Suraj Kumar Sahu",
+    img: "/team/suraj.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/suraj-kumar-sahu-7348231aa/",
+    domain: "Software Engineering",
+  },
+  {
+    name: "Sarbajit Mohanty",
+    img: "/team/sarbajit.jpg",
+    batch: "2019",
+    linkedIn: "https://www.linkedin.com/in/sarbajitmohanty/",
+    domain: "Programmer Analyst",
   },
 ]

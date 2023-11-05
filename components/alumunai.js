@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import Card1 from "./Card1"
 import { useInView } from "react-intersection-observer"
+import { AlumunaiMembers } from "@/mock"
 
 const MainCont = styled.div`
   margin-top: 50px;
@@ -105,40 +106,22 @@ function Alumunai() {
         >
           <div className="partnven-box">
             <div className="">
-              <Card1
-                img={"/team/sanjeev.jpg"}
-                txt={"Sanjeev"}
-              />
+              <Card1 data={AlumunaiMembers[0]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/richa di.jpg"}
-                txt={"Richa"}
-              />
+              <Card1 data={AlumunaiMembers[1]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/Ankit bhiya.jpg"}
-                txt={"Ankit"}
-              />
+              <Card1 data={AlumunaiMembers[2]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/Biswa bhiya.jpg"}
-                txt={"Biswa"}
-              />
+              <Card1 data={AlumunaiMembers[3]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/kishlay bhiya.png"}
-                txt={"Kishlay"}
-              />
+              <Card1 data={AlumunaiMembers[4]} />
             </div>
             <div className="show-mobile">
-              <Card1
-                img={"/team/srikant.jpg"}
-                txt={"Srikant"}
-              />
+              <Card1 data={AlumunaiMembers[5]} />
             </div>
           </div>
         </motion.div>
@@ -153,34 +136,19 @@ function Alumunai() {
         >
           <div className="partnven-box second">
             <div className="">
-              <Card1
-                img={"/team/code8"}
-                txt={"CODE8"}
-              />
+              <Card1 data={AlumunaiMembers[6]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/lunatic"}
-                txt={"LUNATIC GAMES"}
-              />
+              <Card1 data={AlumunaiMembers[7]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/luster"}
-                txt={"LUSTER"}
-              />
+              <Card1 data={AlumunaiMembers[8]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/agg"}
-                txt={"AGG"}
-              />
+              <Card1 data={AlumunaiMembers[9]} />
             </div>
             <div className="hide-mobile">
-              <Card1
-                img={"/team/srikant.jpg"}
-                txt={"Srikant"}
-              />
+              <Card1 data={AlumunaiMembers[5]} />
             </div>
           </div>
         </motion.div>
@@ -195,34 +163,19 @@ function Alumunai() {
         >
           <div className="partnven-box second">
             <div className="">
-              <Card1
-                img={"/team/web3punjab"}
-                txt={"WEB3 PANJAB COMMUNITY"}
-              />
+              <Card1 data={AlumunaiMembers[10]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/asvarium"}
-                txt={"ASVARIUM"}
-              />
+              <Card1 data={AlumunaiMembers[11]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/metaspacecy"}
-                txt={"METASPACECY"}
-              />
+              <Card1 data={AlumunaiMembers[12]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/seracle"}
-                txt={"SERACLE"}
-              />
+              <Card1 data={AlumunaiMembers[13]} />
             </div>
             <div className="hide-mobile">
-              <Card1
-                img={"/team/asva"}
-                txt={"ASVA LABS"}
-              />
+              <Card1 data={AlumunaiMembers[14]} />
             </div>
           </div>
         </motion.div>
@@ -237,10 +190,7 @@ function Alumunai() {
         >
           <div className="partnven-box second">
             <div className="show-mobile">
-              <Card1
-                img={"/team/varsha"}
-                txt={"Varsha"}
-              />
+              <Card1 data={AlumunaiMembers[14]} />
             </div>
             <div className="">
               <Card1

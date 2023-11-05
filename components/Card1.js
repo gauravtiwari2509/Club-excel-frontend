@@ -68,6 +68,7 @@ function Card1({ data }) {
             height={170}
             width={170}
             alt="Image"
+            onClick={() => window.open(data.linkedIn)}
           />
         </div>
         <div className="partner-card-txt">

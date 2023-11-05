@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { motion } from 'framer-motion';
-import Card1 from './Card1';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect, useState } from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import Card1 from "./Card1"
+import { useInView } from "react-intersection-observer"
+import { clubMembers } from "@/mock"
 
 export const MainCont = styled.div`
   margin-top: 150px;
@@ -79,242 +80,253 @@ export const MainCont = styled.div`
       z-index: 300;
     }
   }
-`;
-
+`
 
 function Member() {
-    const [animate, setAnimate] = useState(false);
-    const [ref, inView] = useInView();
-  
-    useEffect(() => {
-      if (inView) {
-        setAnimate(true);
-      } else {
-        setAnimate(false);
-      }
-    }, [inView]);
-    
+  const [animate, setAnimate] = useState(false)
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true)
+    } else {
+      setAnimate(false)
+    }
+  }, [inView])
+
   return (
     <MainCont>
-         <div className='pnvm'>
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(500px)",
-            }}
-            className='parent-motion-div '
-          >
-            <div className='partnven-box'>
-              <div className=''>
-                <Card1 img={"/team/sanjeev.jpg"} txt={"Sanjeev"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/abhinav.jpg"} txt={"Abhinav"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/ogclub"} txt={"OG CLUB"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/xsquad"} txt={"XSQUAD"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/cfk"} txt={"CFK"} />
-              </div>
-              <div className='show-mobile'>
-                <Card1
-                  img={"/team/intoTheVerse"}
-                  txt={"INTO THE VERSE"}
-                />
-              </div>
+      <div className="pnvm">
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(500px)",
+          }}
+          className="parent-motion-div "
+        >
+          <div className="partnven-box">
+            <div className="">
+              <Card1 data={clubMembers[0]} />
             </div>
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(-500px)",
-            }}
-            className=''
-          >
-            <div className='partnven-box second'>
-              <div className=''>
-                <Card1 img={"/team/code8"} txt={"CODE8"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/lunatic"}
-                  txt={"LUNATIC GAMES"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/luster"} txt={"LUSTER"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/agg"} txt={"AGG"} />
-              </div>
-              <div className='hide-mobile'>
-                <Card1
-                  img={"/team/intoTheVerse"}
-                  txt={"INTO THE VERSE"}
-                />
-              </div>
+            <div className="">
+              <Card1 data={clubMembers[1]} />
             </div>
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(500px)",
-            }}
-            className='parent-motion-div'
-          >
-            <div className='partnven-box second'>
-              <div className=''>
-                <Card1
-                  img={"/team/web3punjab"}
-                  txt={"WEB3 PANJAB COMMUNITY"}
-                />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/asvarium"}
-                  txt={"ASVARIUM"}
-                />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/metaspacecy"}
-                  txt={"METASPACECY"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/seracle"} txt={"SERACLE"} />
-              </div>
-              <div className='hide-mobile'>
-                <Card1 img={"/team/asva"} txt={"ASVA LABS"} />
-              </div>
+            <div className="">
+              <Card1 data={clubMembers[2]} />
             </div>
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(-500px)",
-            }}
-            className=''
-          >
-            <div className='partnven-box second'>
-              <div className='show-mobile'>
-                <Card1 img={"/team/asva"} txt={"ASVA LABS"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/web3assam"}
-                  txt={"web3 assam"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/sora"} txt={"SORA"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/borntodie"}
-                  txt={"BORN TO DIE"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/gafin"} txt={"GAFIN"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/guildgames"}
-                  txt={"guild games"}
-                />
-              </div>
+            <div className="">
+              <Card1 data={clubMembers[3]} />
             </div>
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(500px)",
-            }}
-            className='parent-motion-div'
-          >
-            <div className='partnven-box second'>
-              <div className=''>
-                <Card1
-                  img={"/team/gamingarcade"}
-                  txt={"GAMING ARCADE"}
-                />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/kridafans"}
-                  txt={"KRIDA FANS"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/medroii"} txt={"MEDROII"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/metadoge"}
-                  txt={"METADOGE UNITY"}
-                />
-              </div>
-              <div className='hide-mobile'>
-                <Card1 img={"/team/nordek"} txt={"NORDEK"} />
-              </div>
+            <div className="">
+              <Card1 data={clubMembers[4]} />
             </div>
-          </motion.div>
-
-          <motion.div
-            transition={{ duration: 1 }}
-            animate={{
-              opacity: animate ? 1 : 0,
-              transform: animate ? "translateX(0px)" : "translateX(-500px)",
-            }}
-            className=''
-          >
-            <div className='partnven-box second'>
-              <div className='show-mobile'>
-                <Card1 img={"/team/nordek"} txt={"NORDEK"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/threewaystudio"}
-                  txt={"THREEWAY STUDIO"}
-                />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/truts"} txt={"TRUTS"} />
-              </div>
-              <div className=''>
-                <Card1 img={"/team/xwinner"} txt={"X WINNER"} />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/yearn"}
-                  txt={"YEARN TOGETEHR"}
-                />
-              </div>
-              <div className=''>
-                <Card1
-                  img={"/team/zuraverse"}
-                  txt={"ZURA VERSE"}
-                />
-              </div>
+            <div className="show-mobile">
+              <Card1 data={clubMembers[5]} />
             </div>
-          </motion.div>
-        </div>
-        <div ref={ref} className='  center-ref'></div>
+          </div>
+        </motion.div>
 
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="">
+              <Card1 data={clubMembers[6]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[7]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[8]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[9]} />
+            </div>
+            <div className="hide-mobile">
+              <Card1 data={clubMembers[5]} />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(500px)",
+          }}
+          className="parent-motion-div"
+        >
+          <div className="partnven-box second">
+            <div className="">
+              <Card1 data={clubMembers[10]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[11]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[12]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[13]} />
+            </div>
+            <div className="hide-mobile">
+              <Card1 data={clubMembers[14]} />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="show-mobile">
+              <Card1 data={clubMembers[14]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[15]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[16]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[17]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[18]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[19]} />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(500px)",
+          }}
+          className="parent-motion-div"
+        >
+          <div className="partnven-box second">
+            <div className="">
+              <Card1 data={clubMembers[20]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[21]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[22]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[23]} />
+            </div>
+            <div className="hide-mobile">
+              <Card1 data={clubMembers[24]} />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="show-mobile">
+              <Card1 data={clubMembers[24]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[25]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[26]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[27]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[28]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[29]} />
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(500px)",
+          }}
+          className="parent-motion-div"
+        >
+          <div className="partnven-box second">
+            <div className="">
+              <Card1 data={clubMembers[30]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[31]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[32]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[33]} />
+            </div>
+            <div className="hide-mobile">
+              <Card1 data={clubMembers[34]} />
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="show-mobile">
+              <Card1 data={clubMembers[34]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[35]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[36]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[37]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[38]} />
+            </div>
+            <div className="">
+              <Card1 data={clubMembers[39]} />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+      <div
+        ref={ref}
+        className="  center-ref"
+      ></div>
     </MainCont>
   )
 }

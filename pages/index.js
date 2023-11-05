@@ -116,47 +116,46 @@ export default function Home() {
           href="/clubexcellogo.png"
         />
       </Head>
-      <Suspense fallback={<p>Loading . . .</p>}>
-        <MainCont>
-          <Hero />
-          <div id="about">
-            <QuickContact />
-          </div>
 
-          <div className="bg1"></div>
-          <div className="bg2"></div>
-          <div className="bg3"></div>
-          <div className="hero-4"></div>
+      <MainCont>
+        <Hero />
+        <div id="about">
+          <QuickContact />
+        </div>
 
-          <div className="intro-comp">
-            <Intro />
-          </div>
+        <div className="bg1"></div>
+        <div className="bg2"></div>
+        <div className="bg3"></div>
+        <div className="hero-4"></div>
 
-          <About />
-          <div className="scrolly">
-            <div className="flex-scrolly">
-              <div className="intro-text">Our Domains</div>
-              <div className="scrolly-arrow"></div>
-            </div>
-            <ScrollSection />
-          </div>
+        <div className="intro-comp">
+          <Intro />
+        </div>
 
-          <div>
-            <WhyChoose />
+        <About />
+        <div className="scrolly">
+          <div className="flex-scrolly">
+            <div className="intro-text">Our Domains</div>
+            <div className="scrolly-arrow"></div>
           </div>
-          <div id="Gallary">
-            <div className="Gal-head">Gallary</div>
-            <Carroussel
-              cards={cards}
-              height="500px"
-              width="50%"
-              margin="0 auto"
-              offset={2}
-              showArrows={false}
-            />
-          </div>
-        </MainCont>
-      </Suspense>
+          <ScrollSection />
+        </div>
+
+        <div>
+          <WhyChoose />
+        </div>
+        <div id="Gallary">
+          <div className="Gal-head">Gallary</div>
+          <Carroussel
+            cards={cards}
+            height="500px"
+            width="50%"
+            margin="0 auto"
+            offset={2}
+            showArrows={false}
+          />
+        </div>
+      </MainCont>
     </>
   )
 }

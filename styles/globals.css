@@ -219,20 +219,7 @@ filter: blur(176.73252868652344px);
 
 
 
-.why-rectangle {
-  width: 1381px;
-  height: 639px;
-  background: url("/Rectangle 28.svg");
-  background-size: 1381px 639px;
-  display: flex;
-  align-items: center;
-  margin-right: -30px;
-  @media (max-width: 800px) {
- flex-direction: column;
- justify-content: center;
- margin-right: -140px;
-}
-}
+
 
 .mt30{
   margin-top: 30px;
@@ -260,6 +247,7 @@ filter: blur(176.73252868652344px);
   line-height: normal;
   @media (max-width: 800px) {
  text-align: center;
+ font-size: 26px;
 }
 }
 .scrolly{
@@ -269,6 +257,12 @@ filter: blur(176.73252868652344px);
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (min-width: 801px) and (max-width: 1200px) {
+    margin-top: 0;
+
+  
+  }
+
 }
 .flex-scrolly{
   margin-bottom:-100px;
@@ -276,4 +270,33 @@ filter: blur(176.73252868652344px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 800px) {
+    margin-left:0 ;
+    margin-bottom: 10px;
+    }
+  
+  @media (min-width: 801px) and (max-width: 1200px) {
+    margin-left:-490px ;
+
+    margin-bottom: -200px;
+
+  
+  }
 }
+
+
+
+.why-rectangle {
+  width: 1381px;
+  height: 639px;
+  background: url("/Rectangle 28.svg");
+  background-size: 1381px 639px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: -140px;
+  }
+}
+

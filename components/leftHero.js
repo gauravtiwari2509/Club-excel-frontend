@@ -20,6 +20,9 @@ const MainCont = styled.div`
     -webkit-text-fill-color: transparent;
 
     height: 56px;
+    @media (max-width: 800px) {
+      font-size: 36px;
+    }
   }
   .head-text {
     margin-left: 54px;
@@ -51,6 +54,9 @@ const MainCont = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 800px) {
+      font-size: 36px;
+    }
   }
 
   .hero-p {
@@ -65,7 +71,9 @@ const MainCont = styled.div`
     height: 72px;
     @media (max-width: 800px) {
       text-align: center;
-      width: 360px;
+      font-size: 16px;
+
+      width: 335px;
     }
   }
   .button {

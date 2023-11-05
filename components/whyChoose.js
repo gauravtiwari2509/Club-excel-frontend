@@ -6,32 +6,17 @@ import { useInView } from "react-intersection-observer"
 
 const MainCont = styled.div`
   margin-bottom: 200px;
-  margin-top: 200px;
-  .why-box{
-
+  .why-box {
   }
   @media (max-width: 800px) {
     margin-top: 100px;
+  }
 
-  }
-  .why-rectangle {
-    width: 1381px;
-    height: 639px;
-    background: url("/Rectangle 28.svg");
-    background-size: 1381px 639px;
-    display: flex;
-    align-items: center;
-    @media (max-width: 800px) {
-   flex-direction: column;
-   justify-content: center;
-   margin-right: -140px;
-  }
-  }
   @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.6);
-    margin-top: -100px;
+    margin-top: -400px;
   }
- 
+
   .head {
     margin-top: -50px;
     color: #fff;
@@ -43,8 +28,8 @@ const MainCont = styled.div`
     margin-left: 149px;
     @media (max-width: 800px) {
       margin-top: 20px;
-      margin-left:90px;
-  }
+      margin-left: 90px;
+    }
   }
   .text {
     width: 493.072px;
@@ -57,12 +42,12 @@ const MainCont = styled.div`
     margin-left: 60px;
     line-height: 32px;
     @media (max-width: 800px) {
-   text-align: center;
-   margin-top: 10px;
-  font-size: 15px;
-  width: 360px;
-  margin-left: 85px;
-  }
+      text-align: center;
+      margin-top: 10px;
+      font-size: 15px;
+      width: 360px;
+      margin-left: 85px;
+    }
   }
   .rectangle1 {
     width: 241.429px;
@@ -82,6 +67,9 @@ const MainCont = styled.div`
     );
     backdrop-filter: blur(19.040151596069336px);
     position: relative;
+    @media (max-width: 800px) {
+      transform: scale(0.8);
+    }
   }
   .center-ref-why {
     margin-top: -300px;
@@ -99,7 +87,7 @@ const MainCont = styled.div`
       margin-left: 0;
       justify-content: center;
       margin-right: -140px;
-  }
+    }
   }
   .stch-left {
     margin-left: -70px;

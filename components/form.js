@@ -96,6 +96,22 @@ const MainCont = styled.div`
   }
   .main-form::shadow {
   }
+  .main-form::before {
+    content: "";
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .main-form::affter {
+    content: Animination;
+    color: white;
+    width: 190px;
+    height: 190px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+  }
   .labelc {
     color: #242426;
     font-family: Poppins;

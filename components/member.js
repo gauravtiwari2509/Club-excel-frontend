@@ -13,7 +13,7 @@ export const MainCont = styled.div`
     transform: scale(0.5);
     margin-left: 0px;
     margin-top: -450px;
-    margin-bottom: -100px;
+    margin-bottom: -600px;
   }
   @media (min-width: 2560px) {
     transform: scale(1.4);
@@ -22,8 +22,8 @@ export const MainCont = styled.div`
   }
 
   @media (max-width: 799px) {
-    margin-left: -675px;
-    margin-top: -52px;
+    margin-left: -710px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@ export const MainCont = styled.div`
       width: 100px;
       position: relative;
       margin-top: -500px;
-      height: 5000px;
+      height: 5350px;
       margin-bottom: -20px;
       margin-left: -800px;
       z-index: 300;

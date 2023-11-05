@@ -11,11 +11,12 @@ const MainCont = styled.div`
     margin-top: -350px;
   }
   .rightHero {
-    
   }
-  .hero-gif{
-    height: 326px;
-    width: 390px;
+
+  .hero-gif {
+    @media (max-width: 800px) {
+      transform: scale(0.9);
+    }
   }
 `
 

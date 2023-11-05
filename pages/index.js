@@ -9,6 +9,9 @@ import QuickContact from "@/components/quickContact"
 
 import { v4 as uuidv4 } from "uuid"
 import Hero from "@/components/Hero"
+import WhyChoose from "@/components/whyChoose"
+import Loader from "@/components/loder"
+import { Suspense } from "react"
 
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
@@ -16,10 +19,6 @@ const Carroussel = dynamic(() => import("@/components/carousel"), {
 const ScrollSection = dynamic(() => import("@/components/ScrollSection"), {
   ssr: false,
 })
-const WhyChoose = dynamic(() => import("@/components/whyChoose"), {
-  ssr: false,
-})
-
 const Card = dynamic(() => import("@/components/Card"), {
   ssr: false,
 })
@@ -31,7 +30,6 @@ const MainCont = styled.div`
   flex-direction: column;
   align-items: center;
 
-
   .Hero-div {
     @media (max-width: 800px) {
       display: flex;
@@ -39,8 +37,6 @@ const MainCont = styled.div`
       align-items: center;
     }
   }
-  
-  
 `
 
 export default function Home() {
@@ -120,46 +116,47 @@ export default function Home() {
           href="/clubexcellogo.png"
         />
       </Head>
-      <MainCont>
-        <Hero />
-        <div id="about">
-          <QuickContact />
-        </div>
+      <Suspense fallback={<p>Loading . . .</p>}>
+        <MainCont>
+          <Hero />
+          <div id="about">
+            <QuickContact />
+          </div>
 
-        <div className="bg1"></div>
-        <div className="bg2"></div>
-        <div className="bg3"></div>
-        <div className="hero-4"></div>
+          <div className="bg1"></div>
+          <div className="bg2"></div>
+          <div className="bg3"></div>
+          <div className="hero-4"></div>
 
-        <div className="intro-comp">
-          <Intro />
-        </div>
+          <div className="intro-comp">
+            <Intro />
+          </div>
 
           <About />
           <div className="scrolly">
-          <div className="flex-scrolly">
-        <div className="intro-text">Our Domains</div>
-           <div className="scrolly-arrow"></div>
-      </div>
-      <ScrollSection/>
+            <div className="flex-scrolly">
+              <div className="intro-text">Our Domains</div>
+              <div className="scrolly-arrow"></div>
+            </div>
+            <ScrollSection />
           </div>
-          
 
-        <div>
-          <WhyChoose />
-        </div>
-        <div id="Gallary">
-          <div className="Gal-head">Gallary</div>
-          <Carroussel
-            cards={cards}
-            height="500px"
-            width="50%"
-            margin="0 auto"
-            offset={2}
-            showArrows={false}
-          />
-        </div>
-      </MainCont>
+          <div>
+            <WhyChoose />
+          </div>
+          <div id="Gallary">
+            <div className="Gal-head">Gallary</div>
+            <Carroussel
+              cards={cards}
+              height="500px"
+              width="50%"
+              margin="0 auto"
+              offset={2}
+              showArrows={false}
+            />
+          </div>
+        </MainCont>
+      </Suspense>
     </>
   )
 }

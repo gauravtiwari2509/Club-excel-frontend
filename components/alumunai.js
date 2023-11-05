@@ -12,8 +12,8 @@ const MainCont = styled.div`
   @media (min-width: 800px) and (max-width: 1440px) {
     transform: scale(0.5);
     margin-left: 0px;
-    margin-top: -450px;
-    margin-bottom: -100px;
+    margin-top: -250px;
+    margin-bottom: -300px;
   }
   @media (min-width: 2560px) {
     transform: scale(1.4);
@@ -69,12 +69,12 @@ const MainCont = styled.div`
 
   .center-ref {
     height: 2000px;
-    margin-top: -2200px;
+    margin-top: -2300px;
     @media (max-width: 799px) {
       width: 100px;
       position: relative;
       margin-top: -500px;
-      height: 5000px;
+      height: 4900px;
       margin-bottom: -20px;
       margin-left: -800px;
       z-index: 300;

@@ -6,6 +6,7 @@ import dynamic from "next/dynamic"
 import Member from "@/components/member"
 import Button from "@/components/button"
 import ScrollSection from "@/components/ScrollSection"
+import Loader from "@/components/loder"
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
 })
@@ -13,8 +14,7 @@ const Carroussel = dynamic(() => import("@/components/carousel"), {
 const MainCont = styled.div``
 
 function Navbar() {
-  return <MainCont>
-  </MainCont>
+  return <MainCont>{/* <Loader /> */}</MainCont>
 }
 
 export default Navbar

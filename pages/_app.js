@@ -2,27 +2,37 @@ import Navbar from "@/components/navbar"
 import "@/styles/globals.css"
 import "@/styles/Home.module.css"
 import Footer from "@/components/footer"
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import LoadingBar from "react-top-loading-bar";
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import LoadingBar from "react-top-loading-bar"
+import Loader from "@/components/loder"
 
 export default function App({ Component, pageProps }) {
-  const [progress, setProgress] = useState(0);
-  const router = useRouter();
-  useEffect(() => {
-    router.events.on('routeChangeStart', () => {
-      setProgress(40);
-    });
+  const [progress, setProgress] = useState(0)
+  const router = useRouter()
+  const [loaded, setLoaded] = useState(false)
 
-    router.events.on('routeChangeComplete', () => {
-      setProgress(100);
-    });
-  }, []);
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => {
+      setProgress(40)
+      setLoaded(false)
+    })
+
+    router.events.on("routeChangeComplete", () => {
+      setProgress(100)
+      setLoaded(true)
+    })
+  }, [])
 
   return (
     <>
-                <LoadingBar color='violet' progress={progress} waitingTime={400} onLoaderFinished={() => setProgress(0)} />
-
+      <LoadingBar
+        color="violet"
+        progress={progress}
+        waitingTime={400}
+        onLoaderFinished={() => setProgress(0)}
+      />
+      {/* {!loaded ? <Loader /> : ""} */}
       <Navbar />
       <Component {...pageProps} />
       <div>

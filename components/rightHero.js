@@ -23,6 +23,9 @@ const MainCont = styled.div`
     height: 336px;
     width: 360px;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

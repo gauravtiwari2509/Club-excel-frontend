@@ -116,7 +116,6 @@ export default function Home() {
           href="/clubexcellogo.png"
         />
       </Head>
-      <Suspense fallback={<p>Loading . . .</p>}>
         <MainCont>
           <Hero />
           <div id="about">
@@ -156,7 +155,6 @@ export default function Home() {
             />
           </div>
         </MainCont>
-      </Suspense>
     </>
   )
 }

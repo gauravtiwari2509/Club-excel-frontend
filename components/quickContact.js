@@ -142,7 +142,7 @@ function QuickContact() {
           <div className="bold-text">
             Pay Us a Visit
             <div className="text">
-              Union St, Seattle, WA 98101, United States
+              NIST, Berhampur(Ganjam),Odisha
             </div>
           </div>
         </div>
@@ -150,14 +150,14 @@ function QuickContact() {
           <div className="phone"></div>
           <div className="bold-text">
             Give Us a Call
-            <div className="text">(110) 1111-1010</div>
+            <div className="text">(+91) 70086 80932</div>
           </div>
         </div>
         <div className="flex gap">
           <div className="mail"></div>
           <div className="bold-text">
             Send Us a Message
-            <div className="text">Contact@clubexcel.com</div>
+            <div className="text">clubexcel@nist.edu</div>
           </div>
         </div>
       </div>

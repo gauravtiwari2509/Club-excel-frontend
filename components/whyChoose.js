@@ -12,6 +12,20 @@ const MainCont = styled.div`
     margin-top: 100px;
   }
 
+  
+  .why-rectangle {
+    width: 1381px;
+    height: 639px;
+    background: url("/Rectangle 28.svg");
+    background-size: 1381px 639px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 800px) {
+   flex-direction: column;
+   justify-content: center;
+   margin-right: -110px;
+  }
+  }
   @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.6);
     margin-top: -400px;
@@ -124,7 +138,7 @@ const MainCont = styled.div`
     font-size: 16.755px;
     font-style: normal;
     font-weight: 400;
-    line-height: 25.59px; /* 152.727% */
+    line-height: 25.59px; 
   }
   .yellow {
     position: absolute;

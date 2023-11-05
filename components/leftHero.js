@@ -124,9 +124,9 @@ function LeftHero() {
         </div>
         <div
           className="button"
-          onClick={() => router.push("/contact")}
+          
         >
-          <span className="send">Send Message</span>
+          <span className="send" onClick={()=>(window.open("mailto:clubexcel@nist.edu"))}>Send Message</span>
           <div className="arrow"></div>
         </div>
       </div>

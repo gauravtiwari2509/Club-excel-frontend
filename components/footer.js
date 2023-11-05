@@ -146,7 +146,9 @@ function Footer() {
           <div className="vector-20"></div>
           <div className="sec"></div>
           <div className="link">
-            <div className="pointer hover">
+            <div className="pointer hover"
+            onClick={() => router.push("/register")}
+            >
               REGISTER
             </div>
           </div>
@@ -158,7 +160,6 @@ function Footer() {
               CONTACT
             </div>
           </div>
-          {/* <div className="vector-20"></div> */}
 
           <div className="link">
             <div className="pointer hover">

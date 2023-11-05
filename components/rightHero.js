@@ -27,8 +27,8 @@ function RightHero() {
         <Image
           src={"/Excel_Logo_Anim.gif"}
           alt="Logo"
-          height={426}
-          width={490}
+          height={436}
+          width={460}
           className="hero-gif"
         />
       </div>

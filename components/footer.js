@@ -3,11 +3,19 @@ import styled from "styled-components"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import Link from "next/link"
-
 const MainCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  .bar {
+    width: 0%;
+    height: 0px;
+    transition-duration: 500ms;
+    border: 1.5px solid transparent;
+    background: transparent;
+  }
+
+ 
   .footer {
     display: flex;
     align-items: center;
@@ -59,7 +67,7 @@ const MainCont = styled.div`
     gap: 42px;
     color: #fff;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -123,6 +131,38 @@ const MainCont = styled.div`
       display: none; /* Hide the vertical dividers on smaller screens */
     }
   }
+  .sec {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+    @media (min-width: 800px) and (max-width: 1440px) {
+      margin-top: 30px;
+      gap: 35px;
+
+    }
+
+    @media (max-width: 800px) {
+      margin-top: 0px;
+      gap: 5px;
+      margin-bottom:15px;
+
+    }
+  }
+
+
+  .ftxt{
+    &:hover {
+      .bar {
+        width: 100%;
+        display: block;
+        border: 1.5px solid #8176af;
+        background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+      }
+    }
+    white-space: nowrap;
+
+  }
 `
 
 function Footer() {
@@ -140,30 +180,39 @@ function Footer() {
               height={185}
               width={185}
               alt="club-excel"
-
             />
           </div>
           <div className="vector-20"></div>
-          <div className="sec"></div>
-          <div className="link">
-            <div className="pointer hover"
-            onClick={() => router.push("/register")}
-            >
-              REGISTER
-            </div>
-          </div>
-          <div className="link">
-            <div
-              className="pointer hover"
-              onClick={() => router.push("/contact")}
-            >
-              CONTACT
-            </div>
-          </div>
+          <div className="sec">
+            <div className="link">
+              <div
+                className="pointer ftxt"
+                onClick={() => router.push("/register")}
+              >
+                REGISTER
+                <div className='bar'></div>
 
-          <div className="link">
-            <div className="pointer hover">
-              OUR TEAM
+              </div>
+            </div>
+            <div className="link">
+              <div
+                className="pointer ftxt"
+                onClick={() => router.push("/contact")}
+              >
+                CONTACT
+                <div className='bar'></div>
+
+              </div>
+
+            </div>
+
+            <div className="link">
+              <div className="pointer ftxt"
+                              onClick={() => router.push("/team")}
+
+              >OUR TEAM
+              <div className='bar'></div>
+</div>
             </div>
           </div>
           <div className="vector-20"></div>
@@ -178,7 +227,7 @@ function Footer() {
                   alt="instagram"
                   onClick={() =>
                     window.open(
-                      "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
+                      "https://instagram.com/_club_excel_?igshid=bG40ZnMxd3lwNDcz"
                     )
                   }
                 />
@@ -190,7 +239,7 @@ function Footer() {
                   width={32}
                   onClick={() =>
                     window.open(
-                      "https://twitter.com/_club_excel_?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
+                      "https://twitter.com/club_excel?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
                     )
                   }
                   alt="twitter"
@@ -202,7 +251,6 @@ function Footer() {
                   height={32}
                   width={32}
                   alt="facebook"
-
                   onClick={() =>
                     window.open(
                       "https://www.facebook.com/excelnist?mibextid=ZbWKwL"
@@ -216,7 +264,6 @@ function Footer() {
                   height={32}
                   width={32}
                   alt="linkedin"
-
                   onClick={() =>
                     window.open(
                       "https://www.linkedin.com/company/club-excel-nist/"
@@ -232,6 +279,7 @@ function Footer() {
             >
               <span className="send">CONTACT US</span>
             </div>
+
           </div>
         </div>
         <div className="vector-17"></div>

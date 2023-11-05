@@ -12,8 +12,8 @@ const MainCont = styled.div`
   @media (min-width: 800px) and (max-width: 1440px) {
     transform: scale(0.5);
     margin-left: 0px;
-    margin-top: -250px;
-    margin-bottom: -300px;
+    margin-top: -450px;
+    margin-bottom: -600px;
   }
   @media (min-width: 2560px) {
     transform: scale(1.4);
@@ -68,13 +68,13 @@ const MainCont = styled.div`
   }
 
   .center-ref {
-    height: 2000px;
-    margin-top: -2300px;
+    height: 3000px;
+    margin-top: -3200px;
     @media (max-width: 799px) {
       width: 100px;
       position: relative;
       margin-top: -500px;
-      height: 4900px;
+      height: 5350px;
       margin-bottom: -20px;
       margin-left: -800px;
       z-index: 300;
@@ -193,34 +193,19 @@ function Alumunai() {
               <Card1 data={AlumunaiMembers[14]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/web3assam"}
-                txt={"web3 assam"}
-              />
+              <Card1 data={AlumunaiMembers[15]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/sora"}
-                txt={"SORA"}
-              />
+              <Card1 data={AlumunaiMembers[16]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/borntodie"}
-                txt={"BORN TO DIE"}
-              />
+              <Card1 data={AlumunaiMembers[17]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/gafin"}
-                txt={"GAFIN"}
-              />
+              <Card1 data={AlumunaiMembers[18]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/guildgames"}
-                txt={"guild games"}
-              />
+              <Card1 data={AlumunaiMembers[19]} />
             </div>
           </div>
         </motion.div>
@@ -235,34 +220,19 @@ function Alumunai() {
         >
           <div className="partnven-box second">
             <div className="">
-              <Card1
-                img={"/team/gamingarcade"}
-                txt={"GAMING ARCADE"}
-              />
+              <Card1 data={AlumunaiMembers[20]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/kridafans"}
-                txt={"KRIDA FANS"}
-              />
+              <Card1 data={AlumunaiMembers[21]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/medroii"}
-                txt={"MEDROII"}
-              />
+              <Card1 data={AlumunaiMembers[22]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/metadoge"}
-                txt={"METADOGE UNITY"}
-              />
+              <Card1 data={AlumunaiMembers[23]} />
             </div>
             <div className="hide-mobile">
-              <Card1
-                img={"/team/nordek"}
-                txt={"NORDEK"}
-              />
+              <Card1 data={AlumunaiMembers[24]} />
             </div>
           </div>
         </motion.div>
@@ -277,40 +247,78 @@ function Alumunai() {
         >
           <div className="partnven-box second">
             <div className="show-mobile">
-              <Card1
-                img={"/team/nordek"}
-                txt={"NORDEK"}
-              />
+              <Card1 data={AlumunaiMembers[24]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/threewaystudio"}
-                txt={"THREEWAY STUDIO"}
-              />
+              <Card1 data={AlumunaiMembers[25]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/truts"}
-                txt={"TRUTS"}
-              />
+              <Card1 data={AlumunaiMembers[26]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/xwinner"}
-                txt={"X WINNER"}
-              />
+              <Card1 data={AlumunaiMembers[27]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/yearn"}
-                txt={"YEARN TOGETEHR"}
-              />
+              <Card1 data={AlumunaiMembers[28]} />
             </div>
             <div className="">
-              <Card1
-                img={"/team/zuraverse"}
-                txt={"ZURA VERSE"}
-              />
+              <Card1 data={AlumunaiMembers[29]} />
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(500px)",
+          }}
+          className="parent-motion-div "
+        >
+          <div className="partnven-box">
+            <div className="">
+              <Card1 data={AlumunaiMembers[30]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[31]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[32]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[33]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[34]} />
+            </div>
+            <div className="show-mobile">
+              <Card1 data={AlumunaiMembers[35]} />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="">
+              <Card1 data={AlumunaiMembers[36]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[37]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[38]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[39]} />
+            </div>
+            <div className="hide-mobile">
+              <Card1 data={AlumunaiMembers[35]} />
             </div>
           </div>
         </motion.div>

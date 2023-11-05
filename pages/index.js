@@ -59,10 +59,6 @@ export default function Home() {
     },
     {
       key: uuidv4(),
-      content: <Card imagen="/p5.jpg" />,
-    },
-    {
-      key: uuidv4(),
       content: <Card imagen="/p6.jpg" />,
     },
     {
@@ -116,6 +112,7 @@ export default function Home() {
           href="/clubexcellogo.png"
         />
       </Head>
+      <Suspense fallback={<p>Loading . . .</p>}>
         <MainCont>
           <Hero />
           <div id="about">
@@ -155,6 +152,7 @@ export default function Home() {
             />
           </div>
         </MainCont>
+      </Suspense>
     </>
   )
 }

@@ -72,11 +72,7 @@ const MainCont = styled.div`
       margin-top: 20px;
     }
   }
-  .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
-  }
+
 
   .letter-send {
     width: 240.788px;
@@ -318,8 +314,8 @@ function RightContact() {
             type="message"
           />
           <div className="line"></div>
-          <div className="button dis">
-            <span className="send">Send Message</span>
+          <div className="button dis hover" onClick={()=>(window.open("mailto:clubexcel@nist.edu"))}>
+            <span className="send" >Send Message</span>
           </div>
           <div className="letter_send"></div>
         </div>

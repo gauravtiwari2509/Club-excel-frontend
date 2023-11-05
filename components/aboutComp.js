@@ -59,6 +59,9 @@ const MainCont = styled.div`
     justify-content: center;
     align-self: flex-end;
     align-items: center;
+    position: relative;
+    z-index: 10;
+
     width: 214px;
     height: 48px;
     flex-shrink: 0;
@@ -174,8 +177,8 @@ function About() {
           platform for students to cultivate their technical skills, collaborate
           on innovative projects, and prepare for a tech-driven future.
         </div>
-        <div className="button pointer hover">
-          <span className="send">LET’S GET IN TOUCH</span>
+        <div className="button pointer hover " onClick={()=>(window.open("https://instagram.com/_club_excel_?igshid=bG40ZnMxd3lwNDcz"))}>
+          <span className="send ">LET’S GET IN TOUCH</span>
         </div>
       </div>
       <div className="vector-7 nicha"></div>

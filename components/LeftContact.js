@@ -232,7 +232,7 @@ function LeftContact() {
             alt="contact"
             onClick={() =>
               window.open(
-                "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
+                "https://instagram.com/_club_excel_?igshid=bG40ZnMxd3lwNDcz"
               )
             }
           />

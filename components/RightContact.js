@@ -72,11 +72,7 @@ const MainCont = styled.div`
       margin-top: 20px;
     }
   }
-  .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
-  }
+
 
   .letter-send {
     width: 240.788px;
@@ -257,6 +253,23 @@ const MainCont = styled.div`
 
 function RightContact() {
   const [select, setSelect] = useState(0)
+  const [detail,setDetail] = useState({
+    fname:"",
+    lname:"",
+    email:"",
+    phone:"",
+    subject:"",
+    message:""
+  })
+
+  const change = (e)=>{
+    const {name,value} =e.target;
+    setDetail((data)=>({...data,[name]:value}))
+    
+
+  }
+
+
 
   return (
     <MainCont>
@@ -265,23 +278,23 @@ function RightContact() {
           <div className="grid place">
             <div className="item">
               <div className="llabel">First Name</div>
-              <input />
+              <input name="fname" onChange={(e)=>change(e)} />
 
               <div className="line"></div>
             </div>
             <div className="item">
               <div className="rlabel">Last Name</div>
-              <input />
+              <input name="lname" onChange={(e)=>change(e)} />
               <div className="line"></div>
             </div>
             <div className="item">
               <div className="llabel">Email</div>
-              <input />
+              <input name="email" onChange={(e)=>change(e)} />
               <div className="line"></div>
             </div>
             <div className="item">
               <div className="rlabel">Phone Number</div>
-              <input />
+              <input name="phone" onChange={(e)=>change(e)} />
               <div className="line"></div>
             </div>
           </div>
@@ -293,7 +306,7 @@ function RightContact() {
               <Image
                 className="tick-box"
                 src={select === 1 ? "/solid-tick.svg" : "/tick-circle.svg"}
-                onClick={() => setSelect(1)}
+                onClick={() =>{ setSelect(1);detail.subject="General Inquiry"}}
                 height={14}
                 width={13}
                 alt="select"
@@ -304,7 +317,7 @@ function RightContact() {
               <Image
                 className="tick-box"
                 src={select === 2 ? "/solid-tick.svg" : "/tick-circle.svg"}
-                onClick={() => setSelect(2)}
+                onClick={() => {setSelect(2);detail.subject="Special Inquiry"}}
                 height={14}
                 width={13}
                 alt="select"
@@ -313,13 +326,13 @@ function RightContact() {
             </div>
           </div>
           <div className="msg">Message</div>
-          <input
+          <input name="message" onChange={(e)=>change(e)}
             className="message"
             type="message"
           />
           <div className="line"></div>
-          <div className="button dis">
-            <span className="send">Send Message</span>
+          <div className="button dis hover" onClick={()=>(window.open(`mailto:clubexcel@nist.edu?subject=${ detail.subject   || ""}&body=${detail.message + " " +detail.fname+" "+detail.lname+" "+detail.phone|| ""}`))}>
+            <span className="send" >Send Message</span>
           </div>
           <div className="letter_send"></div>
         </div>

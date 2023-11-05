@@ -12,8 +12,8 @@ const MainCont = styled.div`
   @media (min-width: 800px) and (max-width: 1440px) {
     transform: scale(0.5);
     margin-left: 0px;
-    margin-top: -250px;
-    margin-bottom: -300px;
+    margin-top: -450px;
+    margin-bottom: -600px;
   }
   @media (min-width: 2560px) {
     transform: scale(1.4);

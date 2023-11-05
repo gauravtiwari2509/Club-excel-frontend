@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 import { clubMembers } from "@/mock"
 
 export const MainCont = styled.div`
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 500px;
   position: relative;
   @media (min-width: 800px) and (max-width: 1440px) {

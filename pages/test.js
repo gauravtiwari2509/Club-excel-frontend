@@ -14,7 +14,6 @@ const MainCont = styled.div``
 
 function Navbar() {
   return <MainCont>
-    <ScrollSection/>
   </MainCont>
 }
 

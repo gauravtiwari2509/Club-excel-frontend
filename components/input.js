@@ -4,7 +4,7 @@ import styled from "styled-components"
 const MainCont = styled.div`
   margin-top: 32px;
   .label {
-    color: #242426;
+    color:gray;
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -16,7 +16,7 @@ const MainCont = styled.div`
     margin-top: 10px;
     background-color: transparent;
     width: 370px;
-    color: #242426;
+    color:gray;
     border: none;
     outline: none;
     font-family: "jura";
@@ -35,7 +35,7 @@ const MainCont = styled.div`
       width: 350px;
     }
     height: 1px;
-    background: rgba(36, 36, 38, 0.7);
+    background: rgba(255, 255, 255, 0.6);
   }
 `
 

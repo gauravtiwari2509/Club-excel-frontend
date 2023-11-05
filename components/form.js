@@ -16,7 +16,7 @@ const MainCont = styled.div`
   }
   .regd-txt {
     margin-top: 50px;
-    color: #242731;
+    color: rgba(255,255,255,0.9);
     font-family: Poppins;
     font-size: 32px;
     font-style: normal;
@@ -94,24 +94,8 @@ const MainCont = styled.div`
     transition: width 2s;
     box-shadow: 2px 2px 6px #888888;
   }
-  .main-form::shadow {
-  }
-  .main-form::before {
-    content: "";
-    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-  .main-form::affter {
-    content: Animination;
-    color: white;
-    width: 190px;
-    height: 190px;
-    background: #101010;
-    position: absolute;
-    border-radius: 10px;
-  }
+  
+
   .labelc {
     color: #242426;
     font-family: Poppins;
@@ -279,7 +263,9 @@ function Form() {
 
   return (
     <MainCont>
-      <div className="close">Registration is currently closed...</div>
+      {/* <Border/> */}
+
+      <div className="close">Events Are Comming Soon. Stay Tuned!!!</div>
       <div className="form">
         <div className="status">
           <Image
@@ -542,3 +528,82 @@ function Form() {
 }
 
 export default Form
+
+
+
+
+// const StyleBorder = styled.div`
+
+// display: flex;
+// justify-content: center;
+// align-items: center;
+
+// .ani-box{
+//     width: 100%;
+//     height: 100%;
+//     box-shadow: 16px 14px 20px #0000008c;
+//     border-radius: 10px;
+//     position: relative;
+//     overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .ani-box::before{
+//   content: "";
+//   background-image: conic-gradient(
+//     #ff0052 20deg,
+//     transparent 120deg
+//   );
+//   width: 150%;
+//   height: 150%;
+//   position: absolute;
+//   animation: rotate 2s linear  infinite;
+// }
+// .ani-box::after{
+//   content  :"" ;
+//   width: 461.6px;
+//     height: 437.6px;
+//   background: #101010;
+//   position: absolute;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: #ff0052;
+//   font-size: larger;
+//   letter-spacing: inset 20px 20px 20px #0000008c;
+// }
+
+// @keyframes rotate {
+//   0%{
+//     transform: rotate(0deg);
+
+//   }
+//   100%{
+//     transform: rotate(360deg);
+
+//   }
+  
+// }
+
+
+// `
+
+
+
+// function Border() {
+//   return (
+//     <StyleBorder>
+//       <div className='ani-box'>
+
+
+// </div>
+//     </StyleBorder>
+//   )
+// }
+
+
+
+
+

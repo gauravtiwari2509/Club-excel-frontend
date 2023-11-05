@@ -16,6 +16,7 @@ const MainCont = styled.div`
   }
   @media (min-width: 801px) and (max-width: 1300px) {
     transform: scale(0.6);
+    margin-top: -50px;
   }
   .bg {
     width: 1272px;
@@ -136,7 +137,6 @@ function QuickContact() {
       <div className="bg">
         <div
           className="flex inl"
-          // style={{ marginLeft: "220px" }}
         >
           <div className="loc"></div>
           <div className="bold-text">

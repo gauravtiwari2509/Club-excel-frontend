@@ -139,12 +139,14 @@ function Footer() {
               src={"/clubexcellogo.png"}
               height={185}
               width={185}
+              alt="club-excel"
+
             />
           </div>
           <div className="vector-20"></div>
           <div className="link">
             <div className="pointer hover">
-              <Link href={"#about"}>ABOUT</Link>
+              REGISTER
             </div>
           </div>
           <div className="link">
@@ -152,14 +154,14 @@ function Footer() {
               className="pointer hover"
               onClick={() => router.push("/contact")}
             >
-              CONTACT US
+              CONTACT
             </div>
           </div>
           <div className="vector-20"></div>
 
           <div className="link">
             <div className="pointer hover">
-              <Link href={"#Gallary"}>GALLARY</Link>
+              OUR TEAM
             </div>
           </div>
           <div className="vector-20"></div>
@@ -171,6 +173,7 @@ function Footer() {
                   src={"/instagram.svg"}
                   height={32}
                   width={32}
+                  alt="instagram"
                   onClick={() =>
                     window.open(
                       "https://instagram.com/_club_excel_?igshid=MzRlODBiNWFlZA=="
@@ -183,6 +186,8 @@ function Footer() {
                   src={"/twitter1.svg"}
                   height={32}
                   width={32}
+                  alt="twitter"
+
                 />
               </div>
               <div className="pointer hover">
@@ -190,6 +195,8 @@ function Footer() {
                   src={"/facebook.svg"}
                   height={32}
                   width={32}
+                  alt="facebook"
+
                   onClick={() =>
                     window.open(
                       "https://www.facebook.com/excelnist?mibextid=ZbWKwL"
@@ -202,6 +209,8 @@ function Footer() {
                   src={"/linkedin.svg"}
                   height={32}
                   width={32}
+                  alt="linkedin"
+
                   onClick={() =>
                     window.open(
                       "https://www.linkedin.com/company/club-excel-nist/"

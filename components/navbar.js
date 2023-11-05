@@ -12,9 +12,17 @@ const MainCont = styled.div`
     padding: 30px 84px;
 
     @media (max-width: 800px) {
-      flex-direction: column;
-      align-items: flex-start;
+      position: relative;
+      z-index: 200;
+      align-items: center;
+
       padding: 20px 20px;
+      position: relative;
+      transition: all .5s ease-in-out;
+    }
+    @media (min-width: 801px) and (max-width: 1200px) {
+      padding: 10px 34px;
+
     }
   }
   .ntxt {
@@ -35,9 +43,11 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
+    @media (min-width: 801px) and (max-width: 1200px) {
+    font-size: 30px;
+  }
     @media (max-width: 800px) {
-      margin-left: 0;
+      margin-left: 20px;
       margin-bottom: 10px;
       text-align: center;
     }
@@ -54,15 +64,40 @@ const MainCont = styled.div`
     line-height: normal;
 
     @media (max-width: 800px) {
-      display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
+      display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #343045;
+      background-color: #00001a;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       padding: 20px 0;
+      animation:${({ menuOpen }) => (menuOpen ? "slide 1s ease-in-out 1 forwards" : "revslide 1s ease-in-out 1 forwards")}
+       ;
+    }
+  }
+
+  
+  @keyframes revslide {
+    0%{
+      transform: translateY(-10px);
+    }
+    20%{
+      transform: translateY(40px);
+
+    }
+    100%{
+      transform: translateY(-400px);
+    }
+  }
+
+  @keyframes slide {
+    from{
+      transform: translateY(-400px);
+    }
+    to{
+      transform: translateY(-10px);
     }
   }
 
@@ -79,17 +114,19 @@ const MainCont = styled.div`
     border-radius: 40px;
     border: 2px solid #fff;
     cursor: pointer;
-
-    @media (max-width: 800px) {
-      margin-top: 10px;
-    }
-  }
-
-  .button1,
-  .button2 {
+    transition: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 800px) {
+        margin-top: 10px;
+        display: none;
+    }
+  }
+
+
+  .button2 {
+   
   }
 
   .button1:hover {
@@ -106,6 +143,7 @@ const MainCont = styled.div`
     @media (max-width: 800px) {
       margin-left: 0;
     }
+
   }
 
   .nav-line {
@@ -113,32 +151,84 @@ const MainCont = styled.div`
     border: 1px solid #fff;
   }
 
+  
+  .nav-logo{
+
+    @media (min-width: 801px) and (max-width: 1200px) {
+
+  }
+  }
+
+
+
   .menu-button {
     display: none;
 
     @media (max-width: 800px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      display: block;
-      color: #fff;
-      font-family: Montserrat;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      cursor: pointer;
-      background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
-      transition: 0.5s;
-      border: none;
-      transform: scale(1.08);
+     height: 50px;
+     width: 50px;
+     display: block;
+     position:relative;
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     cursor:pointer;
+     transition: all .5s ease-in-out;
     }
   }
+  .menu-btn_burger{
+    @media (max-width: 800px) {
+     height: 4px;
+     width: 40px;
+     background: #fff;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(140,133,255,.2);
+     transition: all .5s ease-in-out;
+    }
+  }
+ 
+
+
+  .menu-btn_burger::after,.menu-btn_burger::before{
+    @media (max-width: 800px) {
+      content: '';
+      position: absolute;
+     height: 4px;
+     width: 40px;
+     background: #fff;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(140,133,255,.2);
+     transition: all .5s ease-in-out;
+    }
+  }
+  .menu-btn_burger::after{
+    transform: translateY(12px);
+  }
+  .menu-btn_burger::before{
+    transform: translateY(-12px);
+  }
+
+  .open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .open .menu-btn_burger::before{
+    transform: rotate(45deg) translate(35px,-35px);
+  
+  }
+  .open .menu-btn_burger::after{
+    transform: rotate(-45deg) translate(35px,35px);
+
+  }
+
+
+
 `
 
 function Navbar() {
   const router = useRouter()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(true)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -160,6 +250,7 @@ function Navbar() {
             height={70}
             width={70}
             alt="logo"
+            className="nav-logo"
           />
           <div className="club-txt">Club Excel</div>
         </div>
@@ -195,10 +286,11 @@ function Navbar() {
         </div>
 
         <div
-          className="menu-button"
+          className={menuOpen?"open menu-button":"menu-button"}
           onClick={toggleMenu}
         >
-          MENU
+          <div className="menu-btn_burger"></div>
+          
         </div>
       </div>
       <div className="nav-line"></div>

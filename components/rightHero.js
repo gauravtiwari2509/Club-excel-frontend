@@ -13,6 +13,10 @@ const MainCont = styled.div`
   .rightHero {
     
   }
+  .hero-gif{
+    height: 326px;
+    width: 390px;
+  }
 `
 
 function RightHero() {
@@ -24,6 +28,7 @@ function RightHero() {
           alt="Logo"
           height={426}
           width={490}
+          className="hero-gif"
         />
       </div>
     </MainCont>

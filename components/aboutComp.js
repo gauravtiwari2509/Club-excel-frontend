@@ -1,19 +1,17 @@
 import React from "react"
 import styled from "styled-components"
-import Image from "next/legacy/image"
 
 const MainCont = styled.div`
   display: flex;
   align-items: center;
-  margin-top: -1000px;
   justify-content: center;
   @media (max-width: 800px) {
     flex-direction: column;
-    margin-top: -800px;
   }
+  
   @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.6);
-    margin-top: -1200px;
+    margin-top: -300px;
   }
   .intro1 {
     display: flex;
@@ -156,13 +154,6 @@ function About() {
             <source src="/clubexcel intro.mp4" />
           </video>
         </div>
-        {/* <Image
-          src={"/clubexcel intro.mp4"}
-          height={557}
-          width={624}
-          alt="Image"
-          className="abt-img"
-        /> */}
       <div className="rightabtdiv">
         <div className="for-mob">
         <div className="intro-text">ABOUT</div>

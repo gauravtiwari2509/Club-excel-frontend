@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Card1 from "./Card1"
 import { useInView } from "react-intersection-observer"
 
-export const MainCont = styled.div`
+const MainCont = styled.div`
   margin-top: 50px;
   position: relative;
   margin-bottom: 500px;

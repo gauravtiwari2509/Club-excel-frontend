@@ -65,6 +65,7 @@ const MainCont = styled.div`
     height: 72px;
     @media (max-width: 800px) {
       text-align: center;
+      width: 360px;
     }
   }
   .button {

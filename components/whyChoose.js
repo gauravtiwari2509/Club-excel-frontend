@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 
 const MainCont = styled.div`
   margin-bottom: 200px;
-  margin-top: -200px;
+  margin-top: 200px;
   @media (max-width: 800px) {
     margin-top: 100px;
 
@@ -26,7 +26,7 @@ const MainCont = styled.div`
   }
   @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.6);
-    margin-top: -700px;
+    margin-top: -100px;
   }
  
   .head {

@@ -7,15 +7,14 @@ const MainCont = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
-  margin-top: -1200px;
   margin-bottom: 80px;
   @media (max-width: 800px) {
     flex-direction: column;
     padding: 10px;
-    margin-top: -1200px;
   }
   @media (min-width: 801px) and (max-width: 1200px) {
     transform: scale(0.7);
+    margin-top: -300px;
   }
   .intro-text {
     color: #fff;

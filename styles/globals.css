@@ -264,13 +264,14 @@ filter: blur(176.73252868652344px);
 }
 .scrolly{
   margin-top: 200px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 .flex-scrolly{
-  margin-bottom:-200px;
+  margin-bottom:-100px;
   margin-left: -1200px;
   display: flex;
   flex-direction: column;

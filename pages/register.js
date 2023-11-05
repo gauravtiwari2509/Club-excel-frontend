@@ -31,10 +31,7 @@ export default function Home() {
           rel="preconnect"
           href="https://fonts.googleapis.com"
         />
-        <link
-          rel="stylesheet"
-          href="..."
-        />
+        
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

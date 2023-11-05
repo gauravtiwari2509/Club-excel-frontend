@@ -13,14 +13,14 @@ import Ml from './Domains/ml';
 
 
 const MainCont = styled.div`
-height: 2600px;
+height: 3000px;
 .scroll-section-outer{
     overflow: hidden;
 }
 
 .scroll-section-inner{
     height: 100vh;
-    width: 400vw;
+    width: 700vw;
     display: flex;
     position: relative;
 }
@@ -71,6 +71,18 @@ function ScrollSection() {
         <section className='scroll-section-outer mt30'>
             <div ref={triggerRef}>
                 <div ref={sectionRef} className='scroll-section-inner'>
+                    <div className='scroll-section'>
+                    <Web />
+
+                    </div>
+                    <div className='scroll-section'>
+                    <Web />
+
+                    </div>
+                    <div className='scroll-section'>
+                    <Web />
+
+                    </div>
                     <div className='scroll-section'>
                     <Web />
 

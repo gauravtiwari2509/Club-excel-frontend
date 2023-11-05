@@ -288,6 +288,78 @@ export const clubMembers = [
 
 export const AlumunaiMembers = [
   {
+    name: "Ashutosh Biswal",
+    img: "/team/ashutosh biswal.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/ashutosh-biswal-41328a174/",
+    domain: "DevOps",
+  },
+  {
+    name: "Adil Zamal",
+    img: "/team/adil.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/adil-zamal-40b5aa155/",
+    domain: "Web Development",
+  },
+  {
+    name: "Rishav Kumar",
+    img: "/team/Rishav Kumar.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/rishav-kumar-075ba517b/",
+    domain: "Software Developer",
+  },
+
+  {
+    name: "Asish Patnaik",
+    img: "/team/asish patnaik.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/asish-patnaik-3917a7193/",
+    domain: "Full stack developer",
+  },
+  {
+    name: "Aryan Asgar",
+    img: "/team/aryan.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/aryan-asgar-840825106",
+    domain: "Backend",
+  },
+
+  {
+    name: "Chiranjeeb Nayak",
+    img: "/team/chiranjeeb.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/chiranjeeb-nayak-b6218b182/",
+    domain: "Software Engineer",
+  },
+  {
+    name: "K Nandini Dora",
+    img: "/team/nandini.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/knandinidora/",
+    domain: "Flutter Developer",
+  },
+  {
+    name: "Nikhil Kumar Singh",
+    img: "/team/nikhil.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/kumar-nikhil-b10024194/",
+    domain: "Software Development",
+  },
+  {
+    name: "Ritik Kumar Kapsime",
+    img: "/team/ritik.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/ritik126/",
+    domain: "Software Development",
+  },
+  {
+    name: "Sanat Dash",
+    img: "/team/sanat.jpg",
+    batch: "2018",
+    linkedIn: "https://www.linkedin.com/in/sanat-dash-aa5876193/",
+    domain: "Product Development Engineer",
+  },
+  {
     name: "Sushovan Paul",
     img: "/team/sushovan.jpg",
     batch: "2019",
@@ -320,7 +392,7 @@ export const AlumunaiMembers = [
     img: "/team/deepti.jpg",
     batch: "2019",
     linkedIn: "https://www.linkedin.com/in/dipti-mishra-724928202/",
-    domain: "Backend",
+    domain: "Cyber security",
   },
   {
     name: "Hritvik Ranjan",
@@ -355,11 +427,11 @@ export const AlumunaiMembers = [
     img: "/team/sonali.jpg",
     batch: "2019",
     linkedIn: "https://www.linkedin.com/in/sonali-sahu-/",
-    domain: "Web development",
+    domain: "Data Science",
   },
   {
     name: "Niharika Kumari",
-    img: "/team/sonali.jpg",
+    img: "/team/Niharika.jpg",
     batch: "2019",
     linkedIn: "https://www.linkedin.com/in/niharika-kumari-23b3a6213/",
     domain: "Web development",

@@ -195,7 +195,7 @@ function Footer() {
                   width={32}
                   onClick={() =>
                     window.open(
-                      "https://twitter.com/club_excel?t=NZYnMwtWRqRuOHymXVpY9Q&s=09"
+                      "https://x.com/_club_excel_?t=fMzfK3CcCFMWGtjxdDrqXw&s=09"
                     )
                   }
                   alt="twitter"

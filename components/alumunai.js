@@ -228,16 +228,16 @@ function Alumunai() {
             <div className="">
               <Card1 data={AlumunaiMembers[22]} />
             </div>
-            <div className="">
+            {/* <div className="">
               <Card1 data={AlumunaiMembers[23]} />
-            </div>
-            <div className="hide-mobile">
+            </div> */}
+            {/* <div className="hide-mobile">
               <Card1 data={AlumunaiMembers[24]} />
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           transition={{ duration: 1 }}
           animate={{
             opacity: animate ? 1 : 0,
@@ -265,8 +265,37 @@ function Alumunai() {
               <Card1 data={AlumunaiMembers[29]} />
             </div>
           </div>
-        </motion.div>
-        <motion.div
+        </motion.div> */}
+        {/* <motion.div
+          transition={{ duration: 1 }}
+          animate={{
+            opacity: animate ? 1 : 0,
+            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+          }}
+          className=""
+        >
+          <div className="partnven-box second">
+            <div className="show-mobile">
+              <Card1 data={AlumunaiMembers[24]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[25]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[26]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[27]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[28]} />
+            </div>
+            <div className="">
+              <Card1 data={AlumunaiMembers[29]} />
+            </div>
+          </div>
+        </motion.div> */}
+        {/* <motion.div
           transition={{ duration: 1 }}
           animate={{
             opacity: animate ? 1 : 0,
@@ -321,7 +350,7 @@ function Alumunai() {
               <Card1 data={AlumunaiMembers[35]} />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
       <div
         ref={ref}

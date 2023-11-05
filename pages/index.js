@@ -93,6 +93,71 @@ export default function Home() {
       key: uuidv4(),
       content: <Card imagen="/p14.jpg" />,
     },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p15.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p16.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p17.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p30.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p31.jpg" />,
+    },
+
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p20.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p21.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p22.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p23.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p24.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p25.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p26.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p27.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p28.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p29.jpg" />,
+    },
+    {
+      key: uuidv4(),
+      content: <Card imagen="/p32.jpg" />,
+    },
   ]
 
   return (

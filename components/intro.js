@@ -46,7 +46,7 @@ const MainCont = styled.div`
 
     color: #fff;
     font-family: Montserrat;
-    font-size: 13px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 0.6cm;

@@ -59,7 +59,7 @@ const MainCont = styled.div`
     gap: 42px;
     color: #fff;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;

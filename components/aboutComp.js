@@ -45,13 +45,14 @@ const MainCont = styled.div`
     margin-top: 42px;
     color: #fff;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     width: 652px;
     @media (max-width: 800px) {
       width: 360px;
       text-align: center;
+      
     }
   }
   .button {

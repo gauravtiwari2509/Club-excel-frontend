@@ -39,10 +39,11 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 149px;
+    margin-left: 109px;
     @media (max-width: 800px) {
       margin-top: 20px;
-      margin-left: 90px;
+      font-size: 30px;
+      margin-left: 140px;
     }
   }
   .text {

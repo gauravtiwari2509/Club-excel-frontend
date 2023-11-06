@@ -12,23 +12,12 @@ const MainCont = styled.div`
   }
   .rightHero {
   }
-<<<<<<< Updated upstream
 
   .hero-gif {
     @media (max-width: 800px) {
-      transform: scale(0.9);
-    }
-=======
-  .hero-gif{
-    height: 336px;
+      height: 346px;
     width: 360px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    }
   }
 `
 

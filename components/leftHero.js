@@ -91,6 +91,7 @@ const MainCont = styled.div`
     cursor: pointer;
     @media (max-width: 800px) {
       align-self: center;
+      display: none;
     }
   }
 

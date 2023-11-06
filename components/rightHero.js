@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "next/legacy/image"
+import Loader from "./loder"
 
 const MainCont = styled.div`
   width: fit-content;
@@ -31,6 +32,7 @@ function RightHero() {
           height={436}
           width={460}
           className="hero-gif"
+          loading="lazy"
         />
       </div>
     </MainCont>

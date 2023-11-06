@@ -69,7 +69,7 @@ export const MainCont = styled.div`
 
   .center-ref {
     height: 3000px;
-    margin-top: -3200px;
+    margin-top: -3150px;
     @media (max-width: 799px) {
       width: 100px;
       position: relative;

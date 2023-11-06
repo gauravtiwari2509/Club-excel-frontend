@@ -176,6 +176,7 @@ function Footer() {
             onClick={() => router.push("/")}
           >
             <Image
+            loading="lazy"
               src={"/clubexcellogo.png"}
               height={185}
               width={185}
@@ -221,6 +222,7 @@ function Footer() {
             <div className="social">
               <div className="pointer hover">
                 <Image
+                loading="lazy"
                   src={"/instagram.svg"}
                   height={32}
                   width={32}
@@ -234,6 +236,7 @@ function Footer() {
               </div>
               <div className="pointer hover">
                 <Image
+                loading="lazy"
                   src={"/twitter1.svg"}
                   height={32}
                   width={32}
@@ -247,6 +250,7 @@ function Footer() {
               </div>
               <div className="pointer hover">
                 <Image
+                loading="lazy"
                   src={"/facebook.svg"}
                   height={32}
                   width={32}
@@ -260,6 +264,7 @@ function Footer() {
               </div>
               <div className="pointer hover">
                 <Image
+                loading="lazy"
                   src={"/linkedin.svg"}
                   height={32}
                   width={32}

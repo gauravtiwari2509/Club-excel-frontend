@@ -64,7 +64,7 @@ gap: 100px;
 function MobileDev() {
   return (
     <MainCont>
-            <Image src={"/mobile.gif"} height={400} width={600} className='part1' alt='Domains'/>
+            <Image src={"/mobile.gif"} loading="lazy" height={400} width={600} className='part1' alt='Domains'/>
             <div className='part2'>
             <div className='domain-head'>Mobile Application Development</div>
             <div className='domain-desc'>Mobile Application Development is an exciting domain that opens the doors to the ever-evolving world of mobile technology. In this domain, you will acquire the knowledge and skills necessary to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn about user experience (UX) and user interface (UI) design to create engaging and intuitive mobile apps. Dive into mobile app frameworks and development tools to build efficient and responsive applications that can be distributed to a global audience through app stores. Whether you&apos;re passionate about gaming, productivity apps, or any other niche, this domain will empower you to turn your mobile app ideas into reality.</div>

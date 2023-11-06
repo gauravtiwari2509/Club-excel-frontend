@@ -64,7 +64,7 @@ gap: 100px;
 function Ml() {
   return (
     <MainCont>
-            <Image src={"/ai.gif"} height={400} width={600} className='part1' alt='Domains'/>
+            <Image src={"/ai.gif"} loading="lazy" height={400} width={600} className='part1' alt='Domains'/>
             <div className='part2'>
             <div className='domain-head'>AI/ML (Artificial Intelligence/Machine Learning)</div>
             <div className='domain-desc'>The AI/ML domain is your gateway to the exciting field of Artificial Intelligence and Machine Learning. Dive into the principles of machine learning, data analysis, and pattern recognition. Discover how AI systems can learn from data and make predictions, automating tasks and providing valuable insights. Develop AI-powered applications that can solve complex problems, optimize processes, and improve decision-making across various domains, including healthcare, finance, robotics, and natural language processing. With AI/ML expertise, you can tap into the transformative potential of artificial intelligence and shape the future of technology and innovation.</div>

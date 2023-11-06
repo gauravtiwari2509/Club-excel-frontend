@@ -61,7 +61,7 @@ gap: 100px;
 function BlockChain() {
   return (
     <MainCont>
-            <Image src={"/blockchain.gif"} height={400} width={600} className='part1' alt='Domains'/>
+            <Image src={"/blockchain.gif"} loading="lazy" height={400} width={600} className='part1' alt='Domains'/>
             <div className='part2'>
             <div className='domain-head'>Blockchain Development</div>
             <div className='domain-desc'>The Blockchain Development domain offers a deep exploration of blockchain technology, which is revolutionizing various industries. You&apos;ll learn how blockchain works as a decentralized and tamper-resistant ledger system, enabling secure and transparent transactions. Understand the principles of blockchain consensus mechanisms, smart contracts, and cryptocurrency technologies like Bitcoin and Ethereum. Gain hands-on experience in developing and deploying blockchain applications that have the potential to disrupt finance, supply chain, healthcare, and more. With this knowledge, you&apos;ll be at the forefront of the blockchain revolution, contributing to innovative solutions and exploring new use cases.</div>

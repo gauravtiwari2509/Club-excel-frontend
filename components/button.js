@@ -80,6 +80,7 @@ function Button({ handleState }) {
         {isClicked ? "Member" : "Alumni "}
         <span className={`circle ${isClicked ? "clicked" : ""}`}>
           <Image
+          alt="button"
             src={"/arrow-right-solid.svg"}
             height={24}
             width={24}

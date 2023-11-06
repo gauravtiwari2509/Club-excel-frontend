@@ -63,7 +63,7 @@ gap: 100px;
 function Web() {
   return (
     <MainCont>
-      <Image src={"/web.gif"} height={400} width={600} alt='Domains' className='part1'/>
+      <Image src={"/web.gif"} height={400} loading="lazy" width={600} alt='Domains' className='part1'/>
         <div className='part2'>
             <div className='domain-head'>Full Stack Development</div>
             <div className='domain-desc'>

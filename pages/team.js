@@ -47,7 +47,7 @@ function Team() {
     <MainCont>
       <div className="shift-left">
         <div className="team-heading">
-          Our Team {state ? "Alumunai" : " Members"}
+          Our Team {state ? "Alumni " : " Members"}
         </div>
 
         <Button handleState={handleState} />

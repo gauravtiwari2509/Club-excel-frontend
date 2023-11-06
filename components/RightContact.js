@@ -154,8 +154,6 @@ const MainCont = styled.div`
     font-weight: 400;
     line-height: 20px;
     @media (max-width: 800px) {
-      width: 100%;
-      text-align: center; 
     }
   }
 
@@ -195,6 +193,10 @@ const MainCont = styled.div`
     display: flex;
     gap: 5px;
     align-items: center;
+    @media (max-width: 800px) {
+      margin-top: 5px;
+     
+    }
   }
   .choice-box {
     display: flex;
@@ -205,6 +207,7 @@ const MainCont = styled.div`
       flex-direction: column;
       align-items: flex-start;
       margin-left: -130px;
+      gap: 10px;
     }
   }
   .line1 {
@@ -246,7 +249,8 @@ const MainCont = styled.div`
     width: 13px;
     height: 13.241px;
     @media (max-width: 800px) {
-  margin-left: 100px;
+    height: 40px;
+    width: 40px;
     }
   }
 `
@@ -311,7 +315,7 @@ function RightContact() {
                 width={13}
                 alt="select"
               />
-              <p className="option">General Inquiry</p>
+              <div className="option">General Inquiry</div>
             </div>
             <div className="choice">
               <Image
@@ -322,7 +326,7 @@ function RightContact() {
                 width={13}
                 alt="select"
               />
-              <p className="option">Special Inquiry</p>
+              <div className="option">Special Inquiry</div>
             </div>
           </div>
           <div className="msg">Message</div>

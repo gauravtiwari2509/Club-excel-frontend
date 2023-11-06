@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const MainCont = styled.div`
@@ -146,19 +146,20 @@ const MainCont = styled.div`
 
 function About() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
-
+  const [count,setCount] = useState(false);
   const handleVideoClick = () => {
     setIsVideoPlaying(!isVideoPlaying)
+    setCount(!count);
   }
+
+
   return (
     <MainCont>
       <div className="upar">
         <video
-          autoPlay={isVideoPlaying} // Only autoplay when isVideoPlaying is true
-          loop
+          autoPlay={true} // Only autoplay when isVideoPlaying is true
           style={{ width: "600px", height: "300px" }}
           className="video"
-          onClick={handleVideoClick}
         >
           <source src="/clubexcel intro.mp4" />
         </video>

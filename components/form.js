@@ -167,6 +167,7 @@ const MainCont = styled.div`
     color: red;
     font-size: large;
     font-weight: 900;
+    margin-top: 50px;
   }
 `
 

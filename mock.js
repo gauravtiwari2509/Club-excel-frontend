@@ -104,7 +104,7 @@ export const clubMembers = [
   },
 
   {
-    name: "B Gourav",
+    name: "Gourav",
     img: "/team/gourav.jpg",
     batch: 2021,
     linkedIn: "https://www.linkedin.com/in/bgourav2287",

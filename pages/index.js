@@ -87,7 +87,7 @@ export default function Home() {
             <WhyChoose />
           </div>
           <div id="Gallary">
-            <div className="Gal-head">Gallary</div>
+            <div className="Gal-head">Gallery</div>
             <Carroussel
               cards={cards}
               height="500px"

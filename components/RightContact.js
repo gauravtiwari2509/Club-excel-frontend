@@ -154,6 +154,7 @@ const MainCont = styled.div`
     font-weight: 400;
     line-height: 20px;
     @media (max-width: 800px) {
+      width: 100px;
     }
   }
 

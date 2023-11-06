@@ -501,6 +501,10 @@ export const cards = [
   },
   {
     key: uuidv4(),
+    content: <Card imagen="/p36.jpg" />,
+  },
+  {
+    key: uuidv4(),
     content: <Card imagen="/p12.jpg" />,
   },
   {
@@ -588,5 +592,6 @@ export const cards = [
   {
     key: uuidv4(),
     content: <Card imagen="/p35.jpg" />,
-  },
+  }
+  
 ]

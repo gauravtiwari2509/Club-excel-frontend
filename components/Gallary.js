@@ -1,6 +1,8 @@
+import Image from "next/image"
 import React, { useState } from "react"
 import styled from "styled-components"
-import Image from "next/legacy/image"
+
+
 
 const MainCont = styled.div`
   .box {

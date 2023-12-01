@@ -7,6 +7,7 @@ const MainCont = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
+  z-index: 10;
   margin-bottom: 80px;
   @media (max-width: 800px) {
     flex-direction: column;

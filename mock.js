@@ -91,7 +91,7 @@ export const clubMembers = [
     name: "Abhinav",
     img: "/team/abhinav.jpg",
     batch: "2021",
-    linkedIn: "https://www.linkedin.com/in/abhinav-kumar-038529227/",
+    linkedIn: "https://www.linkedin.com/in/abhinav-sde/",
     domain: "Full Stack Development",
   },
   {
@@ -284,7 +284,7 @@ export const clubMembers = [
     name: "Deepti Manjari Nayak",
     img: "/team/deepti jr.png",
     batch: "2022",
-    linkedIn: "https://www.linkedin.com/in/k-sai-kalyan-1a7249262",
+    linkedIn: "https://www.linkedin.com/in/deepti-manjari-nayak-214b9a25a/",
     domain: " Data Science ",
   },
 ]

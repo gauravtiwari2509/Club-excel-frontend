@@ -5,6 +5,9 @@ const MainCont = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  position: relative;
+  margin-top:100px;
   @media (max-width: 800px) {
     flex-direction: column;
   }
@@ -157,11 +160,12 @@ function About() {
     <MainCont>
       <div className="upar">
         <video
-          autoPlay={true} // Only autoplay when isVideoPlaying is true
+          autoPlay={true} 
+          loop={false}
           style={{ width: "600px", height: "300px" }}
           className="video"
         >
-          <source src="/clubexcel intro.mp4" />
+          <source src="/excel_introv2.mp4" />
         </video>
       </div>
       <div className="rightabtdiv">
@@ -170,14 +174,7 @@ function About() {
           <div className="intro">CLUB EXCEL</div>
         </div>
         <div className="text">
-          Club Excel stands as a premier coding club within the National
-          Institute of Science and Technology (NIST), recognized for its
-          outstanding contributions and achievements in various domains of
-          technology. With a primary focus on full stack development,
-          application development, cloud computing, and AI/ML (Artificial
-          Intelligence/Machine Learning), Club Excel provides an exceptional
-          platform for students to cultivate their technical skills, collaborate
-          on innovative projects, and prepare for a tech-driven future.
+        Welcome to Club Excel, NIST&#39;s premier coding club, where innovation thrives. We are renowned for our remarkable contributions across technology domains, focusing on full stack development, application development, cloud computing, and AI/ML. Club Excel provides an engaging platform for students to hone their technical skills, collaborate on inventive projects, and prepare for a tech-centric future. Whether you&#39;re a coding enthusiast or just beginning your tech journey, all are welcome to join us in pushing the boundaries of what&#39;s possible in the world of coding and tech innovation. Unleash your potential with Club Excel and be a part of the future of technology!
         </div>
         <div className="button pointer hover " onClick={()=>(window.open("https://instagram.com/_club_excel_?igshid=bG40ZnMxd3lwNDcz"))}>
           <span className="send ">LET’S GET IN TOUCH</span>

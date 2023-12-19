@@ -24,6 +24,11 @@ export default function App({ Component, pageProps }) {
     })
   }, [])
 
+  useEffect(() => {
+    setLoaded(false);
+    setTimeout(()=>{setLoaded(true)},3000)
+  }, [])
+
   return (
     <>
       <LoadingBar
@@ -32,7 +37,7 @@ export default function App({ Component, pageProps }) {
         waitingTime={400}
         onLoaderFinished={() => setProgress(0)}
       />
-      {/* {!loaded ? <Loader /> : ""} */}
+      {!loaded ? <Loader /> : ""}
       <Navbar />
       <Component {...pageProps} />
       <div>

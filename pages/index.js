@@ -11,6 +11,7 @@ import WhyChoose from "@/components/whyChoose"
 import Loader from "@/components/loder"
 import { Suspense } from "react"
 import { cards } from "@/mock"
+import VideoAnimation from "@/components/VideoAnimation"
 
 const Carroussel = dynamic(() => import("@/components/carousel"), {
   ssr: false,
@@ -73,7 +74,7 @@ export default function Home() {
           <div className="intro-comp">
             <Intro />
           </div>
-
+          <VideoAnimation/>
           <About />
           <div className="scrolly">
             <div className="flex-scrolly">

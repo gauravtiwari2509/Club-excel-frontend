@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Form from "@/components/form"
 import styled from "styled-components"
+import ParticleAmin from "@/components/Particles"
 
 const MainCont = styled.div`
   display: flex;
@@ -44,7 +45,9 @@ export default function Home() {
       </Head>
 
       <MainCont>
+        <ParticleAmin>
         <Form />
+        </ParticleAmin>
       </MainCont>
     </>
   )

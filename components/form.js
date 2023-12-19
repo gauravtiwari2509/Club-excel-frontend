@@ -8,8 +8,10 @@ import { Modal } from "react-responsive-modal"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { validate } from "email-validator"
+import Loader from "./loder"
 
 const MainCont = styled.div`
+position: absolute;
   @media (max-width: 800px) {
     margin-top: -50px;
     transform: scale(0.8);
@@ -174,6 +176,7 @@ const MainCont = styled.div`
 function Form() {
   const [state, setState] = useState(0)
   const [check, setCheck] = useState(false)
+  const [isLoaded,setIsLoaded] = useState(true);
   const notify = () =>
     toast.error("Oops! It appears that you may have overlooked a few fields.")
 
@@ -197,6 +200,7 @@ function Form() {
     setDetails({ ...details, [name]: value })
   }
   async function save() {
+    setIsLoaded(false)
     if (validateForm()) {
       const url = "https://club-excell-backend.onrender.com"
       console.log(details)
@@ -208,6 +212,8 @@ function Form() {
     } else {
       notify()
     }
+    setIsLoaded(true)
+
   }
   const [open, setOpen] = useState(false)
   const onOpenModal = () => setOpen(true)
@@ -524,6 +530,7 @@ function Form() {
         pauseOnHover
         theme="dark"
       />
+      {!isLoaded?<Loader/>:""}
     </MainCont>
   )
 }

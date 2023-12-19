@@ -253,9 +253,9 @@ export const clubMembers = [
   },
   {
     name: "Aman",
-    img: "/team/Aman jr.jpg",
+    img: "/team/aman  jr.jpg",
     batch: "2022",
-    linkedin: "https://www.linkedin.com/in/aman-kumar-b12085253/",
+    linkedIn: "https://www.linkedin.com/in/aman-kumar-b12085253",
     domain: "Android development",
   },
   {

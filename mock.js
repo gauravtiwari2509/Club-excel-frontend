@@ -1,7 +1,6 @@
 import Card from "./components/Card"
 import { v4 as uuidv4 } from "uuid"
 
-
 export const clubMembers = [
   {
     name: "Sanjeev",
@@ -186,7 +185,7 @@ export const clubMembers = [
     name: "Gaurav Tiwari",
     img: "/team/gaurav jr.jpg",
     batch: "2022",
-    LinkedIn: "https://www.linkedin.com/in/gaurav-tiwari-121a77258/ ",
+    linkedIn: "https://www.linkedin.com/in/gaurav-tiwari-121a77258/ ",
     domain: "Blockchain Development",
   },
   {
@@ -235,7 +234,7 @@ export const clubMembers = [
     name: "Priya",
     img: "/team/Priya patra jr.jpg",
     batch: "2022",
-    Linkedln: "https://www.linkedin.com/in/priya-patra-a7b370259",
+    linkedIn: "https://www.linkedin.com/in/priya-patra-a7b370259",
     domain: "Web development",
   },
   {
@@ -249,14 +248,14 @@ export const clubMembers = [
     name: "Rudra",
     img: "/team/Rudra jr.jpg",
     batch: "2022",
-    Linkedln: "https://www.linkedin.com/in/rudra-narayan-nayak-61939925b",
+    linkedIn: "https://www.linkedin.com/in/rudra-narayan-nayak-61939925b",
     domain: "Data science",
   },
   {
     name: "Aman",
     img: "/team/Aman jr.jpg",
     batch: "2022",
-    linkedin: "https://www.linkedin.com/in/aman-kumar-b12085253",
+    linkedin: "https://www.linkedin.com/in/aman-kumar-b12085253/",
     domain: "Android development",
   },
   {
@@ -456,8 +455,6 @@ export const AlumunaiMembers = [
   },
 ]
 
-
-
 export const cards = [
   {
     key: uuidv4(),
@@ -580,7 +577,7 @@ export const cards = [
     key: uuidv4(),
     content: <Card imagen="/p32.jpg" />,
   },
-  
+
   {
     key: uuidv4(),
     content: <Card imagen="/p33.jpg" />,
@@ -592,6 +589,5 @@ export const cards = [
   {
     key: uuidv4(),
     content: <Card imagen="/p35.jpg" />,
-  }
-  
+  },
 ]

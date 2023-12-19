@@ -25,8 +25,10 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   useEffect(() => {
-    setLoaded(false);
-    setTimeout(()=>{setLoaded(true)},3000)
+    setLoaded(false)
+    setTimeout(() => {
+      setLoaded(true)
+    }, 3000)
   }, [])
 
   return (

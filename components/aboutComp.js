@@ -164,6 +164,8 @@ function About() {
           loop={false}
           style={{ width: "600px", height: "300px" }}
           className="video"
+          controls={true}
+          preload={true}
         >
           <source src="/excel_introv2.mp4" />
         </video>

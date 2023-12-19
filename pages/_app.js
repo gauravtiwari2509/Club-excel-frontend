@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
     setLoaded(false)
     setTimeout(() => {
       setLoaded(true)
-    }, 3000)
+    }, 5000)
   }, [])
 
   return (

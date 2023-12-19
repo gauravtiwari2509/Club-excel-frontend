@@ -165,7 +165,7 @@ function About() {
           style={{ width: "600px", height: "300px" }}
           className="video"
         >
-          <source src="/clubexcel intro.mp4" />
+          <source src="/excel_introv2.mp4" />
         </video>
       </div>
       <div className="rightabtdiv">

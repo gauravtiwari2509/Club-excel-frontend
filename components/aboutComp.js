@@ -154,7 +154,7 @@ function About() {
     setIsVideoPlaying(!isVideoPlaying)
     setCount(!count);
   }
-
+  
 
   return (
     <MainCont>

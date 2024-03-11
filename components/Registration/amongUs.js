@@ -251,49 +251,57 @@ function AmongUs() {
   //     }
   //   }
   async function save() {
-    try {
-      setIsLoaded(false)
-      if (validateForm()) {
-        // const url = "http://localhost:8000"
-        const url = "https://club-excel-backend.vercel.app"
-        const resp = await axios.post(`${url}/api/amongus`, details)
+    if (
+      (details.isNistian === "YES" &&
+        (details.isLocalite === "YES" || details.isLocalite === "NO")) ||
+      (details.isNistian === "NO" && details.otherCollege !== "")
+    ) {
+      try {
+        setIsLoaded(false)
+        if (validateForm()) {
+          // const url = "http://localhost:8000"
+          const url = "https://club-excel-backend.vercel.app"
+          const resp = await axios.post(`${url}/api/amongus`, details)
 
-        if (resp.status === 201) {
-          onOpenModal()
-          notifysuccess()
-          setDetails(emptyObj)
-          setState(0)
-        } else if (
-          resp.status === 400 &&
-          resp.data.error === "Email is already registered"
-        ) {
-          // Handle 400 status with specific error message
-          console.error("Email is already registered:", resp.data.error)
-          notify("Email is already registered")
-        } else {
-          // Handle other unsuccessful registration
-          console.error("Registration failed:", resp.data.error)
+          if (resp.status === 201) {
+            onOpenModal()
+            notifysuccess()
+            setDetails(emptyObj)
+            setState(0)
+          } else if (
+            resp.status === 400 &&
+            resp.data.error === "Email is already registered"
+          ) {
+            // Handle 400 status with specific error message
+            console.error("Email is already registered:", resp.data.error)
+            notify("Email is already registered")
+          } else {
+            // Handle other unsuccessful registration
+            console.error("Registration failed:", resp.data.error)
 
-          // Check if the error response contains a message
-          const errorMessage = resp.data.error || "Registration failed"
+            // Check if the error response contains a message
+            const errorMessage = resp.data.error || "Registration failed"
 
-          //   notify(errorMessage)
-          notify(error)
+            //   notify(errorMessage)
+            notify(error)
+          }
         }
+      } catch (error) {
+        // Handle network errors or other issues
+        console.error("Error during registration:", error)
+
+        // Check if the error object has a response property and extract the error message
+        const errorMessage =
+          error.response?.data?.error ||
+          "Registration failed. Please try again later."
+
+        // Notify the user about the registration failure
+        notify(errorMessage)
+      } finally {
+        setIsLoaded(true)
       }
-    } catch (error) {
-      // Handle network errors or other issues
-      console.error("Error during registration:", error)
-
-      // Check if the error object has a response property and extract the error message
-      const errorMessage =
-        error.response?.data?.error ||
-        "Registration failed. Please try again later."
-
-      // Notify the user about the registration failure
-      notify(errorMessage)
-    } finally {
-      setIsLoaded(true)
+    } else {
+      notify("fill all the details")
     }
   }
   const [open, setOpen] = useState(false)
@@ -337,9 +345,9 @@ function AmongUs() {
       return (
         // details.hackerrankid !== ""
         // details.why !== "" &&
-        details.isLocalite !== "" ||
-        details.isNistian !== "" ||
-        (!details.isNistian && details.otherCollege !== "")
+        (details.isNistian === "YES" &&
+          (details.isLocalite === "YES" || details.isLocalite === "NO")) ||
+        (details.isNistian === "NO" && details.otherCollege !== "")
       )
     }
   }

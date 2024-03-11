@@ -226,49 +226,56 @@ function CodeCrusade() {
     setDetails({ ...details, [name]: value })
   }
   async function save() {
-    console.log(details)
-    try {
-      setIsLoaded(false)
-      if (validateForm()) {
-        // const url = "https://club-excell-backend.onrender.com"
-        const url = "https://club-excel-backend.vercel.app"
-        // const url = "http://localhost:8000"
-        const resp = await axios.post(`${url}/api/codecrushed`, details)
-        if (resp.status === 201) {
-          onOpenModal()
-          notifysuccess()
-          setDetails(emptyObj)
-          setState(0)
-        } else if (
-          resp.status === 400 &&
-          resp.data.error === "Email is already registered"
-        ) {
-          // Handle 400 status with specific error message
-          console.error("Email is already registered:", resp.data.error)
-          notify("Email is already registered")
-        } else {
-          // Handle other unsuccessful registration
-          console.error("Registration failed:", resp.data.error)
+    if (
+      (details.isNistian === "YES" &&
+        (details.isLocalite === "YES" || details.isLocalite === "NO")) ||
+      (details.isNistian === "NO" && details.otherCollege !== "")
+    ) {
+      try {
+        setIsLoaded(false)
+        if (validateForm()) {
+          // const url = "https://club-excell-backend.onrender.com"
+          const url = "https://club-excel-backend.vercel.app"
+          // const url = "http://localhost:8000"
+          const resp = await axios.post(`${url}/api/codecrushed`, details)
+          if (resp.status === 201) {
+            onOpenModal()
+            notifysuccess()
+            setDetails(emptyObj)
+            setState(0)
+          } else if (
+            resp.status === 400 &&
+            resp.data.error === "Email is already registered"
+          ) {
+            // Handle 400 status with specific error message
+            console.error("Email is already registered:", resp.data.error)
+            notify("Email is already registered")
+          } else {
+            // Handle other unsuccessful registration
+            console.error("Registration failed:", resp.data.error)
 
-          // Check if the error response contains a message
-          const errorMessage = resp.data.error || "Registration failed"
+            // Check if the error response contains a message
+            const errorMessage = resp.data.error || "Registration failed"
 
-          notify(errorMessage)
+            notify(errorMessage)
+          }
         }
+      } catch (error) {
+        // Handle network errors or other issues
+        console.error("Error during registration:", error)
+
+        // Check if the error object has a response property and extract the error message
+        const errorMessage =
+          error.response?.data?.error ||
+          "Registration failed. Please try again later."
+
+        // Notify the user about the registration failure
+        notify(errorMessage)
+      } finally {
+        setIsLoaded(true)
       }
-    } catch (error) {
-      // Handle network errors or other issues
-      console.error("Error during registration:", error)
-
-      // Check if the error object has a response property and extract the error message
-      const errorMessage =
-        error.response?.data?.error ||
-        "Registration failed. Please try again later."
-
-      // Notify the user about the registration failure
-      notify(errorMessage)
-    } finally {
-      setIsLoaded(true)
+    } else {
+      notify("fill all the details")
     }
   }
   const [open, setOpen] = useState(false)
@@ -311,9 +318,10 @@ function CodeCrusade() {
       )
     } else {
       return (
-        details.hackerrankid !== ""
-        // details.why !== "" &&
-        // !check || details.area !== ""
+        details.hackerrankid !== "" &&
+        ((details.isNistian === "YES" &&
+          (details.isLocalite === "YES" || details.isLocalite === "NO")) ||
+          (details.isNistian === "NO" && details.otherCollege !== ""))
       )
     }
   }
@@ -424,7 +432,7 @@ function CodeCrusade() {
                 required
               />
               <Input
-                label={"Skills (html,css,js ...etc)"}
+                label={"Skills (C,C++,Java,Python...)"}
                 change={change}
                 name={"skill"}
                 details={details}

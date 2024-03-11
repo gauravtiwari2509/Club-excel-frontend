@@ -75,7 +75,7 @@ const MainCont = styled.div`
       justify-content: center;
     }
   }
-  .flex {
+  .flex1 {
     @media (max-width: 800px) {
       text-align: center;
     }
@@ -85,7 +85,7 @@ const MainCont = styled.div`
 function Intro() {
   return (
     <MainCont>
-      <div className="flex">
+      <div className="flex1">
         <div className="intro-text">INTRODUCTION</div>
         <div className="intro">
           TO CLUB EXCEL <div className="arrow"></div>

@@ -61,7 +61,7 @@ function ScrollSection() {
   }, [])
   return (
     <MainCont>
-      <section className="scroll-section-outer mt30">
+      <section className="scroll-section-outer ">
         <div ref={triggerRef}>
           <div
             ref={sectionRef}

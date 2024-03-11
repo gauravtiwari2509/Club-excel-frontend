@@ -1,27 +1,24 @@
-.pointer{
-    cursor: pointer;
+.pointer {
+  cursor: pointer;
 }
-.hover:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+.hover:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .show-mobile {
-    display: none;
-    @media (max-width: 800px) {
-      display: block;
-    }
-  }
-  .hide-mobile {
+  display: none;
+  @media (max-width: 800px) {
     display: block;
-    @media (max-width: 800px) {
-      display: none;
-    }
   }
+}
+.hide-mobile {
+  display: block;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
 
-
-
-  
 .why-rectangle {
   width: 1381px;
   height: 639px;

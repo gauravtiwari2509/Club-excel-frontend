@@ -4,7 +4,7 @@ import styled from "styled-components"
 const MainCont = styled.div`
   margin-top: 32px;
   .label {
-    color:gray;
+    color: gray;
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -16,7 +16,7 @@ const MainCont = styled.div`
     margin-top: 10px;
     background-color: transparent;
     width: 370px;
-    color:gray;
+    color: gray;
     border: none;
     outline: none;
     font-family: "jura";

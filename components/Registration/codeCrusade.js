@@ -8,6 +8,7 @@ import { Modal } from "react-responsive-modal"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Loader from "../Common/loder"
+import { validate } from "email-validator"
 
 const MainCont = styled.div`
   position: absolute;
@@ -97,11 +98,11 @@ const MainCont = styled.div`
   }
 
   .labelc {
-    color: gray;
+    color: #242426;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 20px;
   }
   .save-btn {
@@ -169,43 +170,70 @@ const MainCont = styled.div`
     font-weight: 900;
     margin-top: 50px;
   }
+  .lastpart {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    font-family: "jura";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    position: relative;
+    right: 30px;
+    width: fit-content;
+
+    @media (max-width: 800px) {
+      width: 350px;
+    }
+  }
+  .isloc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+  }
 `
 
-function Form() {
+function CodeCrusade() {
   const [state, setState] = useState(0)
-  const [check, setCheck] = useState(false)
   const [isLoaded, setIsLoaded] = useState(true)
+
   const notify = (e) => toast.error(e)
   const notifysuccess = () => toast.success("yeeh! Registration Successs.")
 
   const emptyObj = {
     name: "",
     email: "",
+    collegeemail: "",
     contact: "",
     roll: "",
     // why: "",
     batch: "",
-    // hackerrankid: "",
+    hackerrankid: "",
     area: "",
     gender: "",
     skill: "",
     branch: "",
+    isLocalite: "",
+    isNistian: "YES",
+    otherCollege: "",
   }
   const [details, setDetails] = useState(emptyObj)
 
   function change(e) {
     const { name, value } = e.target
+
     setDetails({ ...details, [name]: value })
   }
   async function save() {
+    console.log(details)
     try {
       setIsLoaded(false)
       if (validateForm()) {
         // const url = "https://club-excell-backend.onrender.com"
         const url = "https://club-excel-backend.vercel.app"
         // const url = "http://localhost:8000"
-        const resp = await axios.post(`${url}/api/register`, details)
-        console.log(resp.data)
+        const resp = await axios.post(`${url}/api/codecrushed`, details)
         if (resp.status === 201) {
           onOpenModal()
           notifysuccess()
@@ -215,18 +243,29 @@ function Form() {
           resp.status === 400 &&
           resp.data.error === "Email is already registered"
         ) {
+          // Handle 400 status with specific error message
           console.error("Email is already registered:", resp.data.error)
           notify("Email is already registered")
         } else {
+          // Handle other unsuccessful registration
+          console.error("Registration failed:", resp.data.error)
+
+          // Check if the error response contains a message
           const errorMessage = resp.data.error || "Registration failed"
-          console.error("Registration failed:", errorMessage)
+
           notify(errorMessage)
         }
       }
     } catch (error) {
+      // Handle network errors or other issues
+      console.error("Error during registration:", error)
+
+      // Check if the error object has a response property and extract the error message
       const errorMessage =
         error.response?.data?.error ||
         "Registration failed. Please try again later."
+
+      // Notify the user about the registration failure
       notify(errorMessage)
     } finally {
       setIsLoaded(true)
@@ -242,26 +281,22 @@ function Form() {
     if (validateForm()) {
       setState(state + 1)
     } else {
-      notify()
+      toast.error("Oops! It appears that you may have overlooked a few fields.")
     }
-  }
-
-  const emailValidator = (value) => {
-    const regex = /^[a-zA-Z0-9._-]+@nist\.edu$/
-    return regex.test(value)
   }
 
   // Function to validate the form based on the current state
   function validateForm() {
     // console.log(validate(""))
     if (state === 0) {
-      let verify = emailValidator(details.email)
+      let verify = validate(details.email)
       if (details.email !== "" && !verify)
-        toast.error("Please provide a valid nist.edu email address.")
+        toast.error("Please provide a valid email address.")
 
       return (
         details.name !== "" &&
         details.email !== "" &&
+        details.collegeemail !== "" &&
         details.contact !== "" &&
         details.roll !== "" &&
         verify
@@ -271,13 +306,14 @@ function Form() {
         details.gender !== "" &&
         details.batch !== "" &&
         details.branch !== "" &&
-        details.skill !== ""
+        details.skill !== "" &&
+        details.hackerrankid !== ""
       )
     } else {
       return (
-        // details.hackerrankid !== "" &&
+        details.hackerrankid !== ""
         // details.why !== "" &&
-        !check || details.area !== ""
+        // !check || details.area !== ""
       )
     }
   }
@@ -336,9 +372,16 @@ function Form() {
                 required
               />
               <Input
-                label={"Email (nist.edu)"}
+                label={"Email (college mail)"}
                 change={change}
                 name={"email"}
+                details={details}
+                required
+              />
+              <Input
+                label={"Email (personal mail)"}
+                change={change}
+                name={"collegeemail"}
                 details={details}
                 required
               />
@@ -387,9 +430,15 @@ function Form() {
                 details={details}
                 required
               />
+              <Input
+                label={"Hacker rank id "}
+                change={change}
+                name={"hackerrankid"}
+                details={details}
+              />
             </div>
           ) : (
-            <div className="state3">
+            <div className="state3 lastpart">
               {/* <Input
                 label={"hacker rank id "}
                 change={change}
@@ -405,8 +454,8 @@ function Form() {
                 required
               /> */}
 
-              <div className="checkbox-div">
-                <div className="labelc">Are you localite?</div>
+              {/* <div className="checkbox-div">
+                <div className="labelc">Are you from NIST?</div>
                 <div
                   className="checkbox"
                   onClick={() => setCheck(!check)}
@@ -415,15 +464,91 @@ function Form() {
                 </div>
               </div>
               {check ? (
-                <Input
-                  label={"Enter the area you belong to"}
-                  change={change}
-                  name={"area"}
-                  details={details}
-                />
+                <>
+                  <Input
+                    label={"Are you localite?"}
+                    change={change}
+                    name={"area"}
+                    details={details}
+                  />{" "}
+                </>
               ) : (
                 <div className="dummy"></div>
-              )}
+              )} */}
+              <div className="lastpartCont">
+                <label className="lastpartcont1">
+                  Are you from NIST?
+                  <div>
+                    <input
+                      name="isNistian"
+                      className="isnyes"
+                      type="radio"
+                      value="YES"
+                      checked={details.isNistian === "YES"}
+                      onChange={(e) => change(e)}
+                    />
+                    YES
+                  </div>
+                </label>
+
+                <label>
+                  <input
+                    name="isNistian"
+                    type="radio"
+                    value="NO"
+                    checked={details.isNistian === "NO"}
+                    onChange={(e) => change(e)}
+                  />
+                  NO
+                </label>
+              </div>
+              <div>
+                <div>
+                  {details.isNistian === "YES" ? (
+                    <>
+                      <label className="isloc">
+                        <label>
+                          <input
+                            name="isLocalite"
+                            type="radio"
+                            value="NO"
+                            checked={details.isLocalite === "NO"}
+                            onChange={(e) => change(e)}
+                          />
+                          HOSTELITE
+                        </label>
+                        <label>
+                          <input
+                            name="isLocalite"
+                            type="radio"
+                            value="YES"
+                            checked={details.isLocalite === "YES"}
+                            onChange={(e) => change(e)}
+                          />{" "}
+                          LOCALITE
+                        </label>
+                      </label>
+                    </>
+                  ) : (
+                    <>
+                      <Input
+                        label={"Enter college name"}
+                        change={change}
+                        name={"otherCollege"}
+                        details={details}
+                      />
+                      {/* <input
+                        className="mt-4 rounded-xl p-2 text-black"
+                        type="text"
+                        name="otherCollege"
+                        onChange={(e) => change(e)}
+                        value={details.otherCollege}
+                        placeholder="enter college name"
+                      /> */}
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -522,7 +647,7 @@ function Form() {
           <div
             className="Link-msg"
             onClick={() =>
-              window.open("https://chat.whatsapp.com/IX3RNMhyFphJIPk6F7ea9P")
+              window.open("https://chat.whatsapp.com/FuIHvc7EwGQDwPtSHPk93l")
             }
             style={{
               color: "violet",
@@ -534,7 +659,7 @@ function Form() {
           >
             https://chat.whatsapp.com/
             <br />
-            IX3RNMhyFphJIPk6F7ea9P
+            FuIHvc7EwGQDwPtSHPk93l
           </div>
         </div>
       </Modal>
@@ -556,4 +681,4 @@ function Form() {
   )
 }
 
-export default Form
+export default CodeCrusade

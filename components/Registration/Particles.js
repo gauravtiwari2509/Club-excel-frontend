@@ -4,12 +4,11 @@ import Particles from "react-particles"
 import { loadFull } from "tsparticles"
 
 const MainCont = styled.div`
-  height: 120vh;
+  height: 130vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background: transparent;
   position: relative;
   z-index: 100;

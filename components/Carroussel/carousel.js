@@ -3,17 +3,13 @@ import { useState, useEffect } from "react"
 import { config } from "react-spring"
 import styled from "styled-components"
 
-
 const MainCont = styled.div`
-   @media (max-width: 800px) {
-      transform: scale(0.65);
+  @media (max-width: 800px) {
+    transform: scale(0.65);
   }
   height: 500px;
   width: 800px;
-
-
 `
-
 
 export default function Carroussel(props) {
   const table = props.cards.map((element, index) => {
@@ -31,8 +27,7 @@ export default function Carroussel(props) {
   }, [props.offset, props.showArrows])
 
   return (
-    <MainCont
-    >
+    <MainCont>
       <Carousel
         slides={cards}
         goToSlide={goToSlide}

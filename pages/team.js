@@ -18,7 +18,9 @@ const MainCont = styled.div`
     display: flex;
     align-items: center;
     margin-right: -1000px;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
     @media (min-width: 2560px) {
       transform: scale(1.4);
       margin-top: 551px;
@@ -30,6 +32,7 @@ const MainCont = styled.div`
       margin-top: 83.21px;
       margin-right: 0;
       margin-bottom: -150px;
+      flex-direction: column;
     }
 
     @media (min-width: 801px) and (max-width: 1440px) {
@@ -103,7 +106,6 @@ function Team() {
 
   return (
     <div>
-      {" "}
       <PageMeta
         title="Club Excel - Members"
         description="Team"
@@ -115,9 +117,15 @@ function Team() {
           <div className="Advisor-div">
             <AdvisorCard
               animate={animate}
-              name="R K Baliyar Singh"
+              name="Swetanjali Maharana"
               position={"Assistant Prof."}
-              imagesrc={"/team/advisor.jpg"}
+              imagesrc={"/team/swetanjali.jpg"}
+            />
+            <AdvisorCard
+              animate={animate}
+              name="Lalit Behra"
+              position={"Assistant Prof."}
+              imagesrc={"/team/lalit.jpg"}
             />
 
             <div

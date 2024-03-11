@@ -178,9 +178,9 @@ function Footer() {
           <div className="vector-20"></div>
           <div className="sec">
             <div className="link">
-              <Link href="/register">
+              <Link href="/event">
                 <div className="pointer ftxt text">
-                  REGISTER
+                  EVENT
                   <div className="bar"></div>
                 </div>
               </Link>
@@ -194,7 +194,7 @@ function Footer() {
               </Link>
             </div>
 
-            <div className="link">
+            {/* <div className="link">
               <div className="link">
                 <Link href="/contact">
                   <div className="pointer ftxt text">
@@ -203,7 +203,7 @@ function Footer() {
                   </div>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="vector-20"></div>
           <div className="link">

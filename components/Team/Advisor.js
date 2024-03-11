@@ -1,14 +1,13 @@
-import React from "react";
-import Image from "next/image";
-import styled  from 'styled-components';
-import { motion } from 'framer-motion';
-
+import React from "react"
+import Image from "next/image"
+import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const StyleAdvisorCard = styled(motion.div)`
   width: 501px;
   height: 266px;
   background-image: url("/card1.png");
-  background-size:501px 266px;
+  background-size: 501px 266px;
   display: flex;
   align-items: center;
   @media (max-width: 800px) {
@@ -31,7 +30,7 @@ const StyleAdvisorCard = styled(motion.div)`
     height: 100%;
     border-radius: 10px;
     border: 0.1px solid #bef56e;
-   
+
     @media (max-width: 800px) {
       background: linear-gradient(
           -91deg,
@@ -115,11 +114,7 @@ const StyleAdvisorCard = styled(motion.div)`
       display: none;
     }
   }
-`;
-
-
-
-
+`
 
 export default function AdvisorCard({
   imagesrc,
@@ -128,9 +123,6 @@ export default function AdvisorCard({
   linkedInLink,
   animate,
 }) {
-
-
-
   return (
     <StyleAdvisorCard
       transition={{ duration: 1.5 }}
@@ -140,35 +132,33 @@ export default function AdvisorCard({
           ? "translateX(0%) rotate(0deg)"
           : "translateX(-100%) rotate(-45deg)",
       }}
-      className='frfsc'
+      className="frfsc"
     >
-      <div className='left-div frcc'>
+      <div className="left-div frcc">
         <Image
           src={imagesrc}
-          alt='Advisor'
-          className='core-img'
+          alt="Advisor"
+          className="core-img"
           height={170}
           width={170}
-          style={{borderRadius:"50%"}}
+          style={{ borderRadius: "50%" }}
         />
       </div>
 
-      <div className='right-div '>
-        <div className='name'>{name}</div>
+      <div className="right-div ">
+        <div className="name">{name}</div>
 
-        <div className='position'>{position}</div>
+        <div className="position">{position}</div>
 
         <div
           onClick={() => {
-            window.open("https://www.linkedin.com/in/rajk-bs/");
+            window.open("https://www.linkedin.com/in/rajk-bs/")
           }}
-          className='position pointer'
-        >
-
-        </div>
+          className="position pointer"
+        ></div>
       </div>
 
-      <div className='btm-shadow'></div>
+      <div className="btm-shadow"></div>
     </StyleAdvisorCard>
-  );
+  )
 }

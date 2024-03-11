@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
-import Image from "next/legacy/image"
 import { styled } from "styled-components"
+import Image from "next/image"
 
 const MainCont = styled.div`
   .image-frame {
@@ -13,6 +13,7 @@ const MainCont = styled.div`
     width: 30rem;
     height: fit-content;
     border-radius: 10px;
+    object-fit: cover;
   }
 `
 
@@ -33,7 +34,7 @@ function Card({ imagen }) {
         onMouseEnter={() => setShown(true)}
         onMouseLeave={() => setShown(false)}
       >
-        <img
+        <Image
           className="image-frame"
           src={imagen}
           alt="image"

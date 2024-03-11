@@ -35,7 +35,7 @@ const EventPage = () => {
           imgSrc="/reactlogo.png"
           time="02:00 PM-05:00 PM"
           date="16 MARCH"
-          eventPlace="ATRIUM"
+          eventPlace="GALLERIA AUDITORIUM"
           link="/reactworkshop"
         />
         <TiltCard
@@ -51,7 +51,7 @@ const EventPage = () => {
           imgSrc="/event/codeCrusade.png"
           time="11:00 AM-02:00 PM"
           date="22 MARCH"
-          eventPlace="ATRIUM"
+          eventPlace="ATRIUM CC"
           link="/codecrusade"
         />
       </div>

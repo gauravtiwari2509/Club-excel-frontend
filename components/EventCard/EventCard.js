@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 
 import Link from "next/link"
 import styled from "styled-components"
+
 const MainCont = styled.div`
   .animatecard {
     position: relative;
@@ -18,7 +19,7 @@ const MainCont = styled.div`
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     @media (max-width: 800px) {
-      height: 53vh;
+      height: 60vh;
       width: 70vw;
     }
   }
@@ -33,16 +34,15 @@ const MainCont = styled.div`
     place-content: center;
     color: white;
     border-radius: 0.75rem;
-
     background-color: #151d51;
 
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   .animatecardCont img {
-    max-height: 66.667%;
+    max-height: 100px;
     @media (max-width: 800px) {
-      max-width: 66.77%;
+      max-width: 100px;
     }
   }
   .animatecardCont div {

@@ -34,7 +34,7 @@ const EventPage = () => {
           eventName="REACT WORKSHOP"
           imgSrc="/reactlogo.png"
           time="02:00 PM-05:00 PM"
-          date="16 MARCH"
+          date="15 MARCH"
           eventPlace="GALLERIA AUDITORIUM"
           link="/reactworkshop"
         />

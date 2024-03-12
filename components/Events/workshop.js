@@ -391,7 +391,7 @@ const Banner = () => {
           <div className="msg">
             <div className="msg1">
               <IoTimeOutline />
-              <p>16th March,2024 </p>
+              <p>15th March,2024 </p>
             </div>
             <div className="msg2">
               <IoLocation />

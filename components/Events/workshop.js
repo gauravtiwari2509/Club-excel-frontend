@@ -236,9 +236,9 @@ const MainCont = styled.div`
     border: 2px solid white;
     border-radius: 90px;
     font-weight: 700;
-    background-color: #a4d09c;
+    background-color: red;
     border: #9cd0a1;
-    animation: glowing 1300ms infinite;
+    /* animation: glowing 1300ms infinite; */
     cursor: pointer;
   }
 
@@ -444,12 +444,7 @@ const Banner = () => {
             <div className="tableBox">2-5pm</div>
           </div>
           <div className="bannerRegister">
-            <Link
-              href="/reactregister"
-              className="register"
-            >
-              <button className="registerButton">REGISTER NOW</button>
-            </Link>
+            <button className="registerButton">Registration Closed !!</button>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import Particles from "react-particles"
 import { loadFull } from "tsparticles"
 
 const MainCont = styled.div`
-  height: 130vh;
+  height: 135vh;
   width: 100vw;
   display: flex;
   flex-direction: column;

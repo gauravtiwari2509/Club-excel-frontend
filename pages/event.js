@@ -33,7 +33,7 @@ const EventPage = () => {
         <TiltCard
           eventName="CODE CRUSADE"
           imgSrc="/event/codeCrusade.png"
-          time="11:00 AM-02:00 PM"
+          time="11:00 AM-03:00 PM"
           date="21 MARCH"
           eventPlace="ATRIUM CC"
           link="/codecrusade"

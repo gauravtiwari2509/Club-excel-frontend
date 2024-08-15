@@ -44,7 +44,7 @@ const EventPage = () => {
           time="11:00 AM-02:00 PM"
           date="21 MARCH"
           eventPlace="ATRIUM"
-          link="/amongus"
+          link="/event"
         />
         <TiltCard
           eventName="CODE CRUSADE"
@@ -52,7 +52,7 @@ const EventPage = () => {
           time="11:00 AM-02:00 PM"
           date="22 MARCH"
           eventPlace="ATRIUM CC"
-          link="/codecrusade"
+          link="/event"
         />
       </div>
     </MainCont>

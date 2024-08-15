@@ -264,6 +264,14 @@ function Navbar() {
               OUR TEAM
             </div>
           </Link>
+          <Link href="/clubSelection">
+            <div
+              className="pointer hover ntxt"
+              onClick={closeMenu}
+            >
+              CLUB SELECTION
+            </div>
+          </Link>
         </div>
         <Link href="/contact">
           <div

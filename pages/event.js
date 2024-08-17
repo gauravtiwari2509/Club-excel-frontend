@@ -31,18 +31,19 @@ const EventPage = () => {
     <MainCont>
       <div className="eventCardContiner">
         <TiltCard
-          eventName="REACT WORKSHOP"
-          imgSrc="/reactlogo.png"
-          time="02:00 PM-05:00 PM"
-          date="16 MARCH"
-          eventPlace="GALLERIA AUDITORIUM"
-          link="/reactworkshop"
+          eventName="CODE CRUSADE"
+          imgSrc="/event/codeCrusade.png"
+          time="11:00 AM-03:00 PM"
+          date="21 MARCH"
+          eventPlace="ATRIUM CC"
+          link="/codecrusade"
         />
+        
         <TiltCard
           eventName="AMONG US"
           imgSrc="/event/Among.png"
-          time="11:00 AM-02:00 PM"
-          date="21 MARCH"
+          time="11:00 AM-12:00 PM"
+          date="22 MARCH"
           eventPlace="ATRIUM"
           link="/event"
         />

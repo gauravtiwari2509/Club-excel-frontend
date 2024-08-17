@@ -391,7 +391,7 @@ const Banner = () => {
           <div className="msg">
             <div className="msg1">
               <IoTimeOutline />
-              <p>16th March,2024 </p>
+              <p>15th March,2024 </p>
             </div>
             <div className="msg2">
               <IoLocation />
@@ -439,7 +439,7 @@ const Banner = () => {
             <div className="tableBox">Date</div>
             <div className="tableBox">Program</div>
             <div className="tableBox">Timing</div>
-            <div className="tableBox">16th March</div>
+            <div className="tableBox">15th March</div>
             <div className="tableBox">HTML, CSS , JS & REACT</div>
             <div className="tableBox">2-5pm</div>
           </div>

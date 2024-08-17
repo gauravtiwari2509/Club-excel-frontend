@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react"
 import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import styled from "styled-components"
 const MainCont = styled.div`
   .cs-homepage {
@@ -232,6 +234,8 @@ const MainCont = styled.div`
   }
 `
 const ClubSelection = () => {
+  const notify = (e) => toast.error(e)
+  const notifysuccess = () => toast.success("yeeh! Registration Successs.")
   const [formData, setFormData] = useState({
     name: "",
     rollNo: "",
@@ -267,7 +271,7 @@ const ClubSelection = () => {
       )
 
       if (response.status === 201) {
-        alert("Form submitted successfully!")
+        toast.success("yeeh! Registration Successs.")
         setFormData({
           name: "",
           rollNo: "",
@@ -283,7 +287,7 @@ const ClubSelection = () => {
           reason: "",
         })
       } else {
-        alert("Failed to submit the form.")
+        notify("Failed to submit the form.")
       }
     } catch (error) {
       if (error.response) {
@@ -291,7 +295,7 @@ const ClubSelection = () => {
           "Error occurred while submitting the form:",
           error.response.data
         )
-        alert(
+        notify(
           error.response.data.error || "An error occurred. Please try again."
         )
       } else if (error.request) {
@@ -299,13 +303,13 @@ const ClubSelection = () => {
           "Error occurred while submitting the form:",
           error.request
         )
-        alert("No response received from the server. Please try again.")
+        notify("No response received from the server. Please try again.")
       } else {
         console.error(
           "Error occurred while submitting the form:",
           error.message
         )
-        alert("An error occurred. Please try again.")
+        notify("An error occurred. Please try again.")
       }
     }
   }
@@ -568,6 +572,19 @@ const ClubSelection = () => {
           <span> 2023 © Club Excel - ALL RIGHTS RESERVED </span>
         </footer>
       </div>
+      <ToastContainer
+        className="toast-position"
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </MainCont>
   )
 }

@@ -2,6 +2,8 @@
 import Link from "next/link"
 import React, { useEffect, useRef, useState } from "react"
 import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import styled from "styled-components"
 const MainCont = styled.div`
   .cs-navbar {
@@ -91,6 +93,7 @@ const MainCont = styled.div`
 `
 
 const Navbar = () => {
+  const notify = (e) => toast.error(e)
   const [scrollingDown, setScrollingDown] = useState(false)
   const [lastScrollTop, setLastScrollTop] = useState(0)
   const [isFormVisible, setIsFormVisible] = useState(false)
@@ -143,11 +146,11 @@ const Navbar = () => {
       const link = "https://club-excel-backend.vercel.app"
       const res = await axios.get(`${link}/api/getuser/${rollNo}`)
       if (res.status === 200) {
-        alert("Already registered")
+        toast.success("Already registered")
         setRollNo("")
       }
     } catch (error) {
-      alert("Not registered")
+      notify("Not registered")
     }
   }
 
@@ -182,6 +185,19 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <ToastContainer
+        className="toast-position"
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </MainCont>
   )
 }

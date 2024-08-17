@@ -7,22 +7,34 @@ import { useRouter } from "next/router"
 import LoadingBar from "react-top-loading-bar"
 import Loader from "@/components/Common/loder"
 
+// Define the routes that should not have Navbar and Footer
+const noLayoutPages = ["/clubSelection"]
+
 export default function App({ Component, pageProps }) {
   const [progress, setProgress] = useState(0)
   const router = useRouter()
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => {
+    const handleRouteChangeStart = () => {
       setProgress(40)
       setLoaded(false)
-    })
+    }
 
-    router.events.on("routeChangeComplete", () => {
+    const handleRouteChangeComplete = () => {
       setProgress(100)
       setLoaded(true)
-    })
-  }, [])
+    }
+
+    router.events.on("routeChangeStart", handleRouteChangeStart)
+    router.events.on("routeChangeComplete", handleRouteChangeComplete)
+
+    // Cleanup subscription on unmount
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart)
+      router.events.off("routeChangeComplete", handleRouteChangeComplete)
+    }
+  }, [router.events])
 
   useEffect(() => {
     setLoaded(false)
@@ -30,6 +42,8 @@ export default function App({ Component, pageProps }) {
       setLoaded(true)
     }, 5000)
   }, [])
+
+  const isNoLayoutPage = noLayoutPages.includes(router.pathname)
 
   return (
     <>
@@ -40,11 +54,10 @@ export default function App({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       {!loaded ? <Loader /> : ""}
-      <Navbar />
+
+      {!isNoLayoutPage && <Navbar />}
       <Component {...pageProps} />
-      <div>
-        <Footer />
-      </div>
+      {!isNoLayoutPage && <Footer />}
     </>
   )
 }

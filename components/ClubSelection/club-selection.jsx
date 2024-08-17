@@ -235,7 +235,7 @@ const MainCont = styled.div`
 `
 const ClubSelection = () => {
   const notify = (e) => toast.error(e)
-  // const notifysuccess = () => toast.success("yeeh! Registration Successs.")
+  const notifysuccess = () => toast.success("yeeh! Registration Successs.")
   const [formData, setFormData] = useState({
     name: "",
     rollNo: "",

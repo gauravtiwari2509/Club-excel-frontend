@@ -4,10 +4,16 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import styled from "styled-components"
+import "react-responsive-modal/styles.css"
+import { Modal } from "react-responsive-modal"
 const MainCont = styled.div`
   .cs-homepage {
     background-color: black;
     margin-bottom: -500px;
+  }
+  .Main-modal {
+    color: black;
+    background-color: #242426;
   }
   .cs-banner {
     width: screen;
@@ -234,6 +240,9 @@ const MainCont = styled.div`
   }
 `
 const ClubSelection = () => {
+  const [open, setOpen] = useState(false)
+  const onOpenModal = () => setOpen(true)
+  const onCloseModal = () => setOpen(false)
   const notify = (e) => toast.error(e)
   const notifysuccess = () => toast.success("yeeh! Registration Successs.")
   const [formData, setFormData] = useState({
@@ -272,6 +281,7 @@ const ClubSelection = () => {
 
       if (response.status === 201) {
         toast.success("yeeh! Registration Successs.")
+        onOpenModal()
         setFormData({
           name: "",
           rollNo: "",
@@ -572,6 +582,65 @@ const ClubSelection = () => {
           <span> 2023 © Club Excel - ALL RIGHTS RESERVED </span>
         </footer>
       </div>
+      <Modal
+        open={open}
+        onClose={onCloseModal}
+        center
+      >
+        <div
+          className="Main-modal"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            maxWidth: 370,
+            marginTop: 30,
+            marginBottom: 30,
+          }}
+        >
+          <div
+            className="Thank-msg"
+            style={{
+              color: "skyblue",
+              marginTop: 5,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+            }}
+          >
+            Thank you for completing your registration for Club Excel!
+          </div>
+          <div
+            className="req-msg"
+            style={{
+              color: "purple",
+              marginTop: 15,
+              lineHeight: 1.5,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+            }}
+          >
+            We invite you to join our WhatsApp group to receive additional
+            information and stay updated on upcoming events and activities.
+          </div>
+          <div
+            className="Link-msg"
+            onClick={() =>
+              window.open("https://chat.whatsapp.com/JUyXrgdjJcoG0kILoS1Ix6")
+            }
+            style={{
+              color: "violet",
+              marginTop: 25,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              cursor: "pointer",
+            }}
+          >
+            https://chat.whatsapp.com/
+            <br />
+            JUyXrgdjJcoG0kILoS1Ix6
+          </div>
+        </div>
+      </Modal>
       <ToastContainer
         className="toast-position"
         position="bottom-right"

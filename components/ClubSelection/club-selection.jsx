@@ -244,6 +244,7 @@ const ClubSelection = () => {
   const onOpenModal = () => setOpen(true)
   const onCloseModal = () => setOpen(false)
   const notify = (e) => toast.error(e)
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
   const notifysuccess = () => toast.success("yeeh! Registration Successs.")
   const [formData, setFormData] = useState({
     name: "",
@@ -267,6 +268,11 @@ const ClubSelection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (!isRegistrationOpen) {
+      toast.error("Registration is currently closed.")
+      return
+    }
 
     if (!formData.nistEmail.includes("nist.edu")) {
       alert("Enter a valid NIST email ID")
@@ -577,6 +583,12 @@ const ClubSelection = () => {
           >
             REGISTER
           </button>
+          <div className="registration-closed">
+            <h2>Registration Closed</h2>
+            <p>
+              Sorry, registration is currently closed. Please check back later.
+            </p>
+          </div>
         </form>
         <footer>
           <span> 2023 © Club Excel - ALL RIGHTS RESERVED </span>

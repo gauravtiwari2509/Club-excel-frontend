@@ -314,12 +314,12 @@ function Member() {
             <div className="">
               <Card1 data={clubMembers[37]} />
             </div>
-            <div className="">
+            {/* <div className="">
               <Card1 data={clubMembers[38]} />
             </div>
             <div className="">
               <Card1 data={clubMembers[39]} />
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

@@ -123,9 +123,9 @@ function Team() {
             />
             <AdvisorCard
               animate={animate}
-              name="Lalit Behra"
+              name="Bandhan Panda"
               position={"Assistant Prof."}
-              imagesrc={"/team/lalit.jpg"}
+              imagesrc={"/team/bandhan.jpg"}
             />
 
             <div

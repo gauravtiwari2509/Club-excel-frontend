@@ -482,9 +482,9 @@ export const AlumunaiMembers = [
   },
   {
     name: "Vibhav",
-    img: "/team/Pabitra.jpeg",
+    img: "/team/vibhav.jpg",
     batch: "2020",
-    linkedIn: "https://www.linkedin.com/in/pabitra-ranjan-rout/",
+    linkedIn: "https://myportfollio-b219a.web.app/",
     domain: "Full Stack Developer",
   },
   {

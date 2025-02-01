@@ -73,9 +73,9 @@ const MainCont = styled.div`
       width: 100%;
       padding: 20px 0;
       animation: ${({ menuOpen }) =>
-        menuOpen
-          ? "slide 1s ease-in-out 1 forwards"
-          : "revslide 1s ease-in-out 1 forwards"};
+    menuOpen
+      ? "slide 1s ease-in-out 1 forwards"
+      : "revslide 1s ease-in-out 1 forwards"};
     }
   }
 
@@ -264,12 +264,12 @@ function Navbar() {
               OUR TEAM
             </div>
           </Link>
-          <Link href="/clubSelection">
+          <Link href="/githubworkshop">
             <div
               className="pointer hover ntxt"
               onClick={closeMenu}
             >
-              CLUB SELECTION
+              GITHUB WORKSHOP
             </div>
           </Link>
         </div>

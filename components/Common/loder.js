@@ -11,10 +11,10 @@ const LoaderContainer = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
   z-index: 9999;
   backdrop-filter: blur(2px);
-  background: transparent;
+  background:transparent;
+  background-color: rgba(0, 0, 0, 0.7);
 
   .loader {
     animation: spin 1s linear infinite;

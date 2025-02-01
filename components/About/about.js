@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+'use client'
+import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 
 const MainCont = styled.div`
@@ -27,6 +28,9 @@ const MainCont = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .intro {
     color: #fff;
@@ -147,20 +151,32 @@ const MainCont = styled.div`
 `
 
 function About() {
-  // const [isVideoPlaying, setIsVideoPlaying] = useState(false)
-  // const [count, setCount] = useState(false)
-  // const handleVideoClick = () => {
-  //   setIsVideoPlaying(!isVideoPlaying)
-  //   setCount(!count)
-  // }
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  }, []);
 
   return (
     <MainCont>
       <div className="upar">
         <video
+          ref={videoRef}
           autoPlay={true}
-          loop={false}
-          style={{ width: "600px", height: "300px" }}
+          loop={true}
+          muted={isMuted}
+          onClick={handlePlay}
+          style={{ width: "600px", height: "300px", objectFit: 'contain' }}
           className="video"
         >
           <source src="/excel_introv2.mp4" />

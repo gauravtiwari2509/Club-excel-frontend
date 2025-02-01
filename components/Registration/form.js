@@ -522,7 +522,7 @@ function Form() {
           <div
             className="Link-msg"
             onClick={() =>
-              window.open("https://chat.whatsapp.com/IX3RNMhyFphJIPk6F7ea9P")
+              window.open("https://chat.whatsapp.com/BaK5gzvEbXN41sfZvfHs1r")
             }
             style={{
               color: "violet",

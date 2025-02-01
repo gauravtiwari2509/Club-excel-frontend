@@ -31,15 +31,15 @@ const EventPage = () => {
     <MainCont>
       <div className="eventCardContiner">
         <TiltCard
-          eventName="CODE CRUSADE"
-          imgSrc="/event/codeCrusade.png"
-          time="11:00 AM-03:00 PM"
-          date="21 MARCH"
-          eventPlace="ATRIUM CC"
-          link="/codecrusade"
+          eventName="GIT/GITHUB WORKSHOP"
+          imgSrc="/event/github.svg"
+          time="03:00 PM -05:00 PM / 02:00 PM -05:00 PM "
+          date="07-08 FEBRUARY"
+          eventPlace="GALARIA AUDITORIUM"
+          link="/githubworkshop"
         />
-        
-        <TiltCard
+
+        {/* <TiltCard
           eventName="AMONG US"
           imgSrc="/event/Among.png"
           time="11:00 AM-12:00 PM"
@@ -54,7 +54,7 @@ const EventPage = () => {
           date="22 MARCH"
           eventPlace="ATRIUM CC"
           link="/event"
-        />
+        /> */}
       </div>
     </MainCont>
   )

@@ -304,7 +304,7 @@ const MainCont = styled.div`
     }
     .left {
       width: 100%;
-      margin-top: -30px;
+      /* margin-top: -30px; */
     }
     .left p {
       width: 100%;

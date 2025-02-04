@@ -34,7 +34,7 @@ const EventPage = () => {
           eventName="GIT/GITHUB WORKSHOP"
           imgSrc="/event/github.svg"
           time="03:00 PM -05:00 PM / 02:00 PM -05:00 PM "
-          date="07-08 FEBRUARY"
+          date="14-15th FEBRUARY"
           eventPlace="GALARIA AUDITORIUM"
           link="/githubworkshop"
         />

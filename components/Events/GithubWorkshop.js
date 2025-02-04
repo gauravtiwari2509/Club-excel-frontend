@@ -415,11 +415,11 @@ const GithubWorkshop = () => {
           <div className="msg">
             <div className="msg1">
               <IoTimeOutline />
-              <p>7th February : 03:00-05:00 PM</p>
+              <p>14th February : 03:00-05:00 PM</p>
             </div>
             <div className="msg2">
               <IoTimeOutline />
-              <p>8th February : 02:00-05:00 PM</p>
+              <p>15th February : 02:00-05:00 PM</p>
             </div>
             <div className="msg2">
               <IoLocation />
@@ -464,10 +464,10 @@ const GithubWorkshop = () => {
             <div className="tableBox">Date</div>
             <div className="tableBox">Program</div>
             <div className="tableBox">Timing</div>
-            <div className="tableBox">7th February</div>
+            <div className="tableBox">14th February</div>
             <div className="tableBox">Introduction to Git & GitHub</div>
             <div className="tableBox">03:00-05:00 PM</div>
-            <div className="tableBox">8th February</div>
+            <div className="tableBox">15th February</div>
             <div className="tableBox">Advanced GitHub Workflows</div>
             <div className="tableBox">02:00-05:00 PM</div>
           </div>

@@ -4,15 +4,18 @@ import Particles from "react-particles"
 import { loadFull } from "tsparticles"
 
 const MainCont = styled.div`
-  height: 145vh;
+  height: 115vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: transparent;
-  position: relative;
   z-index: 100;
   overflow: hidden;
+  position: relative;
+  @media (max-width: 800px) {
+    height: 80vh;
+  }
 `
 
 function ParticleAmin({ children }) {

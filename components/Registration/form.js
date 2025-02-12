@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css"
 import Loader from "../Common/loder"
 
 const MainCont = styled.div`
-position: absolute;
+/* position: absolute; */
   @media (max-width: 800px) {
     margin-top: -50px;
     transform: scale(0.8);

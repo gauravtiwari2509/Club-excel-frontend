@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Form from "@/components/Registration/form"
 import styled from "styled-components"
-import ParticleAmin from "@/components/Registration/Particles"
+// import ParticleAmin from "@/components/Registration/Particles"
 import PageMeta from "@/components/Common/PageMeta"
 
 const MainCont = styled.div`
@@ -51,9 +51,9 @@ export default function Home() {
       </Head>
 
       <MainCont>
-        <ParticleAmin>
-          <Form />
-        </ParticleAmin>
+        {/* <ParticleAmin> */}
+        <Form />
+        {/* </ParticleAmin> */}
       </MainCont>
     </>
   )

@@ -407,6 +407,7 @@ const GithubWorkshop = () => {
                 src="/Excel_Logo_Anim.gif"
                 height={436}
                 width={460}
+                
                 className="excellogo"
                 alt="GitHub Workshop Logo"
               />

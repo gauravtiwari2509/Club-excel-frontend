@@ -97,7 +97,7 @@ const Register = () => {
             </h2>
             <p className="mt-2 text-gray-300">
               Skill, Strategy & Speed! This event is all about testing your
-              reflexes, technical knowledge, and ability to think on your feet.
+              reflexes, and ability to think on your feet.
               Get ready for an electrifying battle of wits!
               <br />
          

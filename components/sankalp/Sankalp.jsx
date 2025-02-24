@@ -211,8 +211,8 @@ const Sankalp2025 = () => {
                 </span>
               </h2>
               <p className="mt-2 text-sm md:text-base">
-                It's a coding competition. Get ready to unleash your coding
-                skills at Code Crusade 3.0
+                Get ready for a thrilling battle of reflexes, strategy, and
+                quick thinking at the ultimate showdown
               </p>
               <img
                 src="/components/newstud.jpg"

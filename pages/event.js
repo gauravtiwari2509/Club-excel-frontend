@@ -1,4 +1,4 @@
-import TiltCard from "@/components/EventCard/EventCard"
+// import TiltCard from "@/components/EventCard/EventCard"
 import React from "react"
 import styled from "styled-components"
 const MainCont = styled.div`
@@ -29,7 +29,8 @@ const MainCont = styled.div`
 const EventPage = () => {
   return (
     <MainCont>
-      <div className="eventCardContiner">
+      {/* <div className="eventCardContiner">
+
         <TiltCard
           eventName="GIT/GITHUB WORKSHOP"
           imgSrc="/event/github.svg"
@@ -39,7 +40,7 @@ const EventPage = () => {
           link="/githubworkshop"
         />
 
-        {/* <TiltCard
+        <TiltCard
           eventName="AMONG US"
           imgSrc="/event/Among.png"
           time="11:00 AM-12:00 PM"
@@ -54,7 +55,10 @@ const EventPage = () => {
           date="22 MARCH"
           eventPlace="ATRIUM CC"
           link="/event"
-        /> */}
+        />
+      </div> */}
+      <div style={{ color: 'white', minHeight: "50vh" }}>
+        no event available now!!
       </div>
     </MainCont>
   )

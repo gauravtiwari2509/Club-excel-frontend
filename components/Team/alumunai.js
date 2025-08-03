@@ -66,61 +66,37 @@ const MainCont = styled.div`
       margin-top: -10px;
     }
   }
-
-  .center-ref {
-    height: 1400px;
-    margin-top: -1800px;
-
-    @media (max-width: 799px) {
-      width: 100px;
-      position: relative;
-      margin-top: -00px;
-      height: 3550px;
-      margin-bottom: -520px;
-      margin-left: -800px;
-      z-index: 600;
-    }
-  }
 `
 
 function Alumunai() {
-  const [animate, setAnimate] = useState(false)
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView({
+    // The key fix: `triggerOnce: true` ensures the inView state is set to true only once
+    // when the element first enters the viewport.
+    triggerOnce: true,
+    // The animation will trigger when 10% of the component is visible.
+    threshold: 0.1,
+  })
 
-  useEffect(() => {
-    if (inView) {
-      setAnimate(true)
-    } else {
-      setAnimate(false)
-    }
-  }, [inView])
+  // We can now use the `inView` state directly from the hook, as it will never turn back to false.
   return (
     <MainCont>
-      <div className="pnvm">
+      {/* The `ref` is now attached to the parent container, so the entire section
+          is considered for the animation trigger. */}
+      <div className="pnvm" ref={ref}>
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(500px)",
           }}
-          className="parent-motion-div "
+          className="parent-motion-div"
         >
           <div className="partnven-box">
-            <div className="">
-              <Card1 data={AlumunaiMembers[0]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[1]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[2]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[3]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[4]} />
-            </div>
+            {AlumunaiMembers.slice(0, 5).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
             <div className="show-mobile">
               <Card1 data={AlumunaiMembers[5]} />
             </div>
@@ -130,24 +106,17 @@ function Alumunai() {
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(-500px)",
           }}
           className=""
         >
           <div className="partnven-box second">
-            <div className="">
-              <Card1 data={AlumunaiMembers[6]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[7]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[8]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[9]} />
-            </div>
+            {AlumunaiMembers.slice(6, 10).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
             <div className="hide-mobile">
               <Card1 data={AlumunaiMembers[5]} />
             </div>
@@ -157,24 +126,17 @@ function Alumunai() {
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(500px)",
           }}
           className="parent-motion-div"
         >
           <div className="partnven-box second">
-            <div className="">
-              <Card1 data={AlumunaiMembers[10]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[11]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[12]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[13]} />
-            </div>
+            {AlumunaiMembers.slice(10, 14).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
             <div className="hide-mobile">
               <Card1 data={AlumunaiMembers[14]} />
             </div>
@@ -184,8 +146,8 @@ function Alumunai() {
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(-500px)",
           }}
           className=""
         >
@@ -193,45 +155,28 @@ function Alumunai() {
             <div className="show-mobile">
               <Card1 data={AlumunaiMembers[14]} />
             </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[15]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[16]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[17]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[18]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[19]} />
-            </div>
+            {AlumunaiMembers.slice(15, 20).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
           </div>
         </motion.div>
 
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(500px)",
           }}
           className="parent-motion-div"
         >
           <div className="partnven-box second">
-            <div className="">
-              <Card1 data={AlumunaiMembers[20]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[21]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[22]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[23]} />
-            </div>
+            {AlumunaiMembers.slice(20, 24).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
             <div className="hide-mobile">
               <Card1 data={AlumunaiMembers[24]} />
             </div>
@@ -241,8 +186,8 @@ function Alumunai() {
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(-500px)",
           }}
           className=""
         >
@@ -250,76 +195,28 @@ function Alumunai() {
             <div className="show-mobile">
               <Card1 data={AlumunaiMembers[24]} />
             </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[25]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[26]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[27]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[28]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[29]} />
-            </div>
+            {AlumunaiMembers.slice(25, 30).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
           </div>
         </motion.div>
-        {/* <motion.div
-          transition={{ duration: 1 }}
-          animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(-500px)",
-          }}
-          className=""
-        >
-          <div className="partnven-box second">
-            <div className="show-mobile">
-              <Card1 data={AlumunaiMembers[24]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[25]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[26]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[27]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[28]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[29]} />
-            </div>
-          </div>
-        </motion.div> */}
+
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(500px)",
           }}
-          className="parent-motion-div "
+          className="parent-motion-div"
         >
           <div className="partnven-box">
-            <div className="">
-              <Card1 data={AlumunaiMembers[30]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[31]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[32]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[33]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[34]} />
-            </div>
+            {AlumunaiMembers.slice(30, 35).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
             <div className="show-mobile">
               <Card1 data={AlumunaiMembers[35]} />
             </div>
@@ -329,34 +226,23 @@ function Alumunai() {
         <motion.div
           transition={{ duration: 1 }}
           animate={{
-            opacity: animate ? 1 : 0,
-            transform: animate ? "translateX(0px)" : "translateX(-500px)",
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0px)" : "translateX(-500px)",
           }}
           className=""
         >
           <div className="partnven-box second">
-            {/* <div className="">
-              <Card1 data={AlumunaiMembers[36]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[37]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[38]} />
-            </div>
-            <div className="">
-              <Card1 data={AlumunaiMembers[39]} />
-            </div> */}
             <div className="hide-mobile">
               <Card1 data={AlumunaiMembers[35]} />
             </div>
+            {AlumunaiMembers.slice(36, 40).map((member, index) => (
+              <div key={index}>
+                <Card1 data={member} />
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
-      <div
-        ref={ref}
-        className="  center-ref"
-      ></div>
     </MainCont>
   )
 }

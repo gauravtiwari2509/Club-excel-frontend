@@ -325,7 +325,7 @@ function Member() {
       </div>
       <div
         ref={ref}
-        className="  center-ref"
+        className="center-ref"
       ></div>
     </MainCont>
   )

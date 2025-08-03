@@ -1,7 +1,7 @@
 import React from 'react'
-import  styled  from 'styled-components';
+import styled from 'styled-components';
 
-const VideoAnimationWrapper =  styled.div`
+const VideoAnimationWrapper = styled.div`
 
 background-color: #160e2a;
             display: flex;
@@ -239,36 +239,36 @@ background-color: #160e2a;
 
 
 function VideoAnimation() {
-  return (
-    <VideoAnimationWrapper>
-      <div class="align-div">
-    <video autoPlay={true} loop muted={true}  >
-        <source src="/clubexcel intro.mp4" type="video/mp4"/>
-    </video>
-    <div class="white-div helper1 up10"></div>
-    <div class="white-div helper2 down10"></div>
-    <div class="white-div helper3 up20"></div>
-    <div class="white-div helper4 down20"></div>
-    <div class="white-div helper5 up10"></div>
-    <div class="white-div helper6 down10"></div>
-    <div class="white-div helper7 up20"></div>
-    <div class="white-div helper8 down20"></div>
-    <div class="white-div helper9 up10"></div>
-    <div class="white-div helper10 down10"></div>
-    <div class="white-div helper11 up20"></div>
-    <div class="white-div helper12 down20"></div>
-    <div class="white-div helper13 up10"></div>
-    <div class="white-div helper14 down10"></div>
+    return (
+        <VideoAnimationWrapper>
+            <div className="align-div">
+                <video autoPlay={true} loop muted={true}  >
+                    <source src="/clubexcel intro.mp4" type="video/mp4" />
+                </video>
+                <div className="white-div helper1 up10"></div>
+                <div className="white-div helper2 down10"></div>
+                <div className="white-div helper3 up20"></div>
+                <div className="white-div helper4 down20"></div>
+                <div className="white-div helper5 up10"></div>
+                <div className="white-div helper6 down10"></div>
+                <div className="white-div helper7 up20"></div>
+                <div className="white-div helper8 down20"></div>
+                <div className="white-div helper9 up10"></div>
+                <div className="white-div helper10 down10"></div>
+                <div className="white-div helper11 up20"></div>
+                <div className="white-div helper12 down20"></div>
+                <div className="white-div helper13 up10"></div>
+                <div className="white-div helper14 down10"></div>
 
-    <div class="line aline1"></div>
-    <div class="line aline2"></div>
-    <div class="line aline3"></div>
-    <div class="line aline4"></div>
-    <div class="line aline5"></div>
-    <div class="line aline6"></div>
-</div>
-    </VideoAnimationWrapper>
-  )
+                <div className="line aline1"></div>
+                <div className="line aline2"></div>
+                <div className="line aline3"></div>
+                <div className="line aline4"></div>
+                <div className="line aline5"></div>
+                <div className="line aline6"></div>
+            </div>
+        </VideoAnimationWrapper>
+    )
 }
 
 export default VideoAnimation

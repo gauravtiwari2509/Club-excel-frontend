@@ -264,12 +264,12 @@ function Navbar() {
               OUR TEAM
             </div>
           </Link>
-          <Link href="/sankalp">
+          <Link href="/club-recruitment">
             <div
               className="pointer hover ntxt"
               onClick={closeMenu}
             >
-              SANKALP
+              club recruitment
             </div>
           </Link>
         </div>

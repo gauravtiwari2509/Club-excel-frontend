@@ -331,9 +331,9 @@ const ClubRecruitment = () => {
                 </h3>
               </div>
               <p className="text-gray-400 mb-8 leading-relaxed text-lg">
-                Our seniors have achieved 100% placement in top companies like
-                JP Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and Juspay,
-                with incredible packages that set industry benchmarks.
+                Our seniors have achieved remarkable placement in top companies like JP
+                Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and Juspay, with
+                incredible packages that set industry benchmarks.
               </p>
               <div className="space-y-4">
                 <div className="flex justify-between items-center bg-gray-900 rounded-xl p-4 border border-gray-800">

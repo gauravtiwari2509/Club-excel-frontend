@@ -267,7 +267,7 @@ export const clubMembers = [
   },
   {
     name: "Tadvab Pradhan",
-    img: "/team/deepti jr.png",
+    img: "/team/tadvab.jpg",
     batch: "2023",
     linkedIn: "https://www.linkedin.com/in/tadvab-pradhan-97a976300",
     domain: "Web Development",

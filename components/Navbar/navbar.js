@@ -269,7 +269,7 @@ function Navbar() {
               className="pointer hover ntxt"
               onClick={closeMenu}
             >
-              club recruitment
+              CLUB RECRUITMENT
             </div>
           </Link>
         </div>

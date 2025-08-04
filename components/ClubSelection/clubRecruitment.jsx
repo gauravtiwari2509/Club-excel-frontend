@@ -35,6 +35,8 @@ const ClubRecruitment = () => {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [checkingStatus, setCheckingStatus] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(false);
   const [rollNo, setRollNo] = useState("");
 
   const checkStatusRef = useRef(null);
@@ -81,6 +83,7 @@ const ClubRecruitment = () => {
   };
 
   const handleCheckStatus = async (e) => {
+    setCheckingStatus(true);
     e.preventDefault();
     try {
       const link = "https://club-excel-backend.vercel.app";
@@ -92,8 +95,10 @@ const ClubRecruitment = () => {
         setRollNo("");
         setIsFormVisible(false);
       }
+      setCheckingStatus(false);
     } catch (error) {
       notify("User not found. Please register!");
+      setCheckingStatus(false);
     }
   };
 
@@ -103,6 +108,7 @@ const ClubRecruitment = () => {
   };
 
   const handleSubmit = async (e) => {
+    setIsRegistering(true);
     e.preventDefault();
     if (!formData.nistEmail.includes("nist.edu")) {
       notify("Enter a valid NIST email address.");
@@ -133,6 +139,7 @@ const ClubRecruitment = () => {
           reason: "",
         });
       }
+      setIsRegistering(false);
     } catch (error) {
       if (error.response) {
         console.error("Registration error:", error.response.data);
@@ -148,6 +155,7 @@ const ClubRecruitment = () => {
         notify("An unexpected error occurred.");
       }
     }
+    setIsRegistering(false);
   };
 
   const onCloseModal = () => setOpen(false);
@@ -207,9 +215,10 @@ const ClubRecruitment = () => {
                   />
                   <button
                     type="submit"
+                    disabled={checkingStatus}
                     className="py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg text-sm hover:from-blue-700 hover:to-purple-700 transition-colors"
                   >
-                    Check
+                    {checkingStatus ? "checking..." : "check"}
                   </button>
                 </form>
               </div>
@@ -322,9 +331,9 @@ const ClubRecruitment = () => {
                 </h3>
               </div>
               <p className="text-gray-400 mb-8 leading-relaxed text-lg">
-                Our seniors have achieved 100% placement in top companies like
-                JP Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and Juspay,
-                with incredible packages that set industry benchmarks.
+                Our seniors have achieved remarkable placement in top companies like JP
+                Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and Juspay, with
+                incredible packages that set industry benchmarks.
               </p>
               <div className="space-y-4">
                 <div className="flex justify-between items-center bg-gray-900 rounded-xl p-4 border border-gray-800">
@@ -395,9 +404,9 @@ const ClubRecruitment = () => {
                   </h4>
                   <p className="text-gray-400">Payal and her team</p>
                 </div>
-                <div className="border-l-4 border-green-400 pl-6 py-2 bg-gray-900/50 rounded-r-lg">
+                <div className="border-l-4 border-red-400 pl-6 py-2 bg-gray-900/50 rounded-r-lg">
                   <h4 className="text-white font-bold text-lg">
-                    🎯 ODOO Hackathon Finalist
+                    🚀 ODOO Hackathon Finalist
                   </h4>
                   <p className="text-gray-400">Gaurav and his team</p>
                 </div>
@@ -629,9 +638,10 @@ const ClubRecruitment = () => {
               <div className="mt-12 text-center">
                 <button
                   type="submit"
+                  disabled={isRegistering}
                   className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-700 hover:via-purple-700 hover:to-cyan-700 text-white font-black text-xl px-16 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 border border-blue-500/20"
                 >
-                  REGISTER NOW
+                  {isRegistering ? "Registering..." : "Register Now"}
                 </button>
               </div>
             </form>

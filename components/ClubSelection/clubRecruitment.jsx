@@ -257,7 +257,7 @@ const ClubRecruitment = () => {
               <Star className="w-10 h-10 text-blue-400 mx-auto group-hover:animate-pulse" />
             </div>
             <div className="text-3xl md:text-4xl font-black text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">
-              100%
+              95%+
             </div>
             <div className="text-white font-bold text-lg mb-1">PLACEMENT</div>
             <div className="text-gray-500 text-sm">

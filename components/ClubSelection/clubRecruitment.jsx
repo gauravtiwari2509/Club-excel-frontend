@@ -331,9 +331,9 @@ const ClubRecruitment = () => {
                 </h3>
               </div>
               <p className="text-gray-400 mb-8 leading-relaxed text-lg">
-                Our seniors have achieved remarkable placement in top companies like JP
-                Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and Juspay, with
-                incredible packages that set industry benchmarks.
+                Our seniors have achieved remarkable placement in top companies
+                like JP Morgan, Zomato, Walmart, Amazon, Deloitte, HP, and
+                Juspay, with incredible packages that set industry benchmarks.
               </p>
               <div className="space-y-4">
                 <div className="flex justify-between items-center bg-gray-900 rounded-xl p-4 border border-gray-800">
@@ -379,6 +379,14 @@ const ClubRecruitment = () => {
                     🏆 SIH 2023 Winner
                   </h4>
                   <p className="text-gray-400">Gaurav and his team</p>
+                </div>
+                <div className="border-l-4 border-yellow-400 pl-6 py-2 bg-gray-900/50 rounded-r-lg">
+                  <h4 className="text-white font-bold text-lg">
+                    🏆 SIH 2023 Finalist
+                  </h4>
+                  <p className="text-gray-400">
+                    Sudip, Rudransh and their team
+                  </p>
                 </div>
                 <div className="border-l-4 border-blue-400 pl-6 py-2 bg-gray-900/50 rounded-r-lg">
                   <h4 className="text-white font-bold text-lg">
